@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/data-access/spdb-data-access.iml" filepath="$PROJECT_DIR$/data-access/spdb-data-access.iml" />
+      <module fileurl="file://$PROJECT_DIR$/data-populator/spdb-data-populator.iml" filepath="$PROJECT_DIR$/data-populator/spdb-data-populator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spdb-parent.iml" filepath="$PROJECT_DIR$/spdb-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web-services/spdb-web-services.iml" filepath="$PROJECT_DIR$/web-services/spdb-web-services.iml" />
+    </modules>
+  </component>
+</project>

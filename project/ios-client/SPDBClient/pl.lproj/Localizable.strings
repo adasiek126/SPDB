@@ -1,0 +1,15 @@
+
+"Change" = "Przesiadka";
+"Change here from line: %@ to line: %@." = "Przesiądź się z linii %@ do linii %@.";
+"Route start" = "Początek trasy";
+"Route end" = "Koniec trasy";
+"Set off time: %@." = "Godzina wyjazdu: %@.";
+"Arrival time: %@." = "Godzina przyjazdu: %@.";
+"%@ Enter line: %@." = "%@ Wsiądź w linię %@.";
+"Route fetch failed" = "Błąd pobierania trasy";
+"Could not fetch route. Please check your Internet connection." = "Nie udało się pobrać trasy. Sprawdź połączenie z Internetem.";
+"OK" = "OK";
+"Loading" = "Wczytywanie";
+"Validation failed" = "Błąd walidacji";
+"Please select points before searching route." = "Wybierz punkty przed wyszukiwaniem trasy.";
+"(undefined)" = "(brak)";

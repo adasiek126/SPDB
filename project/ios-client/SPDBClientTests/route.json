@@ -1,0 +1,16 @@
+{
+    "id": 2,
+    "routeFrom":
+    {
+        "id": 16,
+        "latitude": 52.1234,
+        "longitude": 21.6789
+    },
+    "routeTo":
+    {
+        "id": 17,
+        "latitude": 52.6789,
+        "longitude": 21.1234
+    },
+    "duration": 300
+}

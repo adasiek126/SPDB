@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:neo4j="http://www.springframework.org/schema/data/neo4j"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="
+       	http://www.springframework.org/schema/beans
+       	http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/data/neo4j
+		http://www.springframework.org/schema/data/neo4j/spring-neo4j.xsd
+		http://www.springframework.org/schema/tx
+		http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <context:property-placeholder/>
+    <context:annotation-config/>
+    <context:spring-configured/>
+    <context:component-scan base-package="pl.edu.pw.elka.spdb"/>
+
+    <neo4j:config storeDirectory="entries-db"
+                  base-package="pl.edu.pw.elka.spdb.model"/>
+    <neo4j:repositories base-package="pl.edu.pw.elka.spdb.repositories"/>
+
+    <tx:annotation-driven/>
+
+    <bean id="conversionService"
+          class="org.springframework.context.support.ConversionServiceFactoryBean">
+        <property name="converters">
+            <set>
+                <bean class="pl.edu.pw.elka.spdb.converters.DurationToLongConverterFactory"/>
+                <bean class="pl.edu.pw.elka.spdb.converters.LongToDurationConverterFactory"/>
+            </set>
+        </property>
+    </bean>
+
+    <bean class="pl.edu.pw.elka.spdb.configuration.impl.ConfigurationProvider"/>
+    <bean class="pl.edu.pw.elka.spdb.population.reader.entry.impl.StreamMapEntryReader" />
+    <bean class="pl.edu.pw.elka.spdb.population.reader.route.impl.StreamRouteReader" />
+    <bean class="pl.edu.pw.elka.spdb.population.reader.publictransportroute.impl.StreamPublicTransportRouteReader" />
+    <bean class="pl.edu.pw.elka.spdb.population.repository.impl.StreamDataPopulatorRepository">
+        <constructor-arg name="entriesStream" value="classpath:entries.txt" type="java.io.InputStream" />
+        <constructor-arg name="routesStream" value="classpath:routes.txt" type="java.io.InputStream" />
+        <constructor-arg name="publicTransportRoutesStream" value="classpath:public_transport_routes.txt"
+                         type="java.io.InputStream" />
+    </bean>
+    <bean class="pl.edu.pw.elka.spdb.population.impl.DataPopulator"/>
+</beans>
