@@ -1,6 +1,0 @@
-platform :ios, '7.0'
-pod 'RestKit', '~> 0.20.0'
-pod 'RestKit/Testing', '~> 0.20.0'
-pod 'XCTAsyncTestCase', '~> 0.1.0'
-pod 'MBProgressHUD', '~> 0.8'
-pod 'PXAlertView', '~> 0.1.0'
