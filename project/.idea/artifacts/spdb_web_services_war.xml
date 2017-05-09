@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="spdb-web-services:war">
-    <output-path>$PROJECT_DIR$/web-services/target</output-path>
-    <root id="archive" name="spdb-web-services-1.0.war">
-      <element id="artifact" artifact-name="spdb-web-services:war exploded" />
-    </root>
-  </artifact>
-</component>
