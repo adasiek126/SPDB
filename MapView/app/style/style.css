@@ -1,0 +1,78 @@
+    /* Always set the map height explicitly to define the size of the div
+     * element that contains the map. */
+    /* Optional: Makes the sample page fill the window. */
+html, body {
+    height: 100%;
+    margin: 0 auto;
+    padding: 50px;
+}
+#legend {
+    border-radius: 15px;
+    background: white;
+    padding: 5px;
+    margin: 10px;
+}
+.legend-red {
+    display: inline-block;
+    background-color: #FF5400;
+    width: 100px;
+    height: 5px;
+    vertical-align: middle;
+    border: solid 1px silver;
+}
+.legend-green {
+    display: inline-block;
+    width:100px;
+    height:5px;
+    background-color: #00FF00;
+    border: solid 1px silver;
+}
+.legend-blue {
+    display: inline-block;
+    background-color: #0000FF;
+    width:100px;
+    height:5px;
+    border: solid 1px silver;
+}
+.legend-green-apple {
+    display: inline-block;
+    background-color: #BBFF00;
+    width:100px;
+    height:5px;
+    border: solid 1px silver;
+}
+.legend-yellow {
+    display: inline-block;
+    background-color: #E1FF00;
+    width:100px;
+    height:5px;
+    border: solid 1px silver;
+}
+.legend-orange {
+    display: inline-block;
+    background-color: #FFa500;
+    width:100px;
+    height:5px;
+    border: solid 1px silver;
+}
+.map{
+    margin: 0 auto;
+    border: 3px solid #73AD21;
+    padding: 10px;
+    height: 600px;
+    width: 800px;
+}
+.options{
+    margin: 0 auto;
+    width: 600px;
+    padding: 10px;
+}
+.options p{
+    margin: 0 auto;
+    padding: 5px;
+}
+.histogram{
+    margin: 0 auto;
+    width: 600px;
+    padding: 10px;
+}
