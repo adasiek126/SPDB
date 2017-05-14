@@ -10,7 +10,8 @@
           href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"/>
     <script data-require="bootstrap@*" data-semver="3.3.2"
             src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="style/style.css"/>
+    <link rel="stylesheet" type="text/css" href="style/style.css"/>
+    <link rel="stylesheet" type="text/css" href="style/multi.css"/>
 </head>
 
 <body>
@@ -52,40 +53,95 @@
     </div>
 </div>
 
-<div ng-app="refreshingMap" ng-controller="MyFirstController" ng-init="initMap(53.106585,23.122518, 15)">
+<div ng-app="myfirstangularapp" ng-controller="MyFirstController" ng-init="initMap(53.106585,23.122518, 15)">
     <div class="map" id="map"></div>
     <div class="options">
-        <p>Dzień tygodnia: <select ng-model="selectedDay" ng-options="day for day in days" ng-init="selectedDay=days[0]"></select></p>
-        <p>Godzina od: <select ng-model="hourFrom" ng-options="hour for hour in hoursFrom" ng-init="hourFrom=8" ng-change="changeHoursTo()"></select></p>
-        <p>Godzina do: <select ng-model="hourTo" ng-options="hour for hour in hoursTo" ng-init="hourTo=10;changeHoursTo()" ng-change="changeHoursFrom()"></select></p>
+        <p>Dzień tygodnia: <select ng-model="selectedDay" ng-options="day for day in days"
+                                   ng-init="selectedDay=days[0]"></select></p>
+        <p>Godzina od: <select ng-model="hourFrom" ng-options="hour for hour in hoursFrom" ng-init="hourFrom=8"
+                               ng-change="changeHoursTo()"></select></p>
+        <p>Godzina do: <select ng-model="hourTo" ng-options="hour for hour in hoursTo"
+                               ng-init="hourTo=10;changeHoursTo()" ng-change="changeHoursFrom()"></select></p>
         <p><input type="submit" name="clear" ng-click="clearLines()" value="Wyczyść">
             <input type="submit" name="traffic" ng-click="getDataFromApi()" value="Analiza ruchu"></p>
-        <p>Linia: <select ng-model="selectedLineNumber" ng-options="lineNumber for lineNumber in linesNumbers" ng-init="loadLines()"></select></p>
+        <p>Linia: <select ng-model="selectedLineNumber" ng-options="lineNumber for lineNumber in linesNumbers"
+                          ng-init="loadLines()"></select></p>
         <p><input type="submit" name="lineTraffic" ng-click="getLineTrafficData()" value="Analiza ruchu dla linii"></p>
         <p>Minimalne wsparcie względne <input type="number" min="0.1" max="1.0" step="0.1" ng-model="minSupport"></p>
         <p>Próg przyrostu opóźnienia <input type="number" min="1" max="99999999" step="1" ng-model="minDiffDelay"></p>
         <p><input type="submit" name="findStrech" ng-click="getStretches()" value="Znajdź korkujące się odcinki"></p>
-        <br />
+        <br/>
     </div>
     <div class="histogram">
         <p>Histogram</p>
         <img ng-src='{{histogram}}' alt="Histogram" id="histogram">
     </div>
     <div id="legend" style="">
-        <p><u><i>Odrabianie opóźnienia</i></u><section class="legend-blue"></section> </p>
-        <p><u><i>Zmiana opóźnienia do 30s</i></u> <div class="legend-green"></div></p>
-        <p><u><i>Zmiana opóźnienia do 60s</i></u> <div class="legend-green-apple"></div></p>
-        <p><u><i>Zmiana opóźnienia do 120s</i></u> <div class="legend-yellow"></div></p>
-        <p><u><i>Zmiana opóźnienia do 300s</i></u> <div class="legend-orange"></div></p>
-        <p><u><i>Zmiana opóźnienia większa niż 300s</i></u> <div class="legend-red"></div></p>
+        <p><u><i>Odrabianie opóźnienia</i></u>
+            <section class="legend-blue"></section>
+        </p>
+        <p><u><i>Zmiana opóźnienia do 30s</i></u>
+        <div class="legend-green"></div>
+        </p>
+        <p><u><i>Zmiana opóźnienia do 60s</i></u>
+        <div class="legend-green-apple"></div>
+        </p>
+        <p><u><i>Zmiana opóźnienia do 120s</i></u>
+        <div class="legend-yellow"></div>
+        </p>
+        <p><u><i>Zmiana opóźnienia do 300s</i></u>
+        <div class="legend-orange"></div>
+        </p>
+        <p><u><i>Zmiana opóźnienia większa niż 300s</i></u>
+        <div class="legend-red"></div>
+        </p>
     </div>
+
+    <div class="alert alert-success">
+        <strong>Instructions:</strong>
+        Click on items to select/unselect them. When dragging, all selected items will be moved at once.
+    </div>
+
+    <div class="multiDemo row">
+
+        <div class="col-md-8">
+            <div class="row">
+                <div ng-repeat="list in models" class="col-md-6">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">List {{list.listName}}</h3>
+                        </div>
+                        <div class="panel-body" ng-include="'html/multi.html'"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div view-source="multi"></div>
+
+        </div>
+
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Generated Model</h3>
+                </div>
+                <div class="panel-body">
+                    <pre class="code">{{modelAsJson}}</pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDroMUn-fiNfv87FPLlCQyU_w5FyifMFWM&libraries=geometry&libraries=places" type="text/javascript"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDroMUn-fiNfv87FPLlCQyU_w5FyifMFWM&libraries=geometry&libraries=places"
+        type="text/javascript"></script>
 <script src="app.js"></script>
 <script src="controllers/controllers.js"></script>
 <script src="filters/filters.js"></script>
 <script src="services/services.js"></script>
 <script src="directives/directives.js"></script>
+<script src="libraries/angular-drag-and-drop-lists.js"></script>
 </body>
 </html>
