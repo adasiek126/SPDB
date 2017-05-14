@@ -1,0 +1,295 @@
+{
+  "placeTypes":[
+    {
+      "description": "accounting"
+    },
+    {
+      "description": "airport"
+    },
+    {
+      "description": "amusement_park"
+    },
+    {
+      "description": "aquarium"
+    },
+    {
+      "description": "art_gallery"
+    },
+    {
+      "description": "atm"
+    },
+    {
+      "description": "bakery"
+    },
+    {
+      "description": "bank"
+    },
+    {
+      "description": "bar"
+    },
+    {
+      "description": "beauty_salon"
+    },
+    {
+      "description": "bicycle_store"
+    },
+    {
+      "description": "book_store"
+    },
+    {
+      "description": "bowling_alley"
+    },
+    {
+      "description": "bus_station"
+    },
+    {
+      "description": "cafe"
+    },
+    {
+      "description": "campground"
+    },
+    {
+      "description": "car_dealer"
+    },
+    {
+      "description": "car_rental"
+    },
+    {
+      "description": "car_repair"
+    },
+    {
+      "description": "car_wash"
+    },
+    {
+      "description": "casino"
+    },
+    {
+      "description": "cemetery"
+    },
+    {
+      "description": "church"
+    },
+    {
+      "description": "city_hall"
+    },
+    {
+      "description": "clothing_store"
+    },
+    {
+      "description": "convenience_store"
+    },
+    {
+      "description": "courthouse"
+    },
+    {
+      "description": "dentist"
+    },
+    {
+      "description": "department_store"
+    },
+    {
+      "description": "doctor"
+    },
+    {
+      "description": "electrician"
+    },
+    {
+      "description": "electronics_store"
+    },
+    {
+      "description": "embassy"
+    },
+    {
+      "description": "establishment"
+    },
+    {
+      "description": "finance"
+    },
+    {
+      "description": "fire_station"
+    },
+    {
+      "description": "florist"
+    },
+    {
+      "description": "food"
+    },
+    {
+      "description": "funeral_home"
+    },
+    {
+      "description": "furniture_store"
+    },
+    {
+      "description": "gas_station"
+    },
+    {
+      "description": "general_contractor"
+    },
+    {
+      "description": "grocery_or_supermarket"
+    },
+    {
+      "description": "gym"
+    },
+    {
+      "description": "hair_care"
+    },
+    {
+      "description": "hardware_store"
+    },
+    {
+      "description": "health"
+    },
+    {
+      "description": "hindu_temple"
+    },
+    {
+      "description": "home_goods_store"
+    },
+    {
+      "description": "hospital"
+    },
+    {
+      "description": "insurance_agency"
+    },
+    {
+      "description": "jewelry_store"
+    },
+    {
+      "description": "laundry"
+    },
+    {
+      "description": "lawyer"
+    },
+    {
+      "description": "library"
+    },
+    {
+      "description": "liquor_store"
+    },
+    {
+      "description": "local_government_office"
+    },
+    {
+      "description": "locksmith"
+    },
+    {
+      "description": "lodging"
+    },
+    {
+      "description": "meal_delivery"
+    },
+    {
+      "description": "meal_takeaway"
+    },
+    {
+      "description": "mosque"
+    },
+    {
+      "description": "movie_rental"
+    },
+    {
+      "description": "movie_theater"
+    },
+    {
+      "description": "moving_company"
+    },
+    {
+      "description": "museum"
+    },
+    {
+      "description": "night_club"
+    },
+    {
+      "description": "painter"
+    },
+    {
+      "description": "park"
+    },
+    {
+      "description": "parking"
+    },
+    {
+      "description": "pet_store"
+    },
+    {
+      "description": "pharmacy"
+    },
+    {
+      "description": "physiotherapist"
+    },
+    {
+      "description": "place_of_worship"
+    },
+    {
+      "description": "plumber"
+    },
+    {
+      "description": "police"
+    },
+    {
+      "description": "post_office"
+    },
+    {
+      "description": "real_estate_agency"
+    },
+    {
+      "description": "restaurant"
+    },
+    {
+      "description": "roofing_contractor"
+    },
+    {
+      "description": "rv_park"
+    },
+    {
+      "description": "school"
+    },
+    {
+      "description": "shoe_store"
+    },
+    {
+      "description": "shopping_mall"
+    },
+    {
+      "description": "spa"
+    },
+    {
+      "description": "stadium"
+    },
+    {
+      "description": "storage"
+    },
+    {
+      "description": "store"
+    },
+    {
+      "description": "subway_station"
+    },
+    {
+      "description": "synagogue"
+    },
+    {
+      "description": "taxi_stand"
+    },
+    {
+      "description": "train_station"
+    },
+    {
+      "description": "transit_station"
+    },
+    {
+      "description": "travel_agency"
+    },
+    {
+      "description": "university"
+    },
+    {
+      "description": "veterinary_care"
+    },
+    {
+      "description": "zoo"
+    }
+  ]
+}
