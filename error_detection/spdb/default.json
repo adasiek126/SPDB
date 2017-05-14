@@ -1,0 +1,64 @@
+{
+  "linie": [
+    {
+      "nrLinii": 1,
+      "IdPrzystankuKońcowego": 1,
+      "przystanki": [
+        {
+          "id": 1,
+          "dobryX": 12,
+          "dobryY": 13,
+          "zlyX": 123,
+          "zlyY": 1234,
+          "nazwa": "Młociny"
+        },
+        {
+          "id": 2,
+          "dobryX": 12,
+          "dobryY": 13,
+          "zlyX": 123,
+          "zlyY": 1234,
+          "nazwa": "Centrum"
+        },
+        {
+          "id": 3,
+          "dobryX": 12,
+          "dobryY": 13,
+          "zlyX": 123,
+          "zlyY": 1234,
+          "nazwa": "Kabaty"
+        }
+      ]
+    },
+    {
+      "nrLinii": 1,
+      "IdPrzystankuKońcowego": 3,
+      "przystanki": [
+        {
+          "id": 1,
+          "dobryX": 14,
+          "dobryY": 13,
+          "zlyX": 123,
+          "zlyY": 1234,
+          "nazwa": "Młociny"
+        },
+        {
+          "id": 2,
+          "dobryX": 12,
+          "dobryY": 13,
+          "zlyX": 123,
+          "zlyY": 1234,
+          "nazwa": "Centrum"
+        },
+        {
+          "id": 3,
+          "dobryX": 12,
+          "dobryY": 13,
+          "zlyX": 123,
+          "zlyY": 1234,
+          "nazwa": "Kabaty"
+        }
+      ]
+    }
+  ]
+}

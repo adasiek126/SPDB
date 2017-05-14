@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0,text/html,charset=UTF-8">
+    <meta charset="UTF-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0 auto;
+        padding: 50px;
+      }
+      #legend {
+	    border-radius: 15px;
+	    background: white;
+	    padding: 5px;
+	    margin: 10px;
+    }
+      .legend-red {
+        display: inline-block;
+        background-color: #FF5400;
+        width: 100px;
+        height: 5px;
+        vertical-align: middle;
+        border: solid 1px silver;
+      }
+      .legend-green {
+        display: inline-block;
+        width:100px;
+	    height:5px;
+        background-color: #00FF00;
+        border: solid 1px silver;
+      }
+      .legend-blue {
+        display: inline-block;
+        background-color: #0000FF;
+        width:100px;
+	    height:5px;
+	    border: solid 1px silver;
+      }
+      .legend-green-apple {
+        display: inline-block;
+        background-color: #BBFF00;
+        width:100px;
+	    height:5px;
+	    border: solid 1px silver;
+      }
+      .legend-yellow {
+        display: inline-block;
+        background-color: #E1FF00;
+        width:100px;
+	    height:5px;
+	    border: solid 1px silver;
+      }
+      .legend-orange {
+        display: inline-block;
+        background-color: #FFa500;
+        width:100px;
+	    height:5px;
+	    border: solid 1px silver;
+      }
+      .map{
+        margin: 0 auto;
+        border: 3px solid #73AD21;
+        padding: 10px;
+        height: 600px;
+		width: 800px;
+      }
+      .options{
+        margin: 0 auto;
+        width: 600px;
+        padding: 10px;
+      }
+      .options p{
+        margin: 0 auto;
+        padding: 5px;
+      }
+      .histogram{
+        margin: 0 auto;
+        width: 600px;
+        padding: 10px;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUxBPezZO32WdfWSeL_7E_VqXXocr90PM&libraries=geometry" type="text/javascript"></script>
+
+
+  </head>
+  <div ng-app="refreshingMap" ng-controller="mapController" ng-init="initMap(53.106585,23.122518, 15)">
+    <div class="map" id="map"></div>
+    <div class="options">
+      <p>Dzień tygodnia: <select ng-model="selectedDay" ng-options="day for day in days" ng-init="selectedDay=days[0]"></select></p>
+      <p>Godzina od: <select ng-model="hourFrom" ng-options="hour for hour in hoursFrom" ng-init="hourFrom=8" ng-change="changeHoursTo()"></select></p>
+      <p>Godzina do: <select ng-model="hourTo" ng-options="hour for hour in hoursTo" ng-init="hourTo=10;changeHoursTo()" ng-change="changeHoursFrom()"></select></p>
+      <p><input type="submit" name="clear" ng-click="clearLines()" value="Wyczyść">
+        <input type="submit" name="traffic" ng-click="getDataFromApi()" value="Analiza ruchu"></p>
+      <p>Linia: <select ng-model="selectedLineNumber" ng-options="lineNumber for lineNumber in linesNumbers" ng-init="loadLines()"></select></p>
+      <p><input type="submit" name="lineTraffic" ng-click="getLineTrafficData()" value="Analiza ruchu dla linii"></p>
+      <p>Minimalne wsparcie względne <input type="number" min="0.1" max="1.0" step="0.1" ng-model="minSupport"></p>
+      <p>Próg przyrostu opóźnienia <input type="number" min="1" max="99999999" step="1" ng-model="minDiffDelay"></p>
+      <p><input type="submit" name="findStrech" ng-click="getStretches()" value="Znajdź korkujące się odcinki"></p>
+      <br />
+    </div>
+    <div class="histogram">
+      <p>Histogram</p>
+      <img ng-src='{{histogram}}' alt="Histogram" id="histogram">
+    </div>
+    <div id="legend" style="">
+       <p><u><i>Odrabianie opóźnienia</i></u><section class="legend-blue"></section> </p>
+       <p><u><i>Zmiana opóźnienia do 30s</i></u> <div class="legend-green"></div></p>
+       <p><u><i>Zmiana opóźnienia do 60s</i></u> <div class="legend-green-apple"></div></p>
+       <p><u><i>Zmiana opóźnienia do 120s</i></u> <div class="legend-yellow"></div></p>
+      <p><u><i>Zmiana opóźnienia do 300s</i></u> <div class="legend-orange"></div></p>
+      <p><u><i>Zmiana opóźnienia większa niż 300s</i></u> <div class="legend-red"></div></p>
+     </div>
+  </div>
+    <script>
+		var app = angular.module('refreshingMap', []);
+		app.controller('mapController', function($scope, $http){
+		    $scope.hoursFrom = [];
+		    $scope.hoursTo = [];
+		    for(i=0;i<24;i++){
+		        $scope.hoursFrom.push(i);
+		        $scope.hoursTo.push(i);
+		    }
+		    $scope.days = ["Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela"]
+		    $scope.daysCodes = new Map();
+		    $scope.daysCodes.set("Poniedziałek", "MON");
+		    $scope.daysCodes.set("Wtorek", "TUE");
+		    $scope.daysCodes.set("Środa", "WED");
+		    $scope.daysCodes.set("Czwartek", "THU");
+		    $scope.daysCodes.set("Piątek", "FRI");
+		    $scope.daysCodes.set("Sobota", "SAT");
+		    $scope.daysCodes.set("Niedziela", "SUN");
+			$scope.apiUrl = 'http://localhost:5000/api/';
+			$scope.histogram = '';
+			$scope.directionService = new google.maps.DirectionsService();
+			$scope.directionsDisplay = new google.maps.DirectionsRenderer();
+			$scope.lat = 53.139;
+			$scope.lng = 23.159;
+			$scope.minSupport=0.7;
+			$scope.minDiffDelay=100;
+			$scope.lines = [];
+			$scope.initialized = false;
+			$scope.initMap = function(){
+			    if($scope.initialized == false){
+                $scope.map = new google.maps.Map(document.getElementById('map'), {
+                      center: {lat:  Number($scope.lat), lng: Number($scope.lng)},
+                      zoom: 13
+                    });
+                $scope.map.controls[google.maps.ControlPosition.RIGHT_TOP].push(document.getElementById('legend'));
+                $scope.info_window = new google.maps.InfoWindow;
+                $scope.initialized=true;
+                }
+			}
+			google.maps.event.addDomListener(window, 'load', $scope.initMap);
+			$scope.clearLines = function(){
+					$scope.lines.forEach(function(line){
+						line.line.setMap(null);
+					});
+					$scope.lines = [];
+				}
+			$scope.drawLines = function(pointRoutes){
+				pointRoutes.forEach(function(route){
+					var line = new google.maps.Polyline({
+							path: route.points,
+							geodesic: true,
+							strokeColor: route.color,
+							strokeOpacity: 1.0,
+							strokeWeight: 3
+						})
+						var content = route.content
+						var lineWithContent = {'line':line,
+						                        'content':content};
+						$scope.lines.push(lineWithContent);
+                        line.addListener('click', function(){
+                          if(content != undefined){
+                            $scope.info_window.setPosition($scope.findCenterOfPath(line.getPath().getArray()));
+                            $scope.info_window.setContent(content);
+                            $scope.info_window.open($scope.map,this);
+                            }
+                        });
+						line.setMap($scope.map);
+				})
+			}
+			$scope.getDataFromApi = function(){
+			    $scope.clearLines();
+			    $scope.histogram=$scope.apiUrl + "getHistogram/" + $scope.daysCodes.get($scope.selectedDay) + "/" + $scope.hourFrom + "/" + $scope.hourTo;
+			    var url = $scope.apiUrl;
+			    url += "getRoutes/";
+			    url += $scope.daysCodes.get($scope.selectedDay);
+			    url += "/";
+			    url += $scope.hourFrom;
+			    url += "/";
+			    url += $scope.hourTo;
+				$http({
+					method: 'GET',
+					url: url,
+					responseType: 'json'
+				}).then(function(response){
+					$scope.drawLines(response.data);
+				})
+			}
+			$scope.changeHoursTo = function(){
+                $scope.hoursTo = [];
+                for(i=$scope.hourFrom; i<24; i++){
+                    $scope.hoursTo.push(i);
+                }
+                if($scope.hourTo <= $scope.hourFrom){
+                    $scope.hourTo = $scope.hourFrom;
+                }
+			}
+			$scope.changeHoursFrom = function(){
+			    $scope.hoursFrom = [];
+                for(i=0;i<=$scope.hourTo;i++){
+                    $scope.hoursFrom.push(i);
+                }
+                if($scope.hourFrom > $scope.hourTo){
+                    $scope.hourFrom = $scope.hourTo;
+                }
+			}
+			$scope.loadLines = function(){
+			    var url = $scope.apiUrl;
+			    url += "getLines";
+				$http({
+					method: 'GET',
+					url: url,
+					responseType: 'json'
+				}).then(function(response){
+					$scope.linesNumbers = response.data;
+					$scope.selectedLineNumber = $scope.linesNumbers[0];
+				})
+			}
+			$scope.getLineTrafficData = function(){
+			    $scope.clearLines();
+			    $scope.histogram=$scope.apiUrl + "getHistogramLine/" + $scope.daysCodes.get($scope.selectedDay) + "/" + $scope.hourFrom + "/" + $scope.hourTo + "/" + $scope.selectedLineNumber;
+			    var url = $scope.apiUrl;
+			    url += "getLinesTraffic/";
+			    url += $scope.daysCodes.get($scope.selectedDay);
+			    url += "/";
+			    url += $scope.hourFrom;
+			    url += "/";
+			    url += $scope.hourTo;
+			    url += "/";
+			    url += $scope.selectedLineNumber;
+				$http({
+					method: 'GET',
+					url: url,
+					responseType: 'json'
+				}).then(function(response){
+					$scope.drawLines(response.data);
+				})
+			}
+            $scope.distance = function(line_by_two_points, point){
+                var x1 = line_by_two_points[0].lng;
+                var x2 = line_by_two_points[1].lng;
+                var y1 = line_by_two_points[0].lat;
+                var y2 = line_by_two_points[1].lat;
+                var x0 = point.lng;
+                var y0 = point.lat;
+                return Math.abs((y2 - y1)*x0-(x2-x1)*y0+x2*y1-y2*x1)/Math.sqrt((y2-y1)*(y2-y1)+(x2-x1)*(x2-x1));
+            }
+            $scope.findMinDistFromPathToPoint = function(path_points, point){
+                var dist_ret = 99999999;
+                for(i=0;i<path_points.length-1;i++){
+                    var points_pair = [path_points[i],path_points[i+1]];
+                    var distance = $scope.distance(points_pair,point);
+                    if(distance < dist_ret){
+                        dist_ret = distance;
+                    }
+                }
+                return dist_ret;
+            }
+            $scope.findClosestPath = function(point){
+                var minDist = 99999999;
+                var actLine = $scope.lines[0];
+                $scope.lines.forEach(function(line){
+                    var dist = $scope.findMinDistFromPathToPoint(line.line.getPath().getArray(),point);
+                    if(dist<minDist){
+                        minDist = dist;
+                        actLine = line;
+                    }
+                });
+                return actLine;
+            }
+            $scope.findCenterOfPath = function(path){
+                var pathLength = google.maps.geometry.spherical.computeLength(path);
+                var middleDist = pathLength / 2;
+                var dist = 0;
+                var lineWithCenter = path[0];
+                var beginOfFragmentWithCenter = 0;
+                var lastLength = 0;
+                for(i=0;i<path.length-1;i++){
+                    if(dist<middleDist){
+                        lastLength = google.maps.geometry.spherical.computeDistanceBetween(path[i],path[i+1]);
+                        lineWithCenter = path[i];
+                        beginOfFragmentWithCenter = i;
+                        dist += lastLength;
+                    }else{
+                        break;
+                    }
+                }
+                var distOnBeginOfCenterLine = dist - lastLength;
+                var distOnEndOfCenterLine = dist;
+                var percentageOfWholeDistanceOnBeginOfCenterLine = distOnBeginOfCenterLine / pathLength;
+                var percentageOfWholeDistanceOnEndOfCenterLine = dist / pathLength;
+                var a = percentageOfWholeDistanceOnEndOfCenterLine - percentageOfWholeDistanceOnBeginOfCenterLine;
+                var b = 1/a;
+                var c = 0.5 - percentageOfWholeDistanceOnBeginOfCenterLine;
+                var d = c*b;
+                var inBetween = google.maps.geometry.spherical.interpolate(path[beginOfFragmentWithCenter], path[beginOfFragmentWithCenter+1], d);
+                return inBetween;
+            }
+            $scope.getStretches = function(){
+                $scope.clearLines();
+			    $scope.histogram="";
+			    var url = $scope.apiUrl;
+			    url += "getStretches/";
+			    url += $scope.minSupport;
+			    url += "/";
+			    url += $scope.minDiffDelay;
+				$http({
+					method: 'GET',
+					url: url,
+					responseType: 'json'
+				}).then(function(response){
+					$scope.drawLines(response.data);
+				})
+            }
+
+            $scope.test = function(){
+                var routes = [{'points':[
+                    {'lat': 52.999226, 'lng': 23.151409},
+                   {'lat': 52.9945, 'lng': 23.150332},
+                   {'lat': 52.992036, 'lng': 23.149696},
+                   {'lat': 52.991524, 'lng': 23.149564},
+                   {'lat': 52.987058, 'lng': 23.148453},
+                   {'lat': 52.986564, 'lng': 23.148329},
+                   {'lat': 52.986311, 'lng': 23.148276},
+                   {'lat': 52.986072, 'lng': 23.14822},
+                   {'lat': 52.984915, 'lng': 23.14818},
+                   {'lat': 52.982368, 'lng': 23.147693},
+                   {'lat': 52.981921, 'lng': 23.147602}],
+                   'color': '#00FF00',
+                   'content':'<b>Testowy teskt</b>'}
+                ]
+				$scope.drawLines(routes);
+			}
+		})
+    </script>
+
+  </body>
+</html>
