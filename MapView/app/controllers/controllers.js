@@ -60,6 +60,7 @@ var MyFirstController = function ($scope, $http, $q, userData, userGravatar, git
     $scope.minDiffDelay = 100;
     $scope.lines = [];
     $scope.initialized = false;
+    $scope.places=[];
     $scope.markerIconN = {
         path: google.maps.SymbolPath.CIRCLE,
         scale: 8.5,
@@ -75,17 +76,20 @@ var MyFirstController = function ($scope, $http, $q, userData, userGravatar, git
         strokeWeight: 0.4
     };
 
-    $scope.models = [
-        {listName: "A", items: [], dragging: false},
-        {listName: "B", items: [], dragging: false}
-    ];
-
     var promise = placeService.getPlacesType();
     promise.then(function (data) {
-            $scope.places= data.data.placeTypes;
-            console.log($scope.places);
+            angular.forEach(data.data.placeTypes, function(place, index) {
+                angular.forEach(place, function(description, index) {
+                    $scope.places.push({label: description});
+                });
+            });
         }
     )
+    console.log($scope.places);
+    $scope.models = [
+        {listName: "A", items: $scope.places, dragging: false},
+        {listName: "B", items: [], dragging: false}
+    ];
 
     /**
      * dnd-dragging determines what data gets serialized and send to the receiver
@@ -139,15 +143,16 @@ var MyFirstController = function ($scope, $http, $q, userData, userGravatar, git
         });
     };
 
-    // Generate the initial model
-    angular.forEach($scope.models, function (list) {
-        for (var i = 1; i <= 4; ++i) {
-            list.items.push({label: "Item " + list.listName + i});
-        }
-    });
+
+    // // Generate the initial model
+    // angular.forEach($scope.models, function(list) {
+    //     for (var i = 1; i <= 4; ++i) {
+    //         list.items.push({label: "Item " + list.listName + i});
+    //     }
+    // });
 
     // Model to JSON for demo purpose
-    $scope.$watch('models', function (model) {
+    $scope.$watch('models', function(model) {
         $scope.modelAsJson = angular.toJson(model, true);
     }, true);
 
