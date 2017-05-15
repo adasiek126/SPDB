@@ -2,7 +2,7 @@
  * Created by Adam Zieliński on 2017-05-13.
  */
 
-var MyFirstController = function ($scope, $http, $q, userData, userGravatar, gitHubUserLookup, placeService) {
+var BusStopController = function ($scope, $http, $q, userData, userGravatar, gitHubUserLookup, googlePlacesService, busStopsService) {
     $scope.ManyHellos = ['Hello', 'Hola', 'Bonjour', 'Guten Tag', 'Ciao', 'Namaste', 'Yiasou'];
 
     $scope.data = userData.user;
@@ -26,14 +26,63 @@ var MyFirstController = function ($scope, $http, $q, userData, userGravatar, git
         $scope.error = "Ooops, something went wrong..";
     };
 
+    $scope.showBusStopsModel = {
+        goodBusStops: false,
+        badBusStops: false,
+        busStopToDirection: false,
+        busStopFromDirection: false
+    };
+
+    $scope.googleAvailablePlaces = [];
+
+    $scope.busStop = {
+        ID: 0,
+        name: "",
+        gX: 0,
+        gY: 0,
+        bX: 0,
+        bY: 0
+    };
+
+    $scope.busLine = {
+        number: 0,
+        endStopID: 0,
+        stops: []
+    };
+
+    $scope.busStops = [];
+
+    $scope.availableBusLines = [];
+
+    $scope.initialized = false;
+
+    $scope.markerIconNegative = {
+        path: google.maps.SymbolPath.CIRCLE,
+        scale: 8.5,
+        fillColor: "#F00",
+        fillOpacity: 0.4,
+        strokeWeight: 0.4
+    };
+    $scope.markerIconPositive = {
+        path: google.maps.SymbolPath.CIRCLE,
+        scale: 8.5,
+        fillColor: "#0F0",
+        fillOpacity: 0.4,
+        strokeWeight: 0.4
+    };
+
+    $scope.apiUrl = 'http://localhost:5000/api/';
+    $scope.startPoint = {lat: 53.139, lng: 23.159}; // Białystok
+
+
     // Część Dorsza do ogarnięcia
     $scope.hoursFrom = [];
     $scope.hoursTo = [];
-    for (i = 0; i < 24; i++) {
+    for (var i = 0; i < 24; i++) {
         $scope.hoursFrom.push(i);
         $scope.hoursTo.push(i);
     }
-    $scope.days = ["Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela"]
+    $scope.days = ["Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela"];
     $scope.daysCodes = new Map();
     $scope.daysCodes.set("Poniedziałek", "MON");
     $scope.daysCodes.set("Wtorek", "TUE");
@@ -43,53 +92,84 @@ var MyFirstController = function ($scope, $http, $q, userData, userGravatar, git
     $scope.daysCodes.set("Sobota", "SAT");
     $scope.daysCodes.set("Niedziela", "SUN");
     $scope.locations = [
-        ['Bondi Beach', -33.890542, 151.274856, 4],
-        ['Coogee Beach', -33.923036, 151.259052, 5],
-        ['Cronulla Beach', -34.028249, 151.157507, 3],
-        ['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
-        ['Maroubra Beach', -33.950198, 151.259302, 1]
+        ['Bondi Beach', 53.1390, 23.1593, 1],
+        ['Coogee Beach', 53.1391, 23.1589, 2],
+        ['Cronulla Beach', 53.1392, 23.1588, 3]
     ];
-    $scope.apiUrl = 'http://localhost:5000/api/';
+
     $scope.histogram = '';
     $scope.directionService = new google.maps.DirectionsService();
     $scope.directionsDisplay = new google.maps.DirectionsRenderer();
-    $scope.lat = -33.92; //53.139; Białystok rules
-    $scope.lng = 151.25; //23.159;
-    $scope.startPoint = {lat: -33.866, lng: 151.196};
+
+    $scope.lat = $scope.startPoint.lat;
+    $scope.lng = $scope.startPoint.lng;
     $scope.minSupport = 0.7;
     $scope.minDiffDelay = 100;
     $scope.lines = [];
-    $scope.initialized = false;
-    $scope.places=[];
-    $scope.markerIconN = {
-        path: google.maps.SymbolPath.CIRCLE,
-        scale: 8.5,
-        fillColor: "#F00",
-        fillOpacity: 0.4,
-        strokeWeight: 0.4
-    };
-    $scope.markerIconP = {
-        path: google.maps.SymbolPath.CIRCLE,
-        scale: 8.5,
-        fillColor: "#0F0",
-        fillOpacity: 0.4,
-        strokeWeight: 0.4
-    };
 
-    var promise = placeService.getPlacesType();
-    promise.then(function (data) {
-            angular.forEach(data.data.placeTypes, function(place, index) {
-                angular.forEach(place, function(description, index) {
-                    $scope.places.push({label: description});
+
+    // nasze
+
+    var promiseGooglePlaces = googlePlacesService.getGoogleAvailablePlaces();
+    promiseGooglePlaces.then(function (data) {
+            angular.forEach(data.data.placeTypes, function (place, index) {
+                angular.forEach(place, function (description, index) {
+                    $scope.googleAvailablePlaces.push({label: description});
                 });
             });
         }
-    )
-    console.log($scope.places);
-    $scope.models = [
-        {listName: "A", items: $scope.places, dragging: false},
-        {listName: "B", items: [], dragging: false}
+    );
+
+    console.log(["Available Google places:\n ", $scope.googleAvailablePlaces]);
+    $scope.googlePlacesModels = [
+        {listName: "of available places", items: $scope.googleAvailablePlaces, dragging: false},
+        {listName: "of taken places", items: [], dragging: false}
     ];
+
+    // Model to JSON for demo purpose
+    $scope.$watch('googlePlacesModels', function (model) {
+        $scope.modelAsJsonGoogleAvailablePlaces = angular.toJson(model, true);
+    }, true);
+
+    var promiseBusStopPlaces = busStopsService.getBusStopPlaces();
+    promiseBusStopPlaces.then(function (data) {
+            // angular.forEach(data.data.busLines, function (line, index) {
+            //     angular.forEach(line, function (lineContent, index) {
+            //         $scope.busLine.number = {label: lineNumber};
+            //         $scope.busLine.endStopID = endStopID;
+            //         $scope.busLine.stops = [];
+            //         angular.forEach(stops, function (id, gX, gY, bX, bY, name, index) {
+            //             $scope.busStop.ID = id;
+            //             $scope.busStop.gX = gX;
+            //             $scope.busStop.gY = gY;
+            //             $scope.busStop.bX = bX;
+            //             $scope.busStop.bY = bY;
+            //             $scope.busStop.name = name;
+            //             $scope.busLine.stops.push($scope.busStop);
+            //         });
+            //         $scope.availableBusLines.push($scope.busLine);
+            //     });
+            // });
+            angular.forEach(data.data.busLines, function (line, index) {
+                $scope.availableBusLines.push(line);
+                // angular.forEach(line.stops, function (stop, index) {
+                //    $scope.busStops.push(stop);
+                // });
+            });
+        }
+    );
+
+    console.log(["Available bus stops:\n ", $scope.availableBusLines]);
+    $scope.busStopsModels = [
+        {listName: "of available bus stops", items: $scope.availableBusLines, dragging: false},
+        {listName: "of taken bus stops", items: [], dragging: false}
+    ];
+
+
+    // Model to JSON for demo purpose
+    $scope.$watch('busStopsModels', function (model) {
+        $scope.modelAsJsonAvailableBusStops = angular.toJson(model, true);
+    }, true);
 
     /**
      * dnd-dragging determines what data gets serialized and send to the receiver
@@ -109,7 +189,7 @@ var MyFirstController = function ($scope, $http, $q, userData, userGravatar, git
      * image, since otherwise only the one item that the user actually dragged
      * would be shown as drag image.
      */
-    $scope.onDragstart = function (list, event) {
+    $scope.onDragStart = function (list, event) {
         list.dragging = true;
         if (event.dataTransfer.setDragImage) {
             var img = new Image();
@@ -131,7 +211,7 @@ var MyFirstController = function ($scope, $http, $q, userData, userGravatar, git
             .concat(items)
             .concat(list.items.slice(index));
         return true;
-    }
+    };
 
     /**
      * Last but not least, we have to remove the previously dragged items in the
@@ -145,19 +225,22 @@ var MyFirstController = function ($scope, $http, $q, userData, userGravatar, git
 
 
     // // Generate the initial model
-    // angular.forEach($scope.models, function(list) {
+    // angular.forEach($scope.googlePlacesModels, function(list) {
     //     for (var i = 1; i <= 4; ++i) {
     //         list.items.push({label: "Item " + list.listName + i});
     //     }
     // });
 
-    // Model to JSON for demo purpose
-    $scope.$watch('models', function(model) {
-        $scope.modelAsJson = angular.toJson(model, true);
-    }, true);
+
+
+
 
     $scope.initMap = function () {
-        if ($scope.initialized == false) {
+        if ($scope.initialized === false) {
+
+            $scope.drawCircle('goodBusStopCircle', 'green');
+            $scope.drawCircle('badBusStopCircle', 'red');
+
             $scope.map = new google.maps.Map(document.getElementById('map'), {
                 center: $scope.startPoint,
                 zoom: 13,
@@ -166,7 +249,7 @@ var MyFirstController = function ($scope, $http, $q, userData, userGravatar, git
             $scope.map.controls[google.maps.ControlPosition.RIGHT_TOP].push(document.getElementById('legend'));
             $scope.info_window = new google.maps.InfoWindow;
             $scope.initialized = true;
-            $scope.createBusStopMarkers($scope.locations, $scope.markerIconP);
+            $scope.createBusStopMarkers($scope.locations, $scope.markerIconPositive);
 
             var service = new google.maps.places.PlacesService($scope.map);
             service.nearbySearch({
@@ -174,8 +257,18 @@ var MyFirstController = function ($scope, $http, $q, userData, userGravatar, git
                 radius: 500,
                 type: ['store']
             }, $scope.processResults);
+
+
         }
-    }
+    };
+
+    $scope.drawCircle = function (id, color) {
+        var canvas = document.getElementById(id);
+        var context = canvas.getContext("2d");
+        context.arc(20, 20, 20, 0, Math.PI * 2, false);
+        context.fillStyle = color;
+        context.fill()
+    };
 
     google.maps.event.addDomListener(window, 'load', $scope.initMap);
 
@@ -184,7 +277,7 @@ var MyFirstController = function ($scope, $http, $q, userData, userGravatar, git
             line.line.setMap(null);
         });
         $scope.lines = [];
-    }
+    };
 
     $scope.processResults = function (results, status) {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
@@ -192,7 +285,7 @@ var MyFirstController = function ($scope, $http, $q, userData, userGravatar, git
                 $scope.createPlacesMarkers(results[i]);
             }
         }
-    }
+    };
 
     $scope.createPlacesMarkers = function (place) {
         var placeLoc = place.geometry.location;
@@ -215,7 +308,7 @@ var MyFirstController = function ($scope, $http, $q, userData, userGravatar, git
             $scope.info_window.setContent(place.name);
             $scope.info_window.open($scope.map, this);
         });
-    }
+    };
 
     $scope.createBusStopMarkers = function (locations, icon) {
         var marker, i;
@@ -233,7 +326,7 @@ var MyFirstController = function ($scope, $http, $q, userData, userGravatar, git
                 }
             })(marker, i));
         }
-    }
+    };
 
     $scope.drawLines = function (pointRoutes) {
         pointRoutes.forEach(function (route) {
@@ -243,15 +336,15 @@ var MyFirstController = function ($scope, $http, $q, userData, userGravatar, git
                 strokeColor: route.color,
                 strokeOpacity: 1.0,
                 strokeWeight: 3
-            })
-            var content = route.content
+            });
+            var content = route.content;
             var lineWithContent = {
                 'line': line,
                 'content': content
             };
             $scope.lines.push(lineWithContent);
             line.addListener('click', function () {
-                if (content != undefined) {
+                if (content !== undefined) {
                     $scope.info_window.setPosition($scope.findCenterOfPath(line.getPath().getArray()));
                     $scope.info_window.setContent(content);
                     $scope.info_window.open($scope.map, this);
@@ -259,7 +352,8 @@ var MyFirstController = function ($scope, $http, $q, userData, userGravatar, git
             });
             line.setMap($scope.map);
         })
-    }
+    };
+
     $scope.getDataFromApi = function () {
         $scope.clearLines();
         $scope.histogram = $scope.apiUrl + "getHistogram/" + $scope.daysCodes.get($scope.selectedDay) + "/" + $scope.hourFrom + "/" + $scope.hourTo;
@@ -277,16 +371,17 @@ var MyFirstController = function ($scope, $http, $q, userData, userGravatar, git
         }).then(function (response) {
             $scope.drawLines(response.data);
         })
-    }
+    };
+
     $scope.changeHoursTo = function () {
         $scope.hoursTo = [];
-        for (i = $scope.hourFrom; i < 24; i++) {
+        for (var i = $scope.hourFrom; i < 24; i++) {
             $scope.hoursTo.push(i);
         }
         if ($scope.hourTo <= $scope.hourFrom) {
             $scope.hourTo = $scope.hourFrom;
         }
-    }
+    };
     $scope.changeHoursFrom = function () {
         $scope.hoursFrom = [];
         for (i = 0; i <= $scope.hourTo; i++) {
@@ -295,7 +390,7 @@ var MyFirstController = function ($scope, $http, $q, userData, userGravatar, git
         if ($scope.hourFrom > $scope.hourTo) {
             $scope.hourFrom = $scope.hourTo;
         }
-    }
+    };
     $scope.loadLines = function () {
         var url = $scope.apiUrl;
         url += "getLines";
@@ -307,7 +402,7 @@ var MyFirstController = function ($scope, $http, $q, userData, userGravatar, git
             $scope.linesNumbers = response.data;
             $scope.selectedLineNumber = $scope.linesNumbers[0];
         })
-    }
+    };
     $scope.getLineTrafficData = function () {
         $scope.clearLines();
         $scope.histogram = $scope.apiUrl + "getHistogramLine/" + $scope.daysCodes.get($scope.selectedDay) + "/" + $scope.hourFrom + "/" + $scope.hourTo + "/" + $scope.selectedLineNumber;
@@ -327,7 +422,7 @@ var MyFirstController = function ($scope, $http, $q, userData, userGravatar, git
         }).then(function (response) {
             $scope.drawLines(response.data);
         })
-    }
+    };
     $scope.distance = function (line_by_two_points, point) {
         var x1 = line_by_two_points[0].lng;
         var x2 = line_by_two_points[1].lng;
@@ -336,7 +431,7 @@ var MyFirstController = function ($scope, $http, $q, userData, userGravatar, git
         var x0 = point.lng;
         var y0 = point.lat;
         return Math.abs((y2 - y1) * x0 - (x2 - x1) * y0 + x2 * y1 - y2 * x1) / Math.sqrt((y2 - y1) * (y2 - y1) + (x2 - x1) * (x2 - x1));
-    }
+    };
     $scope.findMinDistFromPathToPoint = function (path_points, point) {
         var dist_ret = 99999999;
         for (i = 0; i < path_points.length - 1; i++) {
@@ -347,7 +442,7 @@ var MyFirstController = function ($scope, $http, $q, userData, userGravatar, git
             }
         }
         return dist_ret;
-    }
+    };
     $scope.findClosestPath = function (point) {
         var minDist = 99999999;
         var actLine = $scope.lines[0];
@@ -359,7 +454,7 @@ var MyFirstController = function ($scope, $http, $q, userData, userGravatar, git
             }
         });
         return actLine;
-    }
+    };
     $scope.findCenterOfPath = function (path) {
         var pathLength = google.maps.geometry.spherical.computeLength(path);
         var middleDist = pathLength / 2;
@@ -387,7 +482,7 @@ var MyFirstController = function ($scope, $http, $q, userData, userGravatar, git
         var d = c * b;
         var inBetween = google.maps.geometry.spherical.interpolate(path[beginOfFragmentWithCenter], path[beginOfFragmentWithCenter + 1], d);
         return inBetween;
-    }
+    };
     $scope.getStretches = function () {
         $scope.clearLines();
         $scope.histogram = "";
@@ -403,7 +498,7 @@ var MyFirstController = function ($scope, $http, $q, userData, userGravatar, git
         }).then(function (response) {
             $scope.drawLines(response.data);
         })
-    }
+    };
 
     $scope.test = function () {
         var routes = [{
@@ -422,10 +517,10 @@ var MyFirstController = function ($scope, $http, $q, userData, userGravatar, git
             'color': '#00FF00',
             'content': '<b>Testowy teskt</b>'
         }
-        ]
+        ];
         $scope.drawLines(routes);
     }
 
 };
 
-app.controller("MyFirstController", MyFirstController);
+app.controller("BusStopController", BusStopController);

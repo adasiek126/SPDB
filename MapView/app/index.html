@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="myfirstangularapp">
+<html ng-app="SPDBBusStopApp" ng-controller="BusStopController">
 
 <head>
     <meta charset="utf-8"/>
@@ -10,13 +10,214 @@
           href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"/>
     <script data-require="bootstrap@*" data-semver="3.3.2"
             src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style/style.css"/>
-    <link rel="stylesheet" type="text/css" href="style/multi.css"/>
+    <link rel="stylesheet" type="text/css" href="style/basicStyle.css"/>
+    <link rel="stylesheet" type="text/css" href="style/dragDropList.css"/>
 </head>
 
-<body>
+<div class="mainApp" ng-init="initMap()">
+
+    <div class="displayMap" id="map"></div>
+
+    <div class="busStops">
+        <div class="col-md-6">
+            <div class="busStopsRight">
+                <canvas class="busStopCircle" id="goodBusStopCircle" width="40" height="40"></canvas>
+                <div class="busStopsText" id="goodBusStopText">
+                    <label>Good bus stops:
+                        <input type="checkbox" ng-model="showBusStopsModel.goodBusStops">
+                    </label><br/>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="busStopsLeft">
+                <canvas class="busStopCircle" id="badBusStopCircle" width="40" height="40"></canvas>
+                <div class="busStopsText" id="badBusStopText">
+                    <label>Bad bus stops:
+                        <input type="checkbox" ng-model="showBusStopsModel.badBusStops">
+                    </label><br/>
+                </div>
+            </div>
+        </div>
+        <!--Wiem, że brzydko to odsuwam, ale nie umiałem inaczej. class alert włazi mi na poprzedniego DIV'a-->
+        <br/>
+        <br/>
+        <br/>
+    </div>
+
+
+    <div class="alert alert-success">
+        <strong>Instructions:</strong>
+        Click on items to select/unselect them. When dragging, all selected items will be moved at once.
+    </div>
+
+    <div class="alert alert-success">
+        Buses lines and directions
+    </div>
+
+    <div class="busLineDescription">
+        <div class="col-md-3">
+            <p>Bus line:
+                <label>
+                    <select ng-model="selectedLineNumber" ng-options="lineNumber for lineNumber in linesNumbers"
+                            ng-init="loadLines()"></select>
+                </label></p><br/>
+        </div>
+
+        <div class="col-md-3">
+            <div class="busStopDirection">
+                <label>First bus direction:
+                    <input type="checkbox" ng-model="showBusStopsModel.busStopToDirection">
+                </label><br/>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="busStopDirection">
+                <label>Second bus direction:
+                    <input type="checkbox" ng-model="showBusStopsModel.busStopFromDirection">
+                </label><br/>
+            </div>
+        </div>
+        <br/>
+        <br/>
+    </div>
+
+
+    <div class="alert alert-success">
+        Bus stops for line number
+    </div>
+
+    <div class="dragDropSelectList row">
+        <div class="col-md-8">
+            <div class="row">
+                <div ng-repeat="list in busStopsModels" class="col-md-6">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">List </h3>
+                        </div>
+                        <div class="panel-body" ng-include="'html/multiBusStops.html'"></div>
+                    </div>
+                </div>
+            </div>
+            <div view-source="multi"></div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Generated Model</h3>
+                </div>
+                <div class="panel-body">
+                    <pre class="code">{{modelAsJsonAvailableBusStops}}</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="alert alert-success">
+        Interesting places to find on map
+    </div>
+
+    <div class="dragDropSelectList row">
+        <div class="col-md-8">
+            <div class="row">
+                <div ng-repeat="list in googlePlacesModels" class="col-md-6">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">List {{list.listName}}</h3>
+                        </div>
+                        <div class="panel-body" ng-include="'html/multiGoogleAvailablePlaces.html'"></div>
+                    </div>
+                </div>
+            </div>
+            <div view-source="multi"></div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Generated Model</h3>
+                </div>
+                <div class="panel-body">
+                    <pre class="code">{{modelAsJsonGoogleAvailablePlaces}}</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="options">
+
+        <p>Dzień tygodnia: <label>
+            <select ng-model="selectedDay" ng-options="day for day in days"
+                    ng-init="selectedDay=days[0]"></select>
+        </label></p>
+
+        <p>Godzina od: <label>
+            <select ng-model="hourFrom" ng-options="hour for hour in hoursFrom" ng-init="hourFrom=8"
+                    ng-change="changeHoursTo()"></select>
+        </label></p>
+
+        <p>Godzina do: <label>
+            <select ng-model="hourTo" ng-options="hour for hour in hoursTo"
+                    ng-init="hourTo=10;changeHoursTo()" ng-change="changeHoursFrom()"></select>
+        </label></p>
+        <p><input type="submit" name="clear" ng-click="clearLines()" value="Wyczyść"><input type="submit" name="traffic"
+                                                                                            ng-click="getDataFromApi()"
+                                                                                            value="Analiza ruchu"></p>
+        <p>Linia: <label>
+            <select ng-model="selectedLineNumber" ng-options="lineNumber for lineNumber in linesNumbers"
+                    ng-init="loadLines()"></select>
+        </label></p>
+
+        <p><input type="submit" name="lineTraffic" ng-click="getLineTrafficData()" value="Analiza ruchu dla linii"></p>
+
+        <p>Minimalne wsparcie względne <label>
+            <input type="number" min="0.1" max="1.0" step="0.1" ng-model="minSupport">
+        </label></p>
+
+        <p>Próg przyrostu opóźnienia <label>
+            <input type="number" min="1" max="99999999" step="1" ng-model="minDiffDelay">
+        </label></p>
+
+        <p><input type="submit" name="findStrech" ng-click="getStretches()" value="Znajdź korkujące się odcinki"></p>
+        <br/>
+    </div>
+
+    <div class="histogram">
+        <p>Histogram</p>
+        <img ng-src='{{histogram}}' alt="Histogram" id="histogram">
+    </div>
+
+    <div id="legend" style="">
+        <p><u><i>Odrabianie opóźnienia</i></u>
+            <section class="legend-blue"></section>
+        </p>
+        <p><u><i>Zmiana opóźnienia do 30s</i></u>
+        <div class="legend-green"></div>
+        </p>
+        <p><u><i>Zmiana opóźnienia do 60s</i></u>
+        <div class="legend-green-apple"></div>
+        </p>
+        <p><u><i>Zmiana opóźnienia do 120s</i></u>
+        <div class="legend-yellow"></div>
+        </p>
+        <p><u><i>Zmiana opóźnienia do 300s</i></u>
+        <div class="legend-orange"></div>
+        </p>
+        <p><u><i>Zmiana opóźnienia większa niż 300s</i></u>
+        <div class="legend-red"></div>
+        </p>
+    </div>
+
+
+</div>
+
 <div class="container">
-    <div ng-controller="MyFirstController">
+    <div>
         <p class="text-muted">
             1. Lower case filter:</p>
         <p class="text-info">First Name : {{data.firstName | lowercase}}</p>
@@ -53,87 +254,9 @@
     </div>
 </div>
 
-<div ng-app="myfirstangularapp" ng-controller="MyFirstController" ng-init="initMap(53.106585,23.122518, 15)">
-    <div class="map" id="map"></div>
-    <div class="options">
-        <p>Dzień tygodnia: <select ng-model="selectedDay" ng-options="day for day in days"
-                                   ng-init="selectedDay=days[0]"></select></p>
-        <p>Godzina od: <select ng-model="hourFrom" ng-options="hour for hour in hoursFrom" ng-init="hourFrom=8"
-                               ng-change="changeHoursTo()"></select></p>
-        <p>Godzina do: <select ng-model="hourTo" ng-options="hour for hour in hoursTo"
-                               ng-init="hourTo=10;changeHoursTo()" ng-change="changeHoursFrom()"></select></p>
-        <p><input type="submit" name="clear" ng-click="clearLines()" value="Wyczyść">
-            <input type="submit" name="traffic" ng-click="getDataFromApi()" value="Analiza ruchu"></p>
-        <p>Linia: <select ng-model="selectedLineNumber" ng-options="lineNumber for lineNumber in linesNumbers"
-                          ng-init="loadLines()"></select></p>
-        <p><input type="submit" name="lineTraffic" ng-click="getLineTrafficData()" value="Analiza ruchu dla linii"></p>
-        <p>Minimalne wsparcie względne <input type="number" min="0.1" max="1.0" step="0.1" ng-model="minSupport"></p>
-        <p>Próg przyrostu opóźnienia <input type="number" min="1" max="99999999" step="1" ng-model="minDiffDelay"></p>
-        <p><input type="submit" name="findStrech" ng-click="getStretches()" value="Znajdź korkujące się odcinki"></p>
-        <br/>
-    </div>
-    <div class="histogram">
-        <p>Histogram</p>
-        <img ng-src='{{histogram}}' alt="Histogram" id="histogram">
-    </div>
-    <div id="legend" style="">
-        <p><u><i>Odrabianie opóźnienia</i></u>
-            <section class="legend-blue"></section>
-        </p>
-        <p><u><i>Zmiana opóźnienia do 30s</i></u>
-        <div class="legend-green"></div>
-        </p>
-        <p><u><i>Zmiana opóźnienia do 60s</i></u>
-        <div class="legend-green-apple"></div>
-        </p>
-        <p><u><i>Zmiana opóźnienia do 120s</i></u>
-        <div class="legend-yellow"></div>
-        </p>
-        <p><u><i>Zmiana opóźnienia do 300s</i></u>
-        <div class="legend-orange"></div>
-        </p>
-        <p><u><i>Zmiana opóźnienia większa niż 300s</i></u>
-        <div class="legend-red"></div>
-        </p>
-    </div>
 
-    <div class="alert alert-success">
-        <strong>Instructions:</strong>
-        Click on items to select/unselect them. When dragging, all selected items will be moved at once.
-    </div>
+<body>
 
-    <div class="multiDemo row">
-
-        <div class="col-md-8">
-            <div class="row">
-                <div ng-repeat="list in models" class="col-md-6">
-                    <div class="panel panel-info">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">List {{list.listName}}</h3>
-                        </div>
-                        <div class="panel-body" ng-include="'html/multi.html'"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div view-source="multi"></div>
-
-        </div>
-
-        <div class="col-md-4">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Generated Model</h3>
-                </div>
-                <div class="panel-body">
-                    <pre class="code">{{modelAsJson}}</pre>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-</div>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDroMUn-fiNfv87FPLlCQyU_w5FyifMFWM&libraries=geometry&libraries=places"
         type="text/javascript"></script>

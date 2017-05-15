@@ -2,9 +2,9 @@
  * The dnd-list should always have a min-height,
  * otherwise you can't drop into it once it's empty
  */
-.multiDemo ul[dnd-list] {
+.dragDropSelectList ul[dnd-list] {
     min-height: 42px;
-    padding-left: 0px;
+    padding-left: 0;
 }
 
 /**
@@ -12,13 +12,13 @@
  * added to the dnd-list while the user is dragging
  * over it.
  */
-.multiDemo ul[dnd-list] .dndPlaceholder {
+.dragDropSelectList ul[dnd-list] .dndPlaceholder {
     background-color: #ddd;
     display: block;
     min-height: 42px;
 }
 
-.multiDemo ul[dnd-list] li {
+.dragDropSelectList ul[dnd-list] li {
     background-color: #fff;
     border: 1px solid #ddd;
     border-top-right-radius: 4px;
@@ -31,7 +31,12 @@
 /**
  * Show selected elements in green
  */
-.multiDemo ul[dnd-list] li.selected {
+.dragDropSelectList ul[dnd-list] li.selected {
     background-color: #dff0d8;
     color: #3c763d;
+}
+
+.panel-body {
+    height: 500px;
+    overflow-y: scroll;
 }
