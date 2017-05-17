@@ -14,6 +14,8 @@
     <link rel="stylesheet" type="text/css" href="style/dragDropList.css"/>
 </head>
 
+<body>
+
 <div class="mainApp" ng-init="initMap()">
 
     <div class="displayMap" id="map"></div>
@@ -92,12 +94,14 @@
     <div class="dragDropSelectList row">
         <div class="col-md-8">
             <div class="row">
-                <div ng-repeat="list in busStopsModels" class="col-md-6">
+                <div ng-repeat="genList in busStopsModels" class="col-md-6">
                     <div class="panel panel-info">
                         <div class="panel-heading">
-                            <h3 class="panel-title">List </h3>
+                            <h3 class="panel-title">List {{genList.listName}}</h3>
                         </div>
-                        <div class="panel-body" ng-include="'html/multiBusStops.html'"></div>
+                        <div ng-repeat="list in genList.items">
+                            <div class="panel-body" ng-include="'html/multiBusStops.html'"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -149,113 +153,113 @@
     </div>
 
 
-    <div class="options">
+    <!--<div class="options">-->
 
-        <p>Dzień tygodnia: <label>
-            <select ng-model="selectedDay" ng-options="day for day in days"
-                    ng-init="selectedDay=days[0]"></select>
-        </label></p>
+    <!--<p>Dzień tygodnia: <label>-->
+    <!--<select ng-model="selectedDay" ng-options="day for day in days"-->
+    <!--ng-init="selectedDay=days[0]"></select>-->
+    <!--</label></p>-->
 
-        <p>Godzina od: <label>
-            <select ng-model="hourFrom" ng-options="hour for hour in hoursFrom" ng-init="hourFrom=8"
-                    ng-change="changeHoursTo()"></select>
-        </label></p>
+    <!--<p>Godzina od: <label>-->
+    <!--<select ng-model="hourFrom" ng-options="hour for hour in hoursFrom" ng-init="hourFrom=8"-->
+    <!--ng-change="changeHoursTo()"></select>-->
+    <!--</label></p>-->
 
-        <p>Godzina do: <label>
-            <select ng-model="hourTo" ng-options="hour for hour in hoursTo"
-                    ng-init="hourTo=10;changeHoursTo()" ng-change="changeHoursFrom()"></select>
-        </label></p>
-        <p><input type="submit" name="clear" ng-click="clearLines()" value="Wyczyść"><input type="submit" name="traffic"
-                                                                                            ng-click="getDataFromApi()"
-                                                                                            value="Analiza ruchu"></p>
-        <p>Linia: <label>
-            <select ng-model="selectedLineNumber" ng-options="lineNumber for lineNumber in linesNumbers"
-                    ng-init="loadLines()"></select>
-        </label></p>
+    <!--<p>Godzina do: <label>-->
+    <!--<select ng-model="hourTo" ng-options="hour for hour in hoursTo"-->
+    <!--ng-init="hourTo=10;changeHoursTo()" ng-change="changeHoursFrom()"></select>-->
+    <!--</label></p>-->
+    <!--<p><input type="submit" name="clear" ng-click="clearLines()" value="Wyczyść"><input type="submit" name="traffic"-->
+    <!--ng-click="getDataFromApi()"-->
+    <!--value="Analiza ruchu"></p>-->
+    <!--<p>Linia: <label>-->
+    <!--<select ng-model="selectedLineNumber" ng-options="lineNumber for lineNumber in linesNumbers"-->
+    <!--ng-init="loadLines()"></select>-->
+    <!--</label></p>-->
 
-        <p><input type="submit" name="lineTraffic" ng-click="getLineTrafficData()" value="Analiza ruchu dla linii"></p>
+    <!--<p><input type="submit" name="lineTraffic" ng-click="getLineTrafficData()" value="Analiza ruchu dla linii"></p>-->
 
-        <p>Minimalne wsparcie względne <label>
-            <input type="number" min="0.1" max="1.0" step="0.1" ng-model="minSupport">
-        </label></p>
+    <!--<p>Minimalne wsparcie względne <label>-->
+    <!--<input type="number" min="0.1" max="1.0" step="0.1" ng-model="minSupport">-->
+    <!--</label></p>-->
 
-        <p>Próg przyrostu opóźnienia <label>
-            <input type="number" min="1" max="99999999" step="1" ng-model="minDiffDelay">
-        </label></p>
+    <!--<p>Próg przyrostu opóźnienia <label>-->
+    <!--<input type="number" min="1" max="99999999" step="1" ng-model="minDiffDelay">-->
+    <!--</label></p>-->
 
-        <p><input type="submit" name="findStrech" ng-click="getStretches()" value="Znajdź korkujące się odcinki"></p>
-        <br/>
-    </div>
+    <!--<p><input type="submit" name="findStrech" ng-click="getStretches()" value="Znajdź korkujące się odcinki"></p>-->
+    <!--<br/>-->
+    <!--</div>-->
 
-    <div class="histogram">
-        <p>Histogram</p>
-        <img ng-src='{{histogram}}' alt="Histogram" id="histogram">
-    </div>
+    <!--<div class="histogram">-->
+    <!--<p>Histogram</p>-->
+    <!--<img ng-src='{{histogram}}' alt="Histogram" id="histogram">-->
+    <!--</div>-->
 
-    <div id="legend" style="">
-        <p><u><i>Odrabianie opóźnienia</i></u>
-            <section class="legend-blue"></section>
-        </p>
-        <p><u><i>Zmiana opóźnienia do 30s</i></u>
-        <div class="legend-green"></div>
-        </p>
-        <p><u><i>Zmiana opóźnienia do 60s</i></u>
-        <div class="legend-green-apple"></div>
-        </p>
-        <p><u><i>Zmiana opóźnienia do 120s</i></u>
-        <div class="legend-yellow"></div>
-        </p>
-        <p><u><i>Zmiana opóźnienia do 300s</i></u>
-        <div class="legend-orange"></div>
-        </p>
-        <p><u><i>Zmiana opóźnienia większa niż 300s</i></u>
-        <div class="legend-red"></div>
-        </p>
-    </div>
+    <!--<div id="legend" style="">-->
+    <!--<p><u><i>Odrabianie opóźnienia</i></u>-->
+    <!--<section class="legend-blue"></section>-->
+    <!--</p>-->
+    <!--<p><u><i>Zmiana opóźnienia do 30s</i></u>-->
+    <!--<div class="legend-green"></div>-->
+    <!--</p>-->
+    <!--<p><u><i>Zmiana opóźnienia do 60s</i></u>-->
+    <!--<div class="legend-green-apple"></div>-->
+    <!--</p>-->
+    <!--<p><u><i>Zmiana opóźnienia do 120s</i></u>-->
+    <!--<div class="legend-yellow"></div>-->
+    <!--</p>-->
+    <!--<p><u><i>Zmiana opóźnienia do 300s</i></u>-->
+    <!--<div class="legend-orange"></div>-->
+    <!--</p>-->
+    <!--<p><u><i>Zmiana opóźnienia większa niż 300s</i></u>-->
+    <!--<div class="legend-red"></div>-->
+    <!--</p>-->
+    <!--</div>-->
+
+
+    <!--</div>-->
+
+    <!--<div class="container">-->
+    <!--<div>-->
+    <!--<p class="text-muted">-->
+    <!--1. Lower case filter:</p>-->
+    <!--<p class="text-info">First Name : {{data.firstName | lowercase}}</p>-->
+    <!--<hr/>-->
+    <!--<p class="text-muted">-->
+    <!--2. Upper case filter</p>-->
+    <!--<p class="text-info">First Name : {{data.firstName | uppercase }}</p>-->
+    <!--<hr/>-->
+    <!--<p class="text-muted">-->
+    <!--3. Date filter: (mm)</p>-->
+    <!--<p class="text-info">Start Month : {{data.startDate | date:'MM'}}-->
+    <!--</p>-->
+    <!--<hr/>-->
+    <!--<p class="text-muted">-->
+    <!--4. Custom filter to remove all spaces:-->
+    <!--</p>-->
+    <!--<p class="text-info">{{data.dashes | removeAllSpaces}}</p>-->
+    <!--<p></p>-->
+    <!--<hr/>-->
+    <!--<div>-->
+    <!--<img ng-src="{{getGravatar(data.email)}}"/>-->
+    <!--</div>-->
+    <!--<hr/>-->
+    <!--<div>-->
+    <!--<my-input/>-->
+    <!--<label>Github return code:-->
+    <!--<h4 ng-bind="status"></h4>-->
+    <!--</label>-->
+    <!--</div>-->
+    <!--<div>-->
+    <!--<pre>{{user | json}}</pre>-->
+    <!--{{error}}-->
+    <!--</div>-->
+    <!--</div>-->
 
 
 </div>
 
-<div class="container">
-    <div>
-        <p class="text-muted">
-            1. Lower case filter:</p>
-        <p class="text-info">First Name : {{data.firstName | lowercase}}</p>
-        <hr/>
-        <p class="text-muted">
-            2. Upper case filter</p>
-        <p class="text-info">First Name : {{data.firstName | uppercase }}</p>
-        <hr/>
-        <p class="text-muted">
-            3. Date filter: (mm)</p>
-        <p class="text-info">Start Month : {{data.startDate | date:'MM'}}
-        </p>
-        <hr/>
-        <p class="text-muted">
-            4. Custom filter to remove all spaces:
-        </p>
-        <p class="text-info">{{data.dashes | removeAllSpaces}}</p>
-        <p></p>
-        <hr/>
-        <div>
-            <img ng-src="{{getGravatar(data.email)}}"/>
-        </div>
-        <hr/>
-        <div>
-            <my-input/>
-            <label>Github return code:
-                <h4 ng-bind="status"></h4>
-            </label>
-        </div>
-        <div>
-            <pre>{{user | json}}</pre>
-            {{error}}
-        </div>
-    </div>
-</div>
-
-
-<body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDroMUn-fiNfv87FPLlCQyU_w5FyifMFWM&libraries=geometry&libraries=places"
