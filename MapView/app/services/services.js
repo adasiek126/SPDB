@@ -248,15 +248,29 @@ app.factory('userGravatar', function () {
     }
 });
 
-app.service("placeService", function ($http, $q) {
+app.service("googlePlacesService", function ($http, $q) {
 
         var deferred = $q.defer();
         $http.get('resources/json/placeTypes.json').then(function (data) {
                 deferred.resolve(data);
             }
-        )
+        );
 
-        this.getPlacesType = function () {
+        this.getGoogleAvailablePlaces = function () {
+            return deferred.promise;
+        }
+    }
+);
+
+app.service("busStopsService", function ($http, $q) {
+
+        var deferred = $q.defer();
+        $http.get('resources/json/incomingExample.json').then(function (data) {
+                deferred.resolve(data);
+            }
+        );
+
+        this.getBusStopPlaces = function () {
             return deferred.promise;
         }
     }

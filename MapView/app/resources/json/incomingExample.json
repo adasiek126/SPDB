@@ -1,0 +1,64 @@
+{
+  "busLines": [
+    {
+      "lineNumber": 1,
+      "endStopID": 1,
+      "stops": [
+        {
+          "id": 1,
+          "gX": 12,
+          "gY": 13,
+          "bX": 123,
+          "bY": 1234,
+          "name": "Młociny"
+        },
+        {
+          "id": 2,
+          "gX": 12,
+          "gY": 13,
+          "bX": 123,
+          "bY": 1234,
+          "name": "Centrum"
+        },
+        {
+          "id": 3,
+          "gX": 12,
+          "gY": 13,
+          "bX": 123,
+          "bY": 1234,
+          "name": "Kabaty"
+        }
+      ]
+    },
+    {
+      "lineNumber": 1,
+      "endStopID": 3,
+      "stops": [
+        {
+          "id": 1,
+          "gX": 14,
+          "gY": 13,
+          "bX": 123,
+          "bY": 1234,
+          "name": "Młociny"
+        },
+        {
+          "id": 2,
+          "gX": 12,
+          "gY": 13,
+          "bX": 123,
+          "bY": 1234,
+          "name": "Centrum"
+        },
+        {
+          "id": 3,
+          "gX": 12,
+          "gY": 13,
+          "bX": 123,
+          "bY": 1234,
+          "name": "Kabaty"
+        }
+      ]
+    }
+  ]
+}

@@ -1,17 +1,19 @@
-    /* Always set the map height explicitly to define the size of the div
-     * element that contains the map. */
-    /* Optional: Makes the sample page fill the window. */
+/* Always set the map height explicitly to define the size of the div
+ * element that contains the map. */
+/* Optional: Makes the sample page fill the window. */
 html, body {
     height: 100%;
     margin: 0 auto;
-    padding: 50px;
+    padding: 20px 50px;
 }
+
 #legend {
     border-radius: 15px;
     background: white;
     padding: 5px;
     margin: 10px;
 }
+
 .legend-red {
     display: inline-block;
     background-color: #FF5400;
@@ -20,59 +22,100 @@ html, body {
     vertical-align: middle;
     border: solid 1px silver;
 }
+
 .legend-green {
     display: inline-block;
-    width:100px;
-    height:5px;
+    width: 100px;
+    height: 5px;
     background-color: #00FF00;
     border: solid 1px silver;
 }
+
 .legend-blue {
     display: inline-block;
     background-color: #0000FF;
-    width:100px;
-    height:5px;
+    width: 100px;
+    height: 5px;
     border: solid 1px silver;
 }
+
 .legend-green-apple {
     display: inline-block;
     background-color: #BBFF00;
-    width:100px;
-    height:5px;
+    width: 100px;
+    height: 5px;
     border: solid 1px silver;
 }
+
 .legend-yellow {
     display: inline-block;
     background-color: #E1FF00;
-    width:100px;
-    height:5px;
+    width: 100px;
+    height: 5px;
     border: solid 1px silver;
 }
+
 .legend-orange {
     display: inline-block;
     background-color: #FFa500;
-    width:100px;
-    height:5px;
+    width: 100px;
+    height: 5px;
     border: solid 1px silver;
 }
-.map{
+
+.displayMap {
     margin: 0 auto;
     border: 3px solid #73AD21;
     padding: 10px;
-    height: 600px;
-    width: 800px;
+    height: 800px;
+    width: 1000px;
 }
-.options{
+
+.options {
     margin: 0 auto;
     width: 600px;
     padding: 10px;
 }
-.options p{
+
+.options p {
     margin: 0 auto;
     padding: 5px;
 }
-.histogram{
+
+.histogram {
     margin: 0 auto;
     width: 600px;
     padding: 10px;
+}
+
+#goodBusStopText, #badBusStopText {
+    float: left;
+    display: inline;
+}
+
+.busStops {
+    overflow: hidden;
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.busStopsText {
+    float: left;
+    font-size: medium;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.busStopsRight {
+    float: right;
+}
+
+.busStopsLeft {
+    float: left;
+}
+
+.busStopCircle {
+    float: left;
+    margin: 10px auto;
 }
