@@ -68,7 +68,7 @@ class Core:
             for daycourse in variant.list:
                 for stop in daycourse:
                     dis = distance(stop_from_db.point, stop.point_between)
-                    if(dis < 0.2):
+                    if(dis < 1):
                         founded = False
                         for real_stop_point in real_stop_points:
                             if(distance(real_stop_point.point, stop.point_between) < 0.02):
@@ -88,6 +88,7 @@ class Core:
         count = 0
         best_point = None
         max = 0
+        dis = 0
         for real_stop_point in real_stop_points:
             dis = distance(stop.point, real_stop_point.point)       
             if(real_stop_point.how_many/(dis*dis) > max):
@@ -96,8 +97,9 @@ class Core:
         if(best_point is None):
             return None
         av_point = averagePoint(best_point.point_history)
+        res = PossibleBusStop(av_point, best_point.how_many, dis)
         print("Latitude: " + str(av_point.latitude) + " Longitude: " + str(av_point.longitude) + " How many times: " + str(best_point.how_many))
-        return av_point
+        return res
 
     def getLinesForStopId(self, id):
         if(len(self.linesforstop) == 0):
@@ -127,7 +129,7 @@ class Core:
             if(calculated_point is None):
                 print("Didn't find traces")
             else:
-                analyzed_list.append(AnalyzeResult(stop.id, stop.name, stop.point.latitude, stop.point.longitude, calculated_point.latitude, calculated_point.longitude, self.getLinesForStopId(stop.id)))
+                analyzed_list.append(AnalyzeResult(stop.id, stop.name, stop.point.latitude, stop.point.longitude, calculated_point.point.latitude, calculated_point.point.longitude, calculated_point.how_many, self.getLinesForStopId(stop.id)))
         return analyzed_list
             
         
