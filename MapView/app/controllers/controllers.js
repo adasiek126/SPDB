@@ -151,10 +151,9 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
             //     });
             // });
             angular.forEach(data.data.busLines, function (line, index) {
-                $scope.availableBusLines.push(line);
-                // angular.forEach(line.stops, function (stop, index) {
-                //    $scope.busStops.push(stop);
-                // });
+                angular.forEach(line.stops, function (stop, index) {
+                    $scope.availableBusLines.push(stop);
+                });
             });
         }
     );
