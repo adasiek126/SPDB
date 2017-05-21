@@ -10,7 +10,7 @@
           "gY": 13,
           "bX": 123,
           "bY": 1234,
-          "label": "Młociny"
+          "name": "Młociny"
         },
         {
           "id": 2,
@@ -18,7 +18,7 @@
           "gY": 13,
           "bX": 123,
           "bY": 1234,
-          "label": "Centrum"
+          "name": "Centrum"
         },
         {
           "id": 3,
@@ -26,7 +26,7 @@
           "gY": 13,
           "bX": 123,
           "bY": 1234,
-          "label": "Kabaty"
+          "name": "Kabaty"
         }
       ]
     },
@@ -40,7 +40,7 @@
           "gY": 13,
           "bX": 123,
           "bY": 1234,
-          "label": "Młociny"
+          "name": "Młociny"
         },
         {
           "id": 2,
@@ -48,7 +48,7 @@
           "gY": 13,
           "bX": 123,
           "bY": 1234,
-          "label": "Centrum"
+          "name": "Centrum"
         },
         {
           "id": 3,
@@ -56,7 +56,7 @@
           "gY": 13,
           "bX": 123,
           "bY": 1234,
-          "label": "Kabaty"
+          "name": "Kabaty"
         }
       ]
     }

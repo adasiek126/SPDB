@@ -50,6 +50,9 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
         stops: []
     };
 
+    $scope.interestingPlaces = [];
+    $scope.placeMarkers = [];
+
     $scope.busStops = [];
 
     $scope.availableBusLines = [];
@@ -122,8 +125,8 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
 
     console.log(["Available Google places:\n ", $scope.googleAvailablePlaces]);
     $scope.googlePlacesModels = [
-        {listName: "of available places", items: $scope.googleAvailablePlaces, dragging: false},
-        {listName: "of taken places", items: [], dragging: false}
+        {listName: "of available places", items: $scope.googleAvailablePlaces, dragging: false, id: 1},
+        {listName: "of taken places", items: [], dragging: false, id: 2}
     ];
 
     // Model to JSON for demo purpose
@@ -158,10 +161,10 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
         }
     );
 
-    console.log(["Available bus stops:\n ", $scope.availableBusLines]);
+    console.log(["Available bus stops:\n ", $scope.busStopsModels]);
     $scope.busStopsModels = [
-        {listName: "of available bus stops", items: $scope.availableBusLines, dragging: false},
-        {listName: "of taken bus stops", items: [], dragging: false}
+        {listName: "of available bus stops", items: $scope.availableBusLines, dragging: false, id: 1},
+        {listName: "of taken bus stops", items: [], dragging: false, id: 2}
     ];
 
 
@@ -209,12 +212,23 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
         list.items = list.items.slice(0, index)
             .concat(items)
             .concat(list.items.slice(index));
-        return true;
-    };
 
+        /*TODO
+         *
+         * trzeba obczaić jak zachowuje się lista po przerzucanie usnięciu atrakcji
+         * potem jakoś analogicznie zrób to dla przystanków
+         */
+        if (list.id === 2) {
+            $scope.onTypePlaces(list.items);
+        } else {
+
+        }
+
+        return true;
+
+    };
     /**
-     * Last but not least, we have to remove the previously dragged items in the
-     * dnd-moved callback.
+     *
      */
     $scope.onMoved = function (list) {
         list.items = list.items.filter(function (item) {
@@ -222,17 +236,48 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
         });
     };
 
+    $scope.clearMarkers = function () {
+        // Loop through markers and set map to null for each
+        for (var i = 0; i < $scope.placeMarkers.length; i++) {
+            $scope.placeMarkers[i].setMap(null);
+        }
+        // Reset the markers array
+        $scope.placeMarkers = [];
+    }
 
-    // // Generate the initial model
-    // angular.forEach($scope.googlePlacesModels, function(list) {
-    //     for (var i = 1; i <= 4; ++i) {
-    //         list.items.push({label: "Item " + list.listName + i});
-    //     }
-    // });
+    /** Selected places by user
+     *
+     * @param placesList
+     */
+    $scope.onTypePlaces = function (placesList) {
+        $scope.clearPlaces();
+        $scope.clearMarkers();
+        placesList.forEach(function (item, index) {
+            if (typeof item.label != 'undefined') {
+                $scope.interestingPlaces.push(item.label);
+            }
+        });
+    }
+    /*
+        TODO
+        jak najpierw wskażesz jedno miejsce interesujące to wyświetli się co trzeba
+        potem jak dodasz następne wywali się, podobnie jak będziesz chciał kilka miejsc naraz dać
+     */
+    $scope.showInterestingPlaces = function () {
+        console.log($scope.interestingPlaces);
+        var service = new google.maps.places.PlacesService($scope.map);
+        service.nearbySearch({
+            location: $scope.startPoint,
+            radius: 500,
+            animation: google.maps.Animation.DROP,
+            type: $scope.interestingPlaces
+        }, $scope.processResults);
+        google.maps.event.trigger($scope.map, 'resize');
+    }
 
-
-
-
+    $scope.clearPlaces = function () {
+        $scope.interestingPlaces = [];
+    };
 
     $scope.initMap = function () {
         if ($scope.initialized === false) {
@@ -249,17 +294,18 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
             $scope.info_window = new google.maps.InfoWindow;
             $scope.initialized = true;
             $scope.createBusStopMarkers($scope.locations, $scope.markerIconPositive);
-
             var service = new google.maps.places.PlacesService($scope.map);
             service.nearbySearch({
                 location: $scope.startPoint,
                 radius: 500,
-                type: ['store']
+                type: ["bakery"]
             }, $scope.processResults);
 
+            console.log(["Markes:\n ", $scope.placeMarkers]);
 
         }
     };
+
 
     $scope.drawCircle = function (id, color) {
         var canvas = document.getElementById(id);
@@ -302,6 +348,8 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
             title: place.name,
             position: placeLoc
         });
+
+        $scope.placeMarkers.push(marker);
 
         google.maps.event.addListener(marker, 'click', function () {
             $scope.info_window.setContent(place.name);
