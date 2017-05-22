@@ -63,7 +63,7 @@ class Database:
         list = []  
         for row in result: 
             if(row['latitude'] is not None and row['longitude'] is not None):
-                list.append(StopPoint(row['loid'], Point(float(row['latitude']), float(row['longitude'])), row['name']))
+                list.append(StopPoint(row['loid'], Point(float(row['latitude']), float(row['longitude'])), row['name'], None))
         result.close()
         return list
 

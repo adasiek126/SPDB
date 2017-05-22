@@ -15,7 +15,7 @@ Variant = namedtuple("Variant", "id, list")
 
 RealStopPoint = recordtype("RealStopPoints", "point, how_many, point_history")
 
-StopPoint = namedtuple("StopPoint", "id, point, name")
+StopPoint = recordtype("StopPoint", "id, point, name, lines")
 
 AnalyzeResult = namedtuple("AnalyzeResult", "id, name, original_latitude, original_longitude, calculated_latitude, calculated_longitude, how_many, distance, lines")
 

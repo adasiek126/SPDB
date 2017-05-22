@@ -16,6 +16,8 @@ def index():
 @app.route('/api/getBusStops', methods=['GET'])
 def getBusStops():
     list = db.getAllStopPoints()
+    for el in list:
+        el.lines = core.getLinesForStopId(el.id)
     return(json.dumps(list, namedtuple_as_object=True, indent=2, ensure_ascii=False))    
     
 
