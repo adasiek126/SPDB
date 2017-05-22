@@ -190,12 +190,7 @@
 			    $scope.clearLines();
 			    $scope.histogram=$scope.apiUrl + "getHistogram/" + $scope.daysCodes.get($scope.selectedDay) + "/" + $scope.hourFrom + "/" + $scope.hourTo;
 			    var url = $scope.apiUrl;
-			    url += "getRoutes/";
-			    url += $scope.daysCodes.get($scope.selectedDay);
-			    url += "/";
-			    url += $scope.hourFrom;
-			    url += "/";
-			    url += $scope.hourTo;
+			    url += "getBadBusStop/1/20/200/100";
 				$http({
 					method: 'GET',
 					url: url,

@@ -17,7 +17,7 @@ RealStopPoint = recordtype("RealStopPoints", "point, how_many, point_history")
 
 StopPoint = namedtuple("StopPoint", "id, point, name")
 
-AnalyzeResult = namedtuple("AnalyzeResult", "id, name, original_latitude, original_longitude, calculated_latitude, calculated_longitude, how_many, lines")
+AnalyzeResult = namedtuple("AnalyzeResult", "id, name, original_latitude, original_longitude, calculated_latitude, calculated_longitude, how_many, distance, lines")
 
 LinesWithStops = namedtuple("LinesWithStops", "id_stop, line_name")
 
