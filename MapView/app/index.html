@@ -21,8 +21,8 @@
     <div class="displayMap" id="map"></div>
 
 
-    <p><input type="submit" name="traffic" ng-click="showBusStops()" value="Dodaj przystanki"></p>
-    <p><input type="submit" name="traffic" ng-click="showInterestingGooglePlaces()" value="Analiza atrakcji"></p>
+    <p><input type="submit" name="busStopsShow" ng-click="showBusStops()" value="Dodaj przystanki"></p>
+    <p><input type="submit" name="interestingPlacesShow" ng-click="showInterestingGooglePlaces()" value="Analiza atrakcji"></p>
 
     <div class="busStops">
         <div class="col-md-6">
@@ -30,7 +30,7 @@
                 <canvas class="busStopCircle" id="goodBusStopCircle" width="40" height="40"></canvas>
                 <div class="busStopsText" id="goodBusStopText">
                     <label>Good bus stops:
-                        <input type="checkbox" ng-model="showBusStopsModel.goodBusStops">
+                        <input type="checkbox" ng-model="showBusStopsModel.goodBusStopsCheck">
                     </label><br/>
                 </div>
             </div>
@@ -41,7 +41,7 @@
                 <canvas class="busStopCircle" id="badBusStopCircle" width="40" height="40"></canvas>
                 <div class="busStopsText" id="badBusStopText">
                     <label>Bad bus stops:
-                        <input type="checkbox" ng-model="showBusStopsModel.badBusStops">
+                        <input type="checkbox" ng-model="showBusStopsModel.badBusStopsCheck">
                     </label><br/>
                 </div>
             </div>
@@ -62,11 +62,14 @@
         Buses lines and directions
     </div>
 
+    <p><input type="submit" name="selectAllBusStopsBtn" ng-click="selectAllBusStops()" value="Wszystkie przystanki"></p>
+    <p><input type="submit" name="selectNoneBusStopsBtn" ng-click="selectNoneBusStops()" value="Żaden przystanek"></p>
+
     <div class="busLineDescription">
         <div class="col-md-3">
             <p>Bus line:
                 <label>
-                    <select ng-model="selectedBusLine" ng-options="lineNumber for lineNumber in availableBusLines"></select>
+                    <select ng-model="selectedBusLine" ng-options="lineNumber for lineNumber in availableBusLines" ng-change="busSelection()"></select>
                 </label></p><br/>
         </div>
 
@@ -91,7 +94,7 @@
 
 
     <div class="alert alert-success">
-        Interesting places to find on map
+        Bus stops to choose
     </div>
 
     <div class="dragDropSelectList row">

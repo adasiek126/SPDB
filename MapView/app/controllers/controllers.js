@@ -34,8 +34,8 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
 
 
     $scope.showBusStopsModel = {
-        goodBusStopsCheck: false,
-        badBusStopsCheck: false,
+        goodBusStopsCheck: true,
+        badBusStopsCheck: true,
         busStopToDirection: false,
         busStopFromDirection: false
     };
@@ -47,6 +47,7 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
 
 
     $scope.busStopsModel = [];
+    $scope.busStopsModelForDisplay = [];
     $scope.googlePlacesTypesModel = [];
 
     $scope.takenBS = [];
@@ -116,6 +117,22 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
     $scope.minDiffDelay = 100;
     $scope.lines = [];
 
+    // TODO zobacz czy jesteś w stanie jakoś lepiej to napisać
+
+    // TODO rozdzielic przystanki na kierunki autobusu
+
+    // TODO dodać parametry jakie bachanek chce dostać
+
+    // TODO ułożyć ładnie przyciski na froncie
+
+    // TODO co do rysownia linii przebiegu trasy busa, to nie wiem sam, bo niektóre, np 9 raz ma końcowy w jednyma  raz w drugim.
+
+    // TODO dodać jakąś opcję z możliwością wyznaczenia najbliższej atrakcji danego typu, to co z Bembenikiem gadaliśmy
+
+    // TODO dodać możliwość podania parametru odległości w jakiej od przystanku ma być szukane
+
+    // TODO ewentualnie dodać ładniejsze wyświetlanie nazw tych rzeczy googlowskich
+
 
     function initModels() {
         var promiseBusStopPlaces = busStopsService.getBusStopPlaces();
@@ -133,18 +150,33 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
                     angular.forEach(busStop.lines, function (line, index) {
                         if ($scope.availableBusLines.indexOf(line) < 0)
                             $scope.availableBusLines.push(line);
-
                     });
                     $scope.availableBusLines.sort($scope.naturalCompare);
                     $scope.selectedBusLine = $scope.availableBusLines[0];
+                    var ifAddToDisplay = false;
+                    angular.forEach(busStop.lines, function (line, index) {
+                      if (line === $scope.selectedBusLine)
+                          ifAddToDisplay = true;
+                    });
+                    if (ifAddToDisplay) {
+                        $scope.busStopsModelForDisplay.push({
+                            id: busStop.id,
+                            name: busStop.name,
+                            oLA : busStop.original_latitude,
+                            oLO : busStop.original_longitude,
+                            cLA : busStop.calculated_latitude,
+                            cLO : busStop.calculated_longitude,
+                            lines: busStop.lines
+                        });
+                    }
                 });
-            }
-        );
+            });
 
-        console.log(["Available bus stops:", $scope.busStopsModel]);
+        console.log(["Available bus stops:", $scope.busStopsModelForDisplay]);
         $scope.busStopsDragDropModel = [
-            {listName: "of taken bus stops", items: [], dragging: false, id: $scope.idTakenBusStops},
-            {listName: "of available bus stops", items: $scope.busStopsModel, dragging: false, id: $scope.idAvailableBusStops}
+            {listName: "of available bus stops", items: $scope.busStopsModelForDisplay, dragging: false, id: $scope.idAvailableBusStops},
+            {listName: "of taken bus stops", items: [], dragging: false, id: $scope.idTakenBusStops}
+
         ];
 
         // Model to JSON for demo purpose
@@ -165,8 +197,8 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
 
         console.log(["Available Google places:", $scope.googlePlacesTypesModel]);
         $scope.googlePlacesDragDropModel = [
-            {listName: "of taken places", items: [], dragging: false, id: $scope.idTakenGoogle},
-            {listName: "of available places", items: $scope.googlePlacesTypesModel, dragging: false, id: $scope.idAvailableGoogle }
+            {listName: "of available places", items: $scope.googlePlacesTypesModel, dragging: false, id: $scope.idAvailableGoogle },
+            {listName: "of taken places", items: [], dragging: false, id: $scope.idTakenGoogle}
         ];
 
         // Model to JSON for demo purpose
@@ -192,12 +224,6 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
             $scope.drawCircle('goodBusStopCircle', 'green');
             $scope.drawCircle('badBusStopCircle', 'red');
 
-
-
-
-            console.log(["new", $scope.busStopsModel]);
-            console.log($scope.busStopsModel.length);
-
             $scope.initialized = true;
 
         }
@@ -207,6 +233,46 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
 
     // nasze
 
+    $scope.busSelection = function() {
+        console.log("Selected bus line: ", $scope.selectedBusLine);
+        $scope.busStopsModelForDisplay = [];
+
+      for (var i = 0; i < $scope.busStopsModel.length; i++) {
+          var busStop = $scope.busStopsModel[i];
+          for (var line = 0; line < busStop.lines.length; line++) {
+              if (busStop.lines[line] === $scope.selectedBusLine) {
+                  $scope.busStopsModelForDisplay.push(busStop);
+              }
+          }
+      }
+
+      for (var j = 0; j < $scope.busStopsDragDropModel.length; j++) {
+          if ($scope.busStopsDragDropModel[j].id === $scope.idAvailableBusStops) {
+              $scope.busStopsDragDropModel[j].items = $scope.busStopsModelForDisplay;
+          }
+      }
+
+    };
+
+    $scope.selectAllBusStops = function () {
+        for (var j = 0; j < $scope.busStopsDragDropModel.length; j++) {
+            if ($scope.busStopsDragDropModel[j].id === $scope.idTakenBusStops) {
+                $scope.busStopsDragDropModel[j].items = $scope.busStopsModelForDisplay;
+            }
+        }
+
+        $scope.takenBS = $scope.busStopsModelForDisplay;
+    };
+
+    $scope.selectNoneBusStops = function () {
+        for (var j = 0; j < $scope.busStopsDragDropModel.length; j++) {
+            if ($scope.busStopsDragDropModel[j].id === $scope.idTakenBusStops) {
+                $scope.busStopsDragDropModel[j].items = [];
+            }
+        }
+
+        $scope.takenBS = [];
+    };
 
     /**
      * dnd-dragging determines what data gets serialized and send to the receiver
@@ -369,18 +435,21 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
     $scope.prepareBusStops = function () {
 
         for (var i = 0; i < $scope.takenBS.length; i++) {
-            // TODO if na zaznaczonych checkboxach
-            $scope.goodBusStops.push([]);
-            $scope.goodBusStops[i].push($scope.takenBS[i].id);
-            $scope.goodBusStops[i].push($scope.takenBS[i].name);
-            $scope.goodBusStops[i].push($scope.takenBS[i].cLA);
-            $scope.goodBusStops[i].push($scope.takenBS[i].cLO);
+            if ($scope.showBusStopsModel.goodBusStopsCheck) {
+                $scope.goodBusStops.push([]);
+                $scope.goodBusStops[i].push($scope.takenBS[i].id);
+                $scope.goodBusStops[i].push($scope.takenBS[i].name);
+                $scope.goodBusStops[i].push($scope.takenBS[i].cLA);
+                $scope.goodBusStops[i].push($scope.takenBS[i].cLO);
+            }
 
-            $scope.badBusStops.push([]);
-            $scope.badBusStops[i].push($scope.takenBS[i].id);
-            $scope.badBusStops[i].push($scope.takenBS[i].name);
-            $scope.badBusStops[i].push($scope.takenBS[i].oLA);
-            $scope.badBusStops[i].push($scope.takenBS[i].oLO);
+            if ($scope.showBusStopsModel.badBusStopsCheck) {
+                $scope.badBusStops.push([]);
+                $scope.badBusStops[i].push($scope.takenBS[i].id);
+                $scope.badBusStops[i].push($scope.takenBS[i].name);
+                $scope.badBusStops[i].push($scope.takenBS[i].oLA);
+                $scope.badBusStops[i].push($scope.takenBS[i].oLO);
+            }
         }
 
     };
