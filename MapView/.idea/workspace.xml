@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/app/controllers/controllers.js" description="            angular.forEach(data.data.busLines, fu..." line="155" />
+    <bookmark url="file://$PROJECT_DIR$/app/controllers/controllers.js" description="            angular.forEach(data.data.busLines, fu..." line="137" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5aafc89-68fd-4b43-b8df-7222c7e0ffe1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/html/multiBusStops.html" afterPath="$PROJECT_DIR$/app/html/dragListBusStops.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/html/multiGoogleAvailablePlaces.html" afterPath="$PROJECT_DIR$/app/html/dragListGooglePlaces.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/controllers.js" afterPath="$PROJECT_DIR$/app/controllers/controllers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/services/services.js" afterPath="$PROJECT_DIR$/app/services/services.js" />
     </list>
     <ignored path="MapView.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,8 +32,8 @@
       <file leaf-file-name="controllers.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="308" column="85" lean-forward="false" selection-start-line="308" selection-start-column="85" selection-end-line="308" selection-end-column="85" />
+            <state relative-caret-position="504">
+              <caret line="320" column="0" lean-forward="true" selection-start-line="320" selection-start-column="0" selection-end-line="320" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -47,11 +42,21 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="685">
-              <caret line="149" column="72" lean-forward="false" selection-start-line="149" selection-start-column="40" selection-end-line="149" selection-end-column="72" />
+            <state relative-caret-position="340">
+              <caret line="23" column="17" lean-forward="true" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
               <folding>
-                <marker date="1495527165824" expanded="true" signature="5461:5471" ph="..." />
+                <marker date="1495532584510" expanded="true" signature="5566:5576" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="services.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/services/services.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="654">
+              <caret line="267" column="56" lean-forward="false" selection-start-line="267" selection-start-column="56" selection-end-line="267" selection-end-column="56" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -472,12 +477,12 @@
       <workItem from="1494931724434" duration="220000" />
       <workItem from="1494933999751" duration="1396000" />
       <workItem from="1495038128341" duration="31028000" />
-      <workItem from="1495523423811" duration="6679000" />
+      <workItem from="1495523423811" duration="11047000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90007000" />
+    <option name="totallyTimeSpent" value="94375000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -543,7 +548,7 @@
         <state relative-caret-position="4199">
           <caret line="247" column="16" lean-forward="false" selection-start-line="247" selection-start-column="16" selection-end-line="247" selection-end-column="16" />
           <folding>
-            <marker date="1495527165824" expanded="true" signature="5461:5471" ph="..." />
+            <marker date="1495532584510" expanded="true" signature="5566:5576" ph="..." />
           </folding>
         </state>
       </provider>
@@ -593,7 +598,7 @@
         <state relative-caret-position="4199">
           <caret line="247" column="16" lean-forward="false" selection-start-line="247" selection-start-column="16" selection-end-line="247" selection-end-column="16" />
           <folding>
-            <marker date="1495527165824" expanded="true" signature="5461:5471" ph="..." />
+            <marker date="1495532584510" expanded="true" signature="5566:5576" ph="..." />
           </folding>
         </state>
       </provider>
@@ -627,7 +632,7 @@
         <state relative-caret-position="1700">
           <caret line="100" column="76" lean-forward="false" selection-start-line="100" selection-start-column="76" selection-end-line="100" selection-end-column="76" />
           <folding>
-            <marker date="1495527165824" expanded="true" signature="5461:5471" ph="..." />
+            <marker date="1495532584510" expanded="true" signature="5566:5576" ph="..." />
           </folding>
         </state>
       </provider>
@@ -683,7 +688,7 @@
         <state relative-caret-position="1683">
           <caret line="99" column="70" lean-forward="false" selection-start-line="99" selection-start-column="70" selection-end-line="99" selection-end-column="70" />
           <folding>
-            <marker date="1495527165824" expanded="true" signature="5461:5471" ph="..." />
+            <marker date="1495532584510" expanded="true" signature="5566:5576" ph="..." />
           </folding>
         </state>
       </provider>
@@ -738,7 +743,7 @@
         <state relative-caret-position="1921">
           <caret line="113" column="73" lean-forward="false" selection-start-line="113" selection-start-column="73" selection-end-line="113" selection-end-column="73" />
           <folding>
-            <marker date="1495527165824" expanded="true" signature="5461:5471" ph="..." />
+            <marker date="1495532584510" expanded="true" signature="5566:5576" ph="..." />
           </folding>
         </state>
       </provider>
@@ -877,10 +882,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/services/services.js">
+    <entry file="file://$PROJECT_DIR$/app/html/dragListGooglePlaces.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="654">
-          <caret line="267" column="56" lean-forward="false" selection-start-line="267" selection-start-column="56" selection-end-line="267" selection-end-column="56" />
+        <state relative-caret-position="153">
+          <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -893,28 +898,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/html/dragListGooglePlaces.html">
+    <entry file="file://$PROJECT_DIR$/app/services/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        <state relative-caret-position="654">
+          <caret line="267" column="56" lean-forward="false" selection-start-line="267" selection-start-column="56" selection-end-line="267" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="685">
-          <caret line="149" column="72" lean-forward="false" selection-start-line="149" selection-start-column="40" selection-end-line="149" selection-end-column="72" />
+        <state relative-caret-position="340">
+          <caret line="23" column="17" lean-forward="true" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
           <folding>
-            <marker date="1495527165824" expanded="true" signature="5461:5471" ph="..." />
+            <marker date="1495532584510" expanded="true" signature="5566:5576" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="308" column="85" lean-forward="false" selection-start-line="308" selection-start-column="85" selection-end-line="308" selection-end-column="85" />
+        <state relative-caret-position="504">
+          <caret line="320" column="0" lean-forward="true" selection-start-line="320" selection-start-column="0" selection-end-line="320" selection-end-column="0" />
           <folding />
         </state>
       </provider>
