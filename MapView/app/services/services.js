@@ -265,7 +265,7 @@ app.service("googlePlacesService", function ($http, $q) {
 app.service("busStopsService", function ($http, $q) {
 
         var deferred = $q.defer();
-        $http.get('resources/json/incomingExample.json').then(function (data) {
+        $http.get('resources/json/stops_with_lines_small.json').then(function (data) {
                 deferred.resolve(data);
             }
         );

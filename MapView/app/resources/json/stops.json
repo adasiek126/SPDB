@@ -1,0 +1,7762 @@
+[
+  {
+    "id": 1,
+    "point": {
+      "latitude": 53.116306,
+      "longitude": 23.127989
+    },
+    "name": "KPK Zajezdnia"
+  },
+  {
+    "id": 2,
+    "point": {
+      "latitude": 53.124832,
+      "longitude": 23.114172
+    },
+    "name": "Popiełuszki/Hetmańska"
+  },
+  {
+    "id": 3,
+    "point": {
+      "latitude": 53.125888,
+      "longitude": 23.105895
+    },
+    "name": "Popiełuszki/Upalna"
+  },
+  {
+    "id": 4,
+    "point": {
+      "latitude": 53.126542,
+      "longitude": 23.101432
+    },
+    "name": "Popiełuszki/Os.Słoneczny Stok"
+  },
+  {
+    "id": 5,
+    "point": {
+      "latitude": 53.1296,
+      "longitude": 23.094653
+    },
+    "name": "Armii Krajowej/Powstańców"
+  },
+  {
+    "id": 6,
+    "point": {
+      "latitude": 53.132297,
+      "longitude": 23.089333
+    },
+    "name": "Armii Krajowej/Szkoła"
+  },
+  {
+    "id": 7,
+    "point": {
+      "latitude": 53.132613,
+      "longitude": 23.086973
+    },
+    "name": "Armii Krajowej/Pętla"
+  },
+  {
+    "id": 8,
+    "point": {
+      "latitude": 53.132317,
+      "longitude": 23.087395
+    },
+    "name": "Armii Krajowej/Pętla"
+  },
+  {
+    "id": 9,
+    "point": {
+      "latitude": 53.132223,
+      "longitude": 23.089377
+    },
+    "name": "Armii Krajowej/Szkoła"
+  },
+  {
+    "id": 10,
+    "point": {
+      "latitude": 53.128713,
+      "longitude": 23.095775
+    },
+    "name": "Armii Krajowej/Bat. Chłopskich"
+  },
+  {
+    "id": 11,
+    "point": {
+      "latitude": 53.126347,
+      "longitude": 23.100272
+    },
+    "name": "Popiełuszki/Kościół Św.Jadwigi"
+  },
+  {
+    "id": 12,
+    "point": {
+      "latitude": 53.125365,
+      "longitude": 23.107592
+    },
+    "name": "Popiełuszki/Słonecznikowa"
+  },
+  {
+    "id": 13,
+    "point": {
+      "latitude": 53.124103,
+      "longitude": 23.116315
+    },
+    "name": "Gen.E.Fieldorfa \"Nila\""
+  },
+  {
+    "id": 14,
+    "point": {
+      "latitude": 53.123357,
+      "longitude": 23.12269
+    },
+    "name": "Kopernika/Składowa"
+  },
+  {
+    "id": 15,
+    "point": {
+      "latitude": 53.125015,
+      "longitude": 23.128347
+    },
+    "name": "Kopernika/Kanonierska"
+  },
+  {
+    "id": 16,
+    "point": {
+      "latitude": 53.126475,
+      "longitude": 23.137623
+    },
+    "name": "Łomżyńska/Młynowa"
+  },
+  {
+    "id": 17,
+    "point": {
+      "latitude": 53.131628,
+      "longitude": 23.138682
+    },
+    "name": "Wyszyńskiego / Urząd Marszałkowski"
+  },
+  {
+    "id": 18,
+    "point": {
+      "latitude": 53.129937,
+      "longitude": 23.141265
+    },
+    "name": "Wyszyńskiego"
+  },
+  {
+    "id": 19,
+    "point": {
+      "latitude": 53.128975,
+      "longitude": 23.144335
+    },
+    "name": "Sosnowskiego / Wyszyńskiego"
+  },
+  {
+    "id": 20,
+    "point": {
+      "latitude": 53.131278,
+      "longitude": 23.152665
+    },
+    "name": "Kalinowskiego / Teatr Lalek"
+  },
+  {
+    "id": 21,
+    "point": {
+      "latitude": 53.131337,
+      "longitude": 23.155477
+    },
+    "name": "Plac Uniwersytecki"
+  },
+  {
+    "id": 22,
+    "point": {
+      "latitude": 53.133732,
+      "longitude": 23.156895
+    },
+    "name": "Malmeda/Zamenhofa"
+  },
+  {
+    "id": 23,
+    "point": {
+      "latitude": 53.136642,
+      "longitude": 23.16378
+    },
+    "name": "Jurowiecka/Sienkiewicza"
+  },
+  {
+    "id": 24,
+    "point": {
+      "latitude": 53.138905,
+      "longitude": 23.16079
+    },
+    "name": "Jurowiecka/Ciepła"
+  },
+  {
+    "id": 25,
+    "point": {
+      "latitude": 53.143928,
+      "longitude": 23.157548
+    },
+    "name": "Zakłady Graficzne"
+  },
+  {
+    "id": 26,
+    "point": {
+      "latitude": 53.145555,
+      "longitude": 23.15301
+    },
+    "name": "Radzymińska/Białostoczek"
+  },
+  {
+    "id": 27,
+    "point": {
+      "latitude": 53.14769,
+      "longitude": 23.149343
+    },
+    "name": "Sokólska/Zagumienna"
+  },
+  {
+    "id": 28,
+    "point": {
+      "latitude": 53.153153,
+      "longitude": 23.153777
+    },
+    "name": "Tysiąclecia P.P./Technikum Elektryczne"
+  },
+  {
+    "id": 29,
+    "point": {
+      "latitude": 53.156128,
+      "longitude": 23.151885
+    },
+    "name": "Tysiąclecia P.P./St.Paliw"
+  },
+  {
+    "id": 30,
+    "point": {
+      "latitude": 53.158135,
+      "longitude": 23.15252
+    },
+    "name": "Andersa/Tysiąclecia P.P."
+  },
+  {
+    "id": 31,
+    "point": {
+      "latitude": 53.154567,
+      "longitude": 23.15937
+    },
+    "name": "Fabryka Dywanów"
+  },
+  {
+    "id": 32,
+    "point": {
+      "latitude": 53.15216,
+      "longitude": 23.16597
+    },
+    "name": "Andersa/1 Armii W.P."
+  },
+  {
+    "id": 33,
+    "point": {
+      "latitude": 53.15287,
+      "longitude": 23.166323
+    },
+    "name": "Elektrociepłownia"
+  },
+  {
+    "id": 34,
+    "point": {
+      "latitude": 53.154085,
+      "longitude": 23.162017
+    },
+    "name": "Fabryka Dywanów"
+  },
+  {
+    "id": 35,
+    "point": {
+      "latitude": 53.158493,
+      "longitude": 23.153223
+    },
+    "name": "Andersa/Tysiąclecia P.P."
+  },
+  {
+    "id": 36,
+    "point": {
+      "latitude": 53.157558,
+      "longitude": 23.15146
+    },
+    "name": "Tysiąclecia P.P./St.Paliw"
+  },
+  {
+    "id": 37,
+    "point": {
+      "latitude": 53.152227,
+      "longitude": 23.154005
+    },
+    "name": "Tysiąclecia P.P./Grodzieńska"
+  },
+  {
+    "id": 38,
+    "point": {
+      "latitude": 53.14954,
+      "longitude": 23.152097
+    },
+    "name": "Sokólska/Szkoła"
+  },
+  {
+    "id": 39,
+    "point": {
+      "latitude": 53.146172,
+      "longitude": 23.15026
+    },
+    "name": "Zagumienna"
+  },
+  {
+    "id": 40,
+    "point": {
+      "latitude": 53.14558,
+      "longitude": 23.155527
+    },
+    "name": "Radzymińska / Sanktuarium"
+  },
+  {
+    "id": 41,
+    "point": {
+      "latitude": 53.145085,
+      "longitude": 23.157263
+    },
+    "name": "Tysiąclecia P.P./Plac Ks.M.Sopoćki"
+  },
+  {
+    "id": 42,
+    "point": {
+      "latitude": 53.14078,
+      "longitude": 23.158915
+    },
+    "name": "Sklep Łowiecki"
+  },
+  {
+    "id": 43,
+    "point": {
+      "latitude": 53.136335,
+      "longitude": 23.163988
+    },
+    "name": "Jurowiecka/Sienkiewicza"
+  },
+  {
+    "id": 44,
+    "point": {
+      "latitude": 53.133908,
+      "longitude": 23.161843
+    },
+    "name": "Sienkiewicza / Białówny"
+  },
+  {
+    "id": 45,
+    "point": {
+      "latitude": 53.13319,
+      "longitude": 23.155845
+    },
+    "name": "Malmeda/Lipowa"
+  },
+  {
+    "id": 46,
+    "point": {
+      "latitude": 53.131448,
+      "longitude": 23.150005
+    },
+    "name": "Kalinowskiego/OiFP"
+  },
+  {
+    "id": 47,
+    "point": {
+      "latitude": 53.129988,
+      "longitude": 23.145415
+    },
+    "name": "Sosnowskiego/Grunwaldzka"
+  },
+  {
+    "id": 48,
+    "point": {
+      "latitude": 53.128748,
+      "longitude": 23.143172
+    },
+    "name": "Wyszyńskiego / Sosnowskiego"
+  },
+  {
+    "id": 49,
+    "point": {
+      "latitude": 53.131217,
+      "longitude": 23.139632
+    },
+    "name": "Wyszyńskiego / Stołeczna"
+  },
+  {
+    "id": 50,
+    "point": {
+      "latitude": 53.132382,
+      "longitude": 23.13644
+    },
+    "name": "Dworzec PKS"
+  },
+  {
+    "id": 51,
+    "point": {
+      "latitude": 53.128602,
+      "longitude": 23.136442
+    },
+    "name": "B.M.Cassino/Sosnowa"
+  },
+  {
+    "id": 52,
+    "point": {
+      "latitude": 53.12566,
+      "longitude": 23.134705
+    },
+    "name": "Kopernika/Stacja Paliw"
+  },
+  {
+    "id": 53,
+    "point": {
+      "latitude": 53.125393,
+      "longitude": 23.129035
+    },
+    "name": "Kopernika/Lokomotywownia"
+  },
+  {
+    "id": 54,
+    "point": {
+      "latitude": 53.12412,
+      "longitude": 23.124678
+    },
+    "name": "Kopernika/Tunel"
+  },
+  {
+    "id": 55,
+    "point": {
+      "latitude": 53.132377,
+      "longitude": 23.083938
+    },
+    "name": "Boboli"
+  },
+  {
+    "id": 56,
+    "point": {
+      "latitude": 53.135377,
+      "longitude": 23.083177
+    },
+    "name": null
+  },
+  {
+    "id": 57,
+    "point": {
+      "latitude": 53.135462,
+      "longitude": 23.083277
+    },
+    "name": "Boboli Cmentarz"
+  },
+  {
+    "id": 58,
+    "point": {
+      "latitude": 53.131827,
+      "longitude": 23.084128
+    },
+    "name": "Boboli"
+  },
+  {
+    "id": 59,
+    "point": {
+      "latitude": 52.965524,
+      "longitude": 23.156829
+    },
+    "name": "Złotniki/Kolonia"
+  },
+  {
+    "id": 60,
+    "point": {
+      "latitude": 53.140814,
+      "longitude": 23.160006
+    },
+    "name": "KZK Zajezdnia"
+  },
+  {
+    "id": 61,
+    "point": {
+      "latitude": 53.135413,
+      "longitude": 23.16463
+    },
+    "name": "Sienkiewicza/Rzeka Biała"
+  },
+  {
+    "id": 62,
+    "point": {
+      "latitude": 53.133764,
+      "longitude": 23.169323
+    },
+    "name": "Warszawska Bank"
+  },
+  {
+    "id": 63,
+    "point": {
+      "latitude": 53.131407,
+      "longitude": 23.169537
+    },
+    "name": "Branickiego/Teatr"
+  },
+  {
+    "id": 64,
+    "point": {
+      "latitude": 53.127713,
+      "longitude": 23.175148
+    },
+    "name": "Branickiego/Świętojańska"
+  },
+  {
+    "id": 65,
+    "point": {
+      "latitude": 53.124477,
+      "longitude": 23.183558
+    },
+    "name": "Branickiego/Miłosza"
+  },
+  {
+    "id": 66,
+    "point": {
+      "latitude": 53.122948,
+      "longitude": 23.18791
+    },
+    "name": "Geodetów"
+  },
+  {
+    "id": 67,
+    "point": {
+      "latitude": 53.121335,
+      "longitude": 23.192822
+    },
+    "name": "Branickiego/Nowowarszawska"
+  },
+  {
+    "id": 68,
+    "point": {
+      "latitude": 53.122142,
+      "longitude": 23.204633
+    },
+    "name": "Baranowicka/Ciołkowskiego"
+  },
+  {
+    "id": 69,
+    "point": {
+      "latitude": 53.122423,
+      "longitude": 23.209038
+    },
+    "name": "Baranowicka/Sowlańska"
+  },
+  {
+    "id": 70,
+    "point": {
+      "latitude": 53.120105,
+      "longitude": 23.210215
+    },
+    "name": "Sowlańska/Piaskowa"
+  },
+  {
+    "id": 71,
+    "point": {
+      "latitude": 53.118183,
+      "longitude": 23.210007
+    },
+    "name": "Sowlańska/Dojnowska"
+  },
+  {
+    "id": 72,
+    "point": {
+      "latitude": 53.115212,
+      "longitude": 23.21371
+    },
+    "name": "Dojnowska/Społem"
+  },
+  {
+    "id": 73,
+    "point": {
+      "latitude": 53.114112,
+      "longitude": 23.216648
+    },
+    "name": "Plażowa/Dojnowska"
+  },
+  {
+    "id": 74,
+    "point": {
+      "latitude": 53.109702,
+      "longitude": 23.212382
+    },
+    "name": "Plażowa / Suchowolca"
+  },
+  {
+    "id": 75,
+    "point": {
+      "latitude": 53.108145,
+      "longitude": 23.211797
+    },
+    "name": "Ks.Suchowolca/Proroka Eliasza"
+  },
+  {
+    "id": 76,
+    "point": {
+      "latitude": 53.106183,
+      "longitude": 23.215458
+    },
+    "name": "Ks.Suchowolca/Dojlidy Cmentarz I"
+  },
+  {
+    "id": 77,
+    "point": {
+      "latitude": 53.104002,
+      "longitude": 23.219497
+    },
+    "name": "Ks.Suchowolca/Dojlidy Cmentarz II"
+  },
+  {
+    "id": 78,
+    "point": {
+      "latitude": 53.102662,
+      "longitude": 23.222033
+    },
+    "name": "Zabłudowska/Kol. Dojlidy"
+  },
+  {
+    "id": 79,
+    "point": {
+      "latitude": 53.10009,
+      "longitude": 23.226755
+    },
+    "name": "Zabłudowska/Zalesie"
+  },
+  {
+    "id": 80,
+    "point": {
+      "latitude": 53.097165,
+      "longitude": 23.232067
+    },
+    "name": "Zabłudowska/Stoczni Gdańskiej"
+  },
+  {
+    "id": 81,
+    "point": {
+      "latitude": 53.094027,
+      "longitude": 23.23783
+    },
+    "name": "Zabłudowska/Kol.Dojlidy"
+  },
+  {
+    "id": 82,
+    "point": {
+      "latitude": 53.090403,
+      "longitude": 23.243925
+    },
+    "name": "Zabłudowska/ Logarytmiczna"
+  },
+  {
+    "id": 83,
+    "point": {
+      "latitude": 53.081667,
+      "longitude": 23.25805
+    },
+    "name": "Kuriany PKS"
+  },
+  {
+    "id": 84,
+    "point": {
+      "latitude": 53.078053,
+      "longitude": 23.261345
+    },
+    "name": "Kuriany/Pętla"
+  },
+  {
+    "id": 85,
+    "point": {
+      "latitude": 53.07812,
+      "longitude": 23.261368
+    },
+    "name": "Kuriany/Pętla"
+  },
+  {
+    "id": 86,
+    "point": {
+      "latitude": 53.082877,
+      "longitude": 23.256595
+    },
+    "name": "Kuriany PKS"
+  },
+  {
+    "id": 87,
+    "point": {
+      "latitude": 53.09134,
+      "longitude": 23.242702
+    },
+    "name": "Zabłudowska/ Gminna"
+  },
+  {
+    "id": 88,
+    "point": {
+      "latitude": 53.0951,
+      "longitude": 23.236222
+    },
+    "name": "Zabłudowska/Zagórki"
+  },
+  {
+    "id": 89,
+    "point": {
+      "latitude": 53.097247,
+      "longitude": 23.232297
+    },
+    "name": "Zabłudowska/Stoczni Gdańskiej"
+  },
+  {
+    "id": 90,
+    "point": {
+      "latitude": 53.101025,
+      "longitude": 23.225093
+    },
+    "name": "Zabłudowska/Masztowa"
+  },
+  {
+    "id": 91,
+    "point": {
+      "latitude": 53.103953,
+      "longitude": 23.21986
+    },
+    "name": "Ks.Suchowolca/Ordynacka"
+  },
+  {
+    "id": 92,
+    "point": {
+      "latitude": 53.106932,
+      "longitude": 23.214308
+    },
+    "name": "Ks.Suchowolca/Dojlidy Cmentarz I"
+  },
+  {
+    "id": 93,
+    "point": {
+      "latitude": 53.108212,
+      "longitude": 23.21206
+    },
+    "name": "Suchowolca / Cm.Prawosławny"
+  },
+  {
+    "id": 94,
+    "point": {
+      "latitude": 53.11009,
+      "longitude": 23.213218
+    },
+    "name": "Plażowa/Cerk.Pror.Eliasza"
+  },
+  {
+    "id": 95,
+    "point": {
+      "latitude": 53.11476,
+      "longitude": 23.216042
+    },
+    "name": "Dojnowska/Plażowa"
+  },
+  {
+    "id": 96,
+    "point": {
+      "latitude": 53.115402,
+      "longitude": 23.212563
+    },
+    "name": "Dojnowska/Sowlańska"
+  },
+  {
+    "id": 97,
+    "point": {
+      "latitude": 53.116737,
+      "longitude": 23.209877
+    },
+    "name": "Sowlańska/Dojnowska"
+  },
+  {
+    "id": 98,
+    "point": {
+      "latitude": 53.12078,
+      "longitude": 23.210373
+    },
+    "name": "Sowlańska/Piaskowa"
+  },
+  {
+    "id": 99,
+    "point": {
+      "latitude": 53.122513,
+      "longitude": 23.208303
+    },
+    "name": "Baranowicka/Chłodnia"
+  },
+  {
+    "id": 100,
+    "point": {
+      "latitude": 53.122028,
+      "longitude": 23.20161
+    },
+    "name": "Baranowicka / Opolska"
+  },
+  {
+    "id": 101,
+    "point": {
+      "latitude": 53.121868,
+      "longitude": 23.192198
+    },
+    "name": "Branickiego / Baranowicka"
+  },
+  {
+    "id": 102,
+    "point": {
+      "latitude": 53.123795,
+      "longitude": 23.186477
+    },
+    "name": "Geodetów"
+  },
+  {
+    "id": 103,
+    "point": {
+      "latitude": 53.12596,
+      "longitude": 23.181325
+    },
+    "name": "Branickiego / Piastowska"
+  },
+  {
+    "id": 104,
+    "point": {
+      "latitude": 53.12807,
+      "longitude": 23.175038
+    },
+    "name": "Branickiego / Automobilklub"
+  },
+  {
+    "id": 105,
+    "point": {
+      "latitude": 53.131453,
+      "longitude": 23.169838
+    },
+    "name": "Branickiego / Urząd Miejski"
+  },
+  {
+    "id": 106,
+    "point": {
+      "latitude": 53.132811,
+      "longitude": 23.168512
+    },
+    "name": "Piłsudskiego/Pałacowa"
+  },
+  {
+    "id": 107,
+    "point": {
+      "latitude": 53.127622,
+      "longitude": 23.144135
+    },
+    "name": "Kard.S.Wyszyńskiego/Młynowa"
+  },
+  {
+    "id": 108,
+    "point": {
+      "latitude": 53.124565,
+      "longitude": 23.149197
+    },
+    "name": "Kaczorowskiego / Waszyngtona"
+  },
+  {
+    "id": 109,
+    "point": {
+      "latitude": 53.1265,
+      "longitude": 23.150717
+    },
+    "name": "Kaczorowskiego / OiFP"
+  },
+  {
+    "id": 110,
+    "point": {
+      "latitude": 53.128918,
+      "longitude": 23.15538
+    },
+    "name": "Legionowa/Szkoła"
+  },
+  {
+    "id": 111,
+    "point": {
+      "latitude": 53.13182,
+      "longitude": 23.16074
+    },
+    "name": "Rynek Kościuszki"
+  },
+  {
+    "id": 112,
+    "point": {
+      "latitude": 53.13872,
+      "longitude": 23.170085
+    },
+    "name": "Sienkiewicza/Komenda Wojewódzka Policji"
+  },
+  {
+    "id": 113,
+    "point": {
+      "latitude": 53.141237,
+      "longitude": 23.174282
+    },
+    "name": "Sienkiewicza/Ryska"
+  },
+  {
+    "id": 114,
+    "point": {
+      "latitude": 53.144347,
+      "longitude": 23.17943
+    },
+    "name": "Wasilkowska / Traugutta"
+  },
+  {
+    "id": 115,
+    "point": {
+      "latitude": 53.1454,
+      "longitude": 23.18364
+    },
+    "name": "Sosabowskiego / Wasilkowska"
+  },
+  {
+    "id": 116,
+    "point": {
+      "latitude": 53.144232,
+      "longitude": 23.187718
+    },
+    "name": "Sosabowskiego / Kapralska"
+  },
+  {
+    "id": 117,
+    "point": {
+      "latitude": 53.144217,
+      "longitude": 23.192573
+    },
+    "name": "42. Pułku Piechoty / Hotel"
+  },
+  {
+    "id": 118,
+    "point": {
+      "latitude": 53.14427,
+      "longitude": 23.196303
+    },
+    "name": "42. Pułku Piechoty / Robotnicza"
+  },
+  {
+    "id": 119,
+    "point": {
+      "latitude": 53.144718,
+      "longitude": 23.201963
+    },
+    "name": "Kazimierza Wielkiego/42. Pułku Piechoty"
+  },
+  {
+    "id": 120,
+    "point": {
+      "latitude": 53.149195,
+      "longitude": 23.202005
+    },
+    "name": "Kazimierza Wielkiego/Chełmońskiego"
+  },
+  {
+    "id": 121,
+    "point": {
+      "latitude": 53.15271,
+      "longitude": 23.20238
+    },
+    "name": "Kazimierza Wielkiego/Antoniewicza"
+  },
+  {
+    "id": 122,
+    "point": {
+      "latitude": 53.155867,
+      "longitude": 23.202752
+    },
+    "name": "Kazimierza Wielkiego/Trawiasta"
+  },
+  {
+    "id": 123,
+    "point": {
+      "latitude": 53.160995,
+      "longitude": 23.199608
+    },
+    "name": "Raginisa/Kazimierza Wielkiego"
+  },
+  {
+    "id": 124,
+    "point": {
+      "latitude": 53.163657,
+      "longitude": 23.202005
+    },
+    "name": "Raginisa/Baśniowa"
+  },
+  {
+    "id": 125,
+    "point": {
+      "latitude": 53.16656,
+      "longitude": 23.206435
+    },
+    "name": "Raginisa/Uśmiechu"
+  },
+  {
+    "id": 126,
+    "point": {
+      "latitude": 53.168595,
+      "longitude": 23.212058
+    },
+    "name": "Niemeńska/Pętla"
+  },
+  {
+    "id": 127,
+    "point": {
+      "latitude": 53.170408,
+      "longitude": 23.215103
+    },
+    "name": "Raginisa/Ogródki Działkowe"
+  },
+  {
+    "id": 128,
+    "point": {
+      "latitude": 53.178947,
+      "longitude": 23.236453
+    },
+    "name": "Nowodworce/Zaciszna"
+  },
+  {
+    "id": 129,
+    "point": {
+      "latitude": 53.181052,
+      "longitude": 23.241045
+    },
+    "name": "Nowodworce PKS"
+  },
+  {
+    "id": 130,
+    "point": {
+      "latitude": 53.185145,
+      "longitude": 23.260285
+    },
+    "name": null
+  },
+  {
+    "id": 131,
+    "point": {
+      "latitude": 53.188275,
+      "longitude": 23.26763
+    },
+    "name": "Ogrodniczki/Pętla"
+  },
+  {
+    "id": 132,
+    "point": {
+      "latitude": 53.19132,
+      "longitude": 23.287433
+    },
+    "name": null
+  },
+  {
+    "id": 133,
+    "point": {
+      "latitude": 53.195589,
+      "longitude": 23.298702
+    },
+    "name": null
+  },
+  {
+    "id": 134,
+    "point": {
+      "latitude": 53.203642,
+      "longitude": 23.312942
+    },
+    "name": null
+  },
+  {
+    "id": 135,
+    "point": {
+      "latitude": 53.208153,
+      "longitude": 23.32702
+    },
+    "name": null
+  },
+  {
+    "id": 136,
+    "point": {
+      "latitude": 53.2092,
+      "longitude": 23.336375
+    },
+    "name": null
+  },
+  {
+    "id": 137,
+    "point": {
+      "latitude": 53.20621,
+      "longitude": 23.337877
+    },
+    "name": null
+  },
+  {
+    "id": 138,
+    "point": {
+      "latitude": 53.202472,
+      "longitude": 23.339626
+    },
+    "name": null
+  },
+  {
+    "id": 139,
+    "point": {
+      "latitude": 53.202235,
+      "longitude": 23.344186
+    },
+    "name": null
+  },
+  {
+    "id": 140,
+    "point": {
+      "latitude": 53.20636,
+      "longitude": 23.343747
+    },
+    "name": null
+  },
+  {
+    "id": 141,
+    "point": {
+      "latitude": 53.202688,
+      "longitude": 23.345276
+    },
+    "name": null
+  },
+  {
+    "id": 142,
+    "point": {
+      "latitude": 53.202285,
+      "longitude": 23.339867
+    },
+    "name": null
+  },
+  {
+    "id": 143,
+    "point": {
+      "latitude": 53.208025,
+      "longitude": 23.337159
+    },
+    "name": null
+  },
+  {
+    "id": 144,
+    "point": {
+      "latitude": 53.209912,
+      "longitude": 23.334602
+    },
+    "name": null
+  },
+  {
+    "id": 145,
+    "point": {
+      "latitude": 53.207973,
+      "longitude": 23.326398
+    },
+    "name": null
+  },
+  {
+    "id": 146,
+    "point": {
+      "latitude": 53.203642,
+      "longitude": 23.312942
+    },
+    "name": null
+  },
+  {
+    "id": 147,
+    "point": {
+      "latitude": 53.194676,
+      "longitude": 23.297676
+    },
+    "name": null
+  },
+  {
+    "id": 148,
+    "point": {
+      "latitude": 53.19098,
+      "longitude": 23.284255
+    },
+    "name": null
+  },
+  {
+    "id": 149,
+    "point": {
+      "latitude": 53.18828,
+      "longitude": 23.26731
+    },
+    "name": "Ogrodniczki"
+  },
+  {
+    "id": 150,
+    "point": {
+      "latitude": 53.18502,
+      "longitude": 23.258262
+    },
+    "name": null
+  },
+  {
+    "id": 151,
+    "point": {
+      "latitude": 53.181383,
+      "longitude": 23.241665
+    },
+    "name": "Nowodworce PKS"
+  },
+  {
+    "id": 152,
+    "point": {
+      "latitude": 53.178248,
+      "longitude": 23.233149
+    },
+    "name": "Nowodworce/Leszczynowa"
+  },
+  {
+    "id": 153,
+    "point": {
+      "latitude": 53.169813,
+      "longitude": 23.213575
+    },
+    "name": "Raginisa/Ogródki Działkowe"
+  },
+  {
+    "id": 154,
+    "point": {
+      "latitude": 53.168258,
+      "longitude": 23.209967
+    },
+    "name": "Raginisa/Gwiazdkowa"
+  },
+  {
+    "id": 155,
+    "point": {
+      "latitude": 53.166247,
+      "longitude": 23.205385
+    },
+    "name": "Raginisa/Uśmiechu"
+  },
+  {
+    "id": 156,
+    "point": {
+      "latitude": 53.162605,
+      "longitude": 23.200828
+    },
+    "name": "Raginisa/Familijna"
+  },
+  {
+    "id": 157,
+    "point": {
+      "latitude": 53.159952,
+      "longitude": 23.199645
+    },
+    "name": "Kazimierza Wielkiego/Raginisa"
+  },
+  {
+    "id": 158,
+    "point": {
+      "latitude": 53.154752,
+      "longitude": 23.202268
+    },
+    "name": "Kazimierza Wielkiego/Trawiasta"
+  },
+  {
+    "id": 159,
+    "point": {
+      "latitude": 53.15172,
+      "longitude": 23.201913
+    },
+    "name": "Kazimierza Wlk. / Antoniewicza"
+  },
+  {
+    "id": 160,
+    "point": {
+      "latitude": 53.148107,
+      "longitude": 23.201523
+    },
+    "name": "Kazimierza Wielkiego/Chełmońskiego"
+  },
+  {
+    "id": 161,
+    "point": {
+      "latitude": 53.144288,
+      "longitude": 23.2006
+    },
+    "name": "42. Pułku Piechoty / Chabrowa"
+  },
+  {
+    "id": 162,
+    "point": {
+      "latitude": 53.144308,
+      "longitude": 23.194377
+    },
+    "name": "42. Pułku Piechoty / Robotnicza"
+  },
+  {
+    "id": 163,
+    "point": {
+      "latitude": 53.144083,
+      "longitude": 23.189198
+    },
+    "name": "Sosabowskiego / Krańcowa"
+  },
+  {
+    "id": 164,
+    "point": {
+      "latitude": 53.145478,
+      "longitude": 23.180942
+    },
+    "name": "Wasilkowska / Andersa"
+  },
+  {
+    "id": 165,
+    "point": {
+      "latitude": 53.140677,
+      "longitude": 23.173008
+    },
+    "name": "Sienkiewicza/Ryska"
+  },
+  {
+    "id": 166,
+    "point": {
+      "latitude": 53.136892,
+      "longitude": 23.166632
+    },
+    "name": "Sienkiewicza/Ogrodowa"
+  },
+  {
+    "id": 167,
+    "point": {
+      "latitude": 53.129075,
+      "longitude": 23.15516
+    },
+    "name": "Legionowa/Piękna"
+  },
+  {
+    "id": 168,
+    "point": {
+      "latitude": 53.125745,
+      "longitude": 23.149715
+    },
+    "name": "Kaczorowskiego / Cieszyńska"
+  },
+  {
+    "id": 169,
+    "point": {
+      "latitude": 53.124398,
+      "longitude": 23.147612
+    },
+    "name": "Kard.S.Wyszyńskiego/ prez.R.Kaczorowskiego"
+  },
+  {
+    "id": 170,
+    "point": {
+      "latitude": 53.125368,
+      "longitude": 23.145517
+    },
+    "name": "Kard.S.Wyszyńskiego/Gen.Bema"
+  },
+  {
+    "id": 171,
+    "point": {
+      "latitude": 53.14888,
+      "longitude": 23.156137
+    },
+    "name": "Tysiąclecia P.P./Stacja Paliw"
+  },
+  {
+    "id": 172,
+    "point": {
+      "latitude": 53.142702,
+      "longitude": 23.148658
+    },
+    "name": "Radzymińska/Sitarska"
+  },
+  {
+    "id": 173,
+    "point": {
+      "latitude": 53.139476,
+      "longitude": 23.150655
+    },
+    "name": "Boh. Getta/Poleska"
+  },
+  {
+    "id": 174,
+    "point": {
+      "latitude": 53.136048,
+      "longitude": 23.15386
+    },
+    "name": "Piłsudskiego/Częstochowska"
+  },
+  {
+    "id": 175,
+    "point": {
+      "latitude": 53.134332,
+      "longitude": 23.164218
+    },
+    "name": "Piłsudskiego/Sienkiewicza"
+  },
+  {
+    "id": 176,
+    "point": {
+      "latitude": 53.122842,
+      "longitude": 23.214285
+    },
+    "name": "Baranowicka/Gródecka"
+  },
+  {
+    "id": 177,
+    "point": {
+      "latitude": 53.12189,
+      "longitude": 23.217822
+    },
+    "name": "Plażowa/Zuchów"
+  },
+  {
+    "id": 178,
+    "point": {
+      "latitude": 53.119218,
+      "longitude": 23.217623
+    },
+    "name": "Plażowa/Pozioma"
+  },
+  {
+    "id": 179,
+    "point": {
+      "latitude": 53.108337,
+      "longitude": 23.21019
+    },
+    "name": "Proroka Eliasza/W.S.A.P."
+  },
+  {
+    "id": 180,
+    "point": {
+      "latitude": 53.105582,
+      "longitude": 23.209965
+    },
+    "name": "Proroka Eliasza"
+  },
+  {
+    "id": 181,
+    "point": {
+      "latitude": 53.101283,
+      "longitude": 23.210725
+    },
+    "name": "Dojlidy Górne/Zalesie"
+  },
+  {
+    "id": 182,
+    "point": {
+      "latitude": 53.096052,
+      "longitude": 23.210057
+    },
+    "name": "Dojlidy Górne/Pętla"
+  },
+  {
+    "id": 183,
+    "point": {
+      "latitude": 53.101543,
+      "longitude": 23.210747
+    },
+    "name": "Dojlidy Górne/Zalesie"
+  },
+  {
+    "id": 184,
+    "point": {
+      "latitude": 53.107352,
+      "longitude": 23.20923
+    },
+    "name": "Proroka Eliasza"
+  },
+  {
+    "id": 185,
+    "point": {
+      "latitude": 53.115408,
+      "longitude": 23.21706
+    },
+    "name": "Plażowa/Dojnowska"
+  },
+  {
+    "id": 186,
+    "point": {
+      "latitude": 53.118438,
+      "longitude": 23.217662
+    },
+    "name": "Plażowa/Pozioma"
+  },
+  {
+    "id": 187,
+    "point": {
+      "latitude": 53.123118,
+      "longitude": 23.216917
+    },
+    "name": "Baranowicka/Plażowa"
+  },
+  {
+    "id": 188,
+    "point": {
+      "latitude": 53.135495,
+      "longitude": 23.16234
+    },
+    "name": "Piłsudskiego/Plac Inwalidów"
+  },
+  {
+    "id": 189,
+    "point": {
+      "latitude": 53.136225,
+      "longitude": 23.153432
+    },
+    "name": "Piłsudskiego/Waryńskiego"
+  },
+  {
+    "id": 190,
+    "point": {
+      "latitude": 53.13684,
+      "longitude": 23.152286
+    },
+    "name": "Boh. Getta/Bank"
+  },
+  {
+    "id": 191,
+    "point": {
+      "latitude": 53.144155,
+      "longitude": 23.149852
+    },
+    "name": "Radzymińska/Szkoła"
+  },
+  {
+    "id": 192,
+    "point": {
+      "latitude": 53.091905,
+      "longitude": 23.211143
+    },
+    "name": "Dojlidy Górne/Grabowa"
+  },
+  {
+    "id": 193,
+    "point": {
+      "latitude": 53.087707,
+      "longitude": 23.210392
+    },
+    "name": "Dojlidy Górne/Brzoskwiniowa"
+  },
+  {
+    "id": 194,
+    "point": {
+      "latitude": 53.081698,
+      "longitude": 23.209195
+    },
+    "name": "Dojlidy Górne/Ananasowa"
+  },
+  {
+    "id": 195,
+    "point": {
+      "latitude": 53.078642,
+      "longitude": 23.21162
+    },
+    "name": "Dojlidy Górne/Kameliowa"
+  },
+  {
+    "id": 196,
+    "point": {
+      "latitude": 53.076562,
+      "longitude": 23.218578
+    },
+    "name": "Halicka/Leśnej Jagody"
+  },
+  {
+    "id": 197,
+    "point": {
+      "latitude": 53.075627,
+      "longitude": 23.224672
+    },
+    "name": "Halicka/Pętla"
+  },
+  {
+    "id": 198,
+    "point": {
+      "latitude": 53.075562,
+      "longitude": 23.224855
+    },
+    "name": "Halicka/Margerytki"
+  },
+  {
+    "id": 199,
+    "point": {
+      "latitude": 53.076765,
+      "longitude": 23.217495
+    },
+    "name": "Halicka/Lubczykowa"
+  },
+  {
+    "id": 200,
+    "point": {
+      "latitude": 53.079133,
+      "longitude": 23.211317
+    },
+    "name": "Dojlidy Górne/Kameliowa"
+  },
+  {
+    "id": 201,
+    "point": {
+      "latitude": 53.082878,
+      "longitude": 23.20937
+    },
+    "name": "Dojlidy Górne/Cytrynowa"
+  },
+  {
+    "id": 202,
+    "point": {
+      "latitude": 53.088015,
+      "longitude": 23.210493
+    },
+    "name": "Dojlidy Górne/Brzoskwiniowa"
+  },
+  {
+    "id": 203,
+    "point": {
+      "latitude": 53.092737,
+      "longitude": 23.211265
+    },
+    "name": "Dojlidy Górne/Grabowa"
+  },
+  {
+    "id": 204,
+    "point": {
+      "latitude": 53.116494,
+      "longitude": 23.129217
+    },
+    "name": "KPKM Zajezdnia"
+  },
+  {
+    "id": 205,
+    "point": {
+      "latitude": 53.099092,
+      "longitude": 23.130855
+    },
+    "name": "Wiadukt/PKP Stadion"
+  },
+  {
+    "id": 206,
+    "point": {
+      "latitude": 53.099897,
+      "longitude": 23.133977
+    },
+    "name": "Wiadukt/Kościół"
+  },
+  {
+    "id": 207,
+    "point": {
+      "latitude": 53.096108,
+      "longitude": 23.123565
+    },
+    "name": "Kleosin/Klasztor"
+  },
+  {
+    "id": 208,
+    "point": {
+      "latitude": 53.091613,
+      "longitude": 23.116347
+    },
+    "name": "Kleosin - Baczyńskiego"
+  },
+  {
+    "id": 209,
+    "point": {
+      "latitude": 53.086027,
+      "longitude": 23.108137
+    },
+    "name": "Horodniany"
+  },
+  {
+    "id": 210,
+    "point": {
+      "latitude": 53.082458,
+      "longitude": 23.101905
+    },
+    "name": "Księżyno/Niewodnicka"
+  },
+  {
+    "id": 211,
+    "point": {
+      "latitude": 53.077045,
+      "longitude": 23.103128
+    },
+    "name": "Księżyno/Krokusowa"
+  },
+  {
+    "id": 212,
+    "point": {
+      "latitude": 53.06831,
+      "longitude": 23.100687
+    },
+    "name": "Ignatki"
+  },
+  {
+    "id": 213,
+    "point": {
+      "latitude": 53.062132,
+      "longitude": 23.094465
+    },
+    "name": "Koplany/Kolonia"
+  },
+  {
+    "id": 214,
+    "point": {
+      "latitude": 53.05935,
+      "longitude": 23.09708
+    },
+    "name": "Koplany/Cegielnia"
+  },
+  {
+    "id": 215,
+    "point": {
+      "latitude": 53.050527,
+      "longitude": 23.110418
+    },
+    "name": "Brończany"
+  },
+  {
+    "id": 216,
+    "point": {
+      "latitude": 53.033358,
+      "longitude": 23.12148
+    },
+    "name": "Lewickie Stacja/Osada"
+  },
+  {
+    "id": 217,
+    "point": {
+      "latitude": 53.029872,
+      "longitude": 23.126612
+    },
+    "name": "Lewickie Stacja"
+  },
+  {
+    "id": 218,
+    "point": {
+      "latitude": 53.023465,
+      "longitude": 23.135515
+    },
+    "name": "Juchnowiec/Jaśminowa"
+  },
+  {
+    "id": 219,
+    "point": {
+      "latitude": 53.018775,
+      "longitude": 23.142087
+    },
+    "name": "Juchnowiec Kościelny"
+  },
+  {
+    "id": 220,
+    "point": {
+      "latitude": 53.019047,
+      "longitude": 23.14199
+    },
+    "name": "Juchnowiec Kościelny"
+  },
+  {
+    "id": 221,
+    "point": {
+      "latitude": 53.023998,
+      "longitude": 23.135015
+    },
+    "name": "Juchnowiec/Jaśminowa"
+  },
+  {
+    "id": 222,
+    "point": {
+      "latitude": 53.02985,
+      "longitude": 23.126687
+    },
+    "name": "Lewickie Stacja"
+  },
+  {
+    "id": 223,
+    "point": {
+      "latitude": 53.033535,
+      "longitude": 23.121322
+    },
+    "name": "Lewickie Stacja/Osada"
+  },
+  {
+    "id": 224,
+    "point": {
+      "latitude": 53.051157,
+      "longitude": 23.109815
+    },
+    "name": "Brończany"
+  },
+  {
+    "id": 225,
+    "point": {
+      "latitude": 53.05935,
+      "longitude": 23.097063
+    },
+    "name": "Koplany/Cegielnia"
+  },
+  {
+    "id": 226,
+    "point": {
+      "latitude": 53.062965,
+      "longitude": 23.094918
+    },
+    "name": "Koplany/Kolonia"
+  },
+  {
+    "id": 227,
+    "point": {
+      "latitude": 53.068685,
+      "longitude": 23.101005
+    },
+    "name": "Ignatki"
+  },
+  {
+    "id": 228,
+    "point": {
+      "latitude": 53.076162,
+      "longitude": 23.103907
+    },
+    "name": "Księżyno/Krokusowa"
+  },
+  {
+    "id": 229,
+    "point": {
+      "latitude": 53.081728,
+      "longitude": 23.10079
+    },
+    "name": "Księżyno/Kościół"
+  },
+  {
+    "id": 230,
+    "point": {
+      "latitude": 53.087058,
+      "longitude": 23.110193
+    },
+    "name": "Horodniany"
+  },
+  {
+    "id": 231,
+    "point": {
+      "latitude": 53.092421,
+      "longitude": 23.117896
+    },
+    "name": "Kleosin - Pętla"
+  },
+  {
+    "id": 232,
+    "point": {
+      "latitude": 53.096935,
+      "longitude": 23.125887
+    },
+    "name": "Wiadukt/Politechnika Białostocka"
+  },
+  {
+    "id": 233,
+    "point": {
+      "latitude": 53.133272,
+      "longitude": 23.138598
+    },
+    "name": "Dworzec PKS"
+  },
+  {
+    "id": 234,
+    "point": {
+      "latitude": 53.13816,
+      "longitude": 23.14404
+    },
+    "name": "Poleska/Pogotowie"
+  },
+  {
+    "id": 235,
+    "point": {
+      "latitude": 53.142595,
+      "longitude": 23.161522
+    },
+    "name": "Poleska/Szkoła"
+  },
+  {
+    "id": 236,
+    "point": {
+      "latitude": 53.141282,
+      "longitude": 23.16874
+    },
+    "name": "Jagienki/Ciepła"
+  },
+  {
+    "id": 237,
+    "point": {
+      "latitude": 53.139717,
+      "longitude": 23.183498
+    },
+    "name": "Towarowa/Kraszewskiego"
+  },
+  {
+    "id": 238,
+    "point": {
+      "latitude": 53.13841,
+      "longitude": 23.187273
+    },
+    "name": "Towarowa/Dw.Fabryczny"
+  },
+  {
+    "id": 239,
+    "point": {
+      "latitude": 53.137145,
+      "longitude": 23.190772
+    },
+    "name": "Towarowa/Parking"
+  },
+  {
+    "id": 240,
+    "point": {
+      "latitude": 53.13487,
+      "longitude": 23.19538
+    },
+    "name": "Piastowska/Os. Piasta"
+  },
+  {
+    "id": 241,
+    "point": {
+      "latitude": 53.131972,
+      "longitude": 23.192502
+    },
+    "name": "Piastowska/Mieszka I"
+  },
+  {
+    "id": 242,
+    "point": {
+      "latitude": 53.128878,
+      "longitude": 23.187967
+    },
+    "name": "Piastowska/Chrobrego"
+  },
+  {
+    "id": 243,
+    "point": {
+      "latitude": 53.117832,
+      "longitude": 23.188885
+    },
+    "name": "Ciołkowskiego / Murarska"
+  },
+  {
+    "id": 244,
+    "point": {
+      "latitude": 53.115595,
+      "longitude": 23.182297
+    },
+    "name": "Ciołkowskiego / Śląska"
+  },
+  {
+    "id": 245,
+    "point": {
+      "latitude": 53.114058,
+      "longitude": 23.177553
+    },
+    "name": "Ciołkowskiego / Mickiewicza"
+  },
+  {
+    "id": 246,
+    "point": {
+      "latitude": 53.108038,
+      "longitude": 23.159672
+    },
+    "name": "Ciołkowskiego / Instytut Meteorologii"
+  },
+  {
+    "id": 247,
+    "point": {
+      "latitude": 53.136225,
+      "longitude": 23.145606
+    },
+    "name": "Artyleryjska"
+  },
+  {
+    "id": 248,
+    "point": {
+      "latitude": 53.105578,
+      "longitude": 23.152839
+    },
+    "name": "Stadion Miejski"
+  },
+  {
+    "id": 249,
+    "point": {
+      "latitude": 53.108392,
+      "longitude": 23.161187
+    },
+    "name": "Ciołkowskiego / Instytut Meteorologii"
+  },
+  {
+    "id": 250,
+    "point": {
+      "latitude": 53.113698,
+      "longitude": 23.177088
+    },
+    "name": "Ciołkowskiego / Mickiewicza"
+  },
+  {
+    "id": 251,
+    "point": {
+      "latitude": 53.114475,
+      "longitude": 23.179315
+    },
+    "name": "Ciołkowskiego / Śląska"
+  },
+  {
+    "id": 252,
+    "point": {
+      "latitude": 53.117688,
+      "longitude": 23.188648
+    },
+    "name": "Niedźwiedzia / Kościół"
+  },
+  {
+    "id": 253,
+    "point": {
+      "latitude": 53.126047,
+      "longitude": 23.183545
+    },
+    "name": "Piastowska/Nowowarszawska"
+  },
+  {
+    "id": 254,
+    "point": {
+      "latitude": 53.12963,
+      "longitude": 23.19039
+    },
+    "name": "Piastowska/Chrobrego"
+  },
+  {
+    "id": 255,
+    "point": {
+      "latitude": 53.133277,
+      "longitude": 23.194305
+    },
+    "name": "Piastowska/Kościół"
+  },
+  {
+    "id": 256,
+    "point": {
+      "latitude": 53.135772,
+      "longitude": 23.19515
+    },
+    "name": "Towarowa/Piastowska"
+  },
+  {
+    "id": 257,
+    "point": {
+      "latitude": 53.136733,
+      "longitude": 23.192543
+    },
+    "name": "Towarowa/Garaże"
+  },
+  {
+    "id": 258,
+    "point": {
+      "latitude": 53.13908,
+      "longitude": 23.185647
+    },
+    "name": "Towarowa/Daleka"
+  },
+  {
+    "id": 259,
+    "point": {
+      "latitude": 53.140485,
+      "longitude": 23.181572
+    },
+    "name": "Towarowa/Kraszewskiego"
+  },
+  {
+    "id": 260,
+    "point": {
+      "latitude": 53.141605,
+      "longitude": 23.168262
+    },
+    "name": "Jagienki/Wąska"
+  },
+  {
+    "id": 261,
+    "point": {
+      "latitude": 53.143503,
+      "longitude": 23.165273
+    },
+    "name": "Poleska/Jagienki"
+  },
+  {
+    "id": 262,
+    "point": {
+      "latitude": 53.142022,
+      "longitude": 23.159308
+    },
+    "name": "Poleska/Wiadukt"
+  },
+  {
+    "id": 263,
+    "point": {
+      "latitude": 53.139753,
+      "longitude": 23.149557
+    },
+    "name": "Poleska/Sitarska"
+  },
+  {
+    "id": 264,
+    "point": {
+      "latitude": 53.138208,
+      "longitude": 23.143815
+    },
+    "name": "Poleska/Pogotowie"
+  },
+  {
+    "id": 265,
+    "point": {
+      "latitude": 53.134417,
+      "longitude": 23.139365
+    },
+    "name": "Poleska/Św.Rocha"
+  },
+  {
+    "id": 266,
+    "point": {
+      "latitude": 53.136037,
+      "longitude": 23.147562
+    },
+    "name": "Piłsudskiego/Botaniczna"
+  },
+  {
+    "id": 267,
+    "point": {
+      "latitude": 53.135844,
+      "longitude": 23.144181
+    },
+    "name": "Dąbrowskiego P.K."
+  },
+  {
+    "id": 268,
+    "point": {
+      "latitude": 53.13565,
+      "longitude": 23.136632
+    },
+    "name": "Dworzec PKP"
+  },
+  {
+    "id": 269,
+    "point": {
+      "latitude": 53.136243,
+      "longitude": 23.127725
+    },
+    "name": "Zwycięstwa/Prowiantowa"
+  },
+  {
+    "id": 270,
+    "point": {
+      "latitude": 53.136212,
+      "longitude": 23.120735
+    },
+    "name": "Hetmańska/Gruntowa"
+  },
+  {
+    "id": 271,
+    "point": {
+      "latitude": 53.132045,
+      "longitude": 23.119057
+    },
+    "name": "Hetmańska/Promienna"
+  },
+  {
+    "id": 272,
+    "point": {
+      "latitude": 53.131525,
+      "longitude": 23.111438
+    },
+    "name": "Marczukowska/Piekarnia"
+  },
+  {
+    "id": 273,
+    "point": {
+      "latitude": 53.132272,
+      "longitude": 23.10521
+    },
+    "name": "Witosa/Skrajna"
+  },
+  {
+    "id": 274,
+    "point": {
+      "latitude": 53.132185,
+      "longitude": 23.101232
+    },
+    "name": "Witosa/Przychodnia"
+  },
+  {
+    "id": 275,
+    "point": {
+      "latitude": 53.133836,
+      "longitude": 23.101308
+    },
+    "name": "Sikorskiego P.K."
+  },
+  {
+    "id": 276,
+    "point": {
+      "latitude": 53.134308,
+      "longitude": 23.101888
+    },
+    "name": "Sikorskiego / Witosa"
+  },
+  {
+    "id": 277,
+    "point": {
+      "latitude": 53.134942,
+      "longitude": 23.101802
+    },
+    "name": "Sikorskiego"
+  },
+  {
+    "id": 278,
+    "point": {
+      "latitude": 53.133864,
+      "longitude": 23.100989
+    },
+    "name": "Sikorskiego P.K."
+  },
+  {
+    "id": 279,
+    "point": {
+      "latitude": 53.132025,
+      "longitude": 23.10175
+    },
+    "name": "Witosa/Pawilon"
+  },
+  {
+    "id": 280,
+    "point": {
+      "latitude": 53.132382,
+      "longitude": 23.107028
+    },
+    "name": "Witosa/Osiedle Słoneczny Stok"
+  },
+  {
+    "id": 281,
+    "point": {
+      "latitude": 53.130607,
+      "longitude": 23.112923
+    },
+    "name": "Marczukowska/Stroma"
+  },
+  {
+    "id": 282,
+    "point": {
+      "latitude": 53.129807,
+      "longitude": 23.11853
+    },
+    "name": "Hetmańska/Marczukowska"
+  },
+  {
+    "id": 283,
+    "point": {
+      "latitude": 53.13426,
+      "longitude": 23.120227
+    },
+    "name": "Hetmańska/Promienna"
+  },
+  {
+    "id": 284,
+    "point": {
+      "latitude": 53.137157,
+      "longitude": 23.122328
+    },
+    "name": "Zwycięstwa/Hetmańska"
+  },
+  {
+    "id": 285,
+    "point": {
+      "latitude": 53.135798,
+      "longitude": 23.130158
+    },
+    "name": "Zwycięstwa/W.S.E."
+  },
+  {
+    "id": 286,
+    "point": {
+      "latitude": 53.135198,
+      "longitude": 23.136212
+    },
+    "name": "Dworzec PKP"
+  },
+  {
+    "id": 287,
+    "point": {
+      "latitude": 53.135711,
+      "longitude": 23.144139
+    },
+    "name": "Dąbrowskiego P.K."
+  },
+  {
+    "id": 288,
+    "point": {
+      "latitude": 53.135653,
+      "longitude": 23.146942
+    },
+    "name": "Piłsudskiego/Pl.Niepodległości"
+  },
+  {
+    "id": 289,
+    "point": {
+      "latitude": 53.123155,
+      "longitude": 23.219113
+    },
+    "name": "Baranowicka/Plażowa"
+  },
+  {
+    "id": 290,
+    "point": {
+      "latitude": 53.123478,
+      "longitude": 23.223007
+    },
+    "name": "Baranowicka/Wczasowa"
+  },
+  {
+    "id": 291,
+    "point": {
+      "latitude": 53.124678,
+      "longitude": 23.228098
+    },
+    "name": null
+  },
+  {
+    "id": 292,
+    "point": {
+      "latitude": 53.124138,
+      "longitude": 23.227005
+    },
+    "name": "Zaścianki"
+  },
+  {
+    "id": 293,
+    "point": {
+      "latitude": 53.1234,
+      "longitude": 23.220893
+    },
+    "name": "Baranowicka/Wczasowa"
+  },
+  {
+    "id": 294,
+    "point": {
+      "latitude": 53.124568,
+      "longitude": 23.228618
+    },
+    "name": "Zaścianki"
+  },
+  {
+    "id": 295,
+    "point": {
+      "latitude": 53.125753,
+      "longitude": 23.23163
+    },
+    "name": "Szosa Baranowicka / Sulika"
+  },
+  {
+    "id": 296,
+    "point": {
+      "latitude": 53.12553,
+      "longitude": 23.24205
+    },
+    "name": "Zaścianki/ Cerkiew"
+  },
+  {
+    "id": 297,
+    "point": {
+      "latitude": 53.125253,
+      "longitude": 23.246545
+    },
+    "name": "Zaścianki/Usługowa"
+  },
+  {
+    "id": 298,
+    "point": {
+      "latitude": 53.125213,
+      "longitude": 23.254418
+    },
+    "name": "Zaścianki/Stacja Paliw"
+  },
+  {
+    "id": 299,
+    "point": {
+      "latitude": 53.125243,
+      "longitude": 23.260087
+    },
+    "name": "Sobolewo/Rondo"
+  },
+  {
+    "id": 300,
+    "point": {
+      "latitude": 53.125325,
+      "longitude": 23.268535
+    },
+    "name": "Sobolewo/Bociania"
+  },
+  {
+    "id": 301,
+    "point": {
+      "latitude": 53.125383,
+      "longitude": 23.282365
+    },
+    "name": "Sobolewo/Niedzwiedzia"
+  },
+  {
+    "id": 302,
+    "point": {
+      "latitude": 53.125412,
+      "longitude": 23.285673
+    },
+    "name": "Grabówka - Pomnik"
+  },
+  {
+    "id": 303,
+    "point": {
+      "latitude": 53.125135,
+      "longitude": 23.286435
+    },
+    "name": "Grabówka/Mniszkowa"
+  },
+  {
+    "id": 304,
+    "point": {
+      "latitude": 53.12543,
+      "longitude": 23.27857
+    },
+    "name": "Grabówka/Macierzankowa"
+  },
+  {
+    "id": 305,
+    "point": {
+      "latitude": 53.125363,
+      "longitude": 23.266265
+    },
+    "name": "Grabówka/Jeżynowa"
+  },
+  {
+    "id": 306,
+    "point": {
+      "latitude": 53.125328,
+      "longitude": 23.257952
+    },
+    "name": "Grabówka/Rondo"
+  },
+  {
+    "id": 307,
+    "point": {
+      "latitude": 53.12532,
+      "longitude": 23.252517
+    },
+    "name": "Zaścianki/Stacja Paliw"
+  },
+  {
+    "id": 308,
+    "point": {
+      "latitude": 53.125612,
+      "longitude": 23.243815
+    },
+    "name": "Zaścianki/Afrykańska"
+  },
+  {
+    "id": 309,
+    "point": {
+      "latitude": 53.125942,
+      "longitude": 23.238192
+    },
+    "name": "Zaścianki/ Cerkiew"
+  },
+  {
+    "id": 310,
+    "point": {
+      "latitude": 53.126543,
+      "longitude": 23.258352
+    },
+    "name": "Grabówka/Szosa Baranowicka"
+  },
+  {
+    "id": 311,
+    "point": {
+      "latitude": 53.129293,
+      "longitude": 23.257778
+    },
+    "name": "Grabówka/Leszczynowa"
+  },
+  {
+    "id": 312,
+    "point": {
+      "latitude": 53.131468,
+      "longitude": 23.257787
+    },
+    "name": "Grabówka/Orzechowa"
+  },
+  {
+    "id": 313,
+    "point": {
+      "latitude": 53.134798,
+      "longitude": 23.257858
+    },
+    "name": "Grabówka/Malinowa"
+  },
+  {
+    "id": 314,
+    "point": {
+      "latitude": 53.136072,
+      "longitude": 23.257878
+    },
+    "name": "Grabówka/Kościół Pętla"
+  },
+  {
+    "id": 315,
+    "point": {
+      "latitude": 53.135823,
+      "longitude": 23.25747
+    },
+    "name": "Grabówka/Kościół"
+  },
+  {
+    "id": 316,
+    "point": {
+      "latitude": 53.132452,
+      "longitude": 23.257872
+    },
+    "name": "Grabówka/Jodłowa"
+  },
+  {
+    "id": 317,
+    "point": {
+      "latitude": 53.130685,
+      "longitude": 23.257768
+    },
+    "name": "Grabówka/Orzechowa"
+  },
+  {
+    "id": 318,
+    "point": {
+      "latitude": 53.12629,
+      "longitude": 23.258408
+    },
+    "name": "Grabówka/Szosa Baranowicka"
+  },
+  {
+    "id": 319,
+    "point": {
+      "latitude": 53.113505,
+      "longitude": 23.128993
+    },
+    "name": "Transportowa/Składowa"
+  },
+  {
+    "id": 320,
+    "point": {
+      "latitude": 53.112462,
+      "longitude": 23.125395
+    },
+    "name": "Transportowa/Straż Pożarna"
+  },
+  {
+    "id": 321,
+    "point": {
+      "latitude": 53.11094,
+      "longitude": 23.11861
+    },
+    "name": "Transportowa/Ekologiczna"
+  },
+  {
+    "id": 322,
+    "point": {
+      "latitude": 53.109098,
+      "longitude": 23.115307
+    },
+    "name": "Transportowa/Pętla"
+  },
+  {
+    "id": 323,
+    "point": {
+      "latitude": 53.111062,
+      "longitude": 23.120052
+    },
+    "name": "Transportowa/Ekologiczna"
+  },
+  {
+    "id": 324,
+    "point": {
+      "latitude": 53.112688,
+      "longitude": 23.126505
+    },
+    "name": "Transportowa/Składowa"
+  },
+  {
+    "id": 325,
+    "point": {
+      "latitude": 53.113853,
+      "longitude": 23.130802
+    },
+    "name": "Pogodna/Żeromskiego"
+  },
+  {
+    "id": 326,
+    "point": {
+      "latitude": 53.116498,
+      "longitude": 23.140077
+    },
+    "name": "Pogodna/Garaże"
+  },
+  {
+    "id": 327,
+    "point": {
+      "latitude": 53.118253,
+      "longitude": 23.14441
+    },
+    "name": "Wiejska/Pogodna"
+  },
+  {
+    "id": 328,
+    "point": {
+      "latitude": 53.121253,
+      "longitude": 23.146957
+    },
+    "name": "Kaczorowskiego / Zwierzyniecka"
+  },
+  {
+    "id": 329,
+    "point": {
+      "latitude": 53.139998,
+      "longitude": 23.151097
+    },
+    "name": "Poleska/Czysta"
+  },
+  {
+    "id": 330,
+    "point": {
+      "latitude": 53.141222,
+      "longitude": 23.157287
+    },
+    "name": "Poleska/Jurowiecka"
+  },
+  {
+    "id": 331,
+    "point": {
+      "latitude": 53.150725,
+      "longitude": 23.158455
+    },
+    "name": "Kombatantów"
+  },
+  {
+    "id": 332,
+    "point": {
+      "latitude": 53.149773,
+      "longitude": 23.165448
+    },
+    "name": "1 Armii W.P./Bank"
+  },
+  {
+    "id": 333,
+    "point": {
+      "latitude": 53.148087,
+      "longitude": 23.163697
+    },
+    "name": "1 Armii W.P./Kombatantów"
+  },
+  {
+    "id": 334,
+    "point": {
+      "latitude": 53.145705,
+      "longitude": 23.158965
+    },
+    "name": "1 Armii W.P./Tysiąclecia P.P."
+  },
+  {
+    "id": 335,
+    "point": {
+      "latitude": 53.123667,
+      "longitude": 23.148258
+    },
+    "name": "Kaczorowskiego / Wyszyńskiego"
+  },
+  {
+    "id": 336,
+    "point": {
+      "latitude": 53.120235,
+      "longitude": 23.144973
+    },
+    "name": "Wiejska/Kopernika"
+  },
+  {
+    "id": 337,
+    "point": {
+      "latitude": 53.117563,
+      "longitude": 23.143395
+    },
+    "name": "Pogodna/Wiejska"
+  },
+  {
+    "id": 338,
+    "point": {
+      "latitude": 53.115877,
+      "longitude": 23.137393
+    },
+    "name": "Pogodna/Gen.J.Bema"
+  },
+  {
+    "id": 339,
+    "point": {
+      "latitude": 53.133282,
+      "longitude": 23.15304
+    },
+    "name": "Lipowa/Nowy Świat"
+  },
+  {
+    "id": 340,
+    "point": {
+      "latitude": 53.134983,
+      "longitude": 23.146577
+    },
+    "name": "Plac Niepodległości/Kościół Św.Rocha"
+  },
+  {
+    "id": 341,
+    "point": {
+      "latitude": 53.141213,
+      "longitude": 23.137112
+    },
+    "name": "Antoniukowska/Owsiana"
+  },
+  {
+    "id": 342,
+    "point": {
+      "latitude": 53.142885,
+      "longitude": 23.134738
+    },
+    "name": "Antoniukowska/Narewska"
+  },
+  {
+    "id": 343,
+    "point": {
+      "latitude": 53.144698,
+      "longitude": 23.133572
+    },
+    "name": "Świętokorzyska/Antoniukowska"
+  },
+  {
+    "id": 344,
+    "point": {
+      "latitude": 53.147738,
+      "longitude": 23.137258
+    },
+    "name": "Świętokrzyska/Ogród działkowy 1"
+  },
+  {
+    "id": 345,
+    "point": {
+      "latitude": 53.151362,
+      "longitude": 23.138054
+    },
+    "name": "Świętokrzyska/Ogród działkowy 2"
+  },
+  {
+    "id": 346,
+    "point": {
+      "latitude": 53.154232,
+      "longitude": 23.133782
+    },
+    "name": "Berlinga/Dziesięciny"
+  },
+  {
+    "id": 347,
+    "point": {
+      "latitude": 53.154418,
+      "longitude": 23.127077
+    },
+    "name": "Berlinga/Palmowa"
+  },
+  {
+    "id": 348,
+    "point": {
+      "latitude": 53.150838,
+      "longitude": 23.122882
+    },
+    "name": "Berlinga/Gajowa"
+  },
+  {
+    "id": 349,
+    "point": {
+      "latitude": 53.147605,
+      "longitude": 23.116178
+    },
+    "name": "Konst.3 Maja/Cmentarz Św. Rocha"
+  },
+  {
+    "id": 350,
+    "point": {
+      "latitude": 53.144595,
+      "longitude": 23.111748
+    },
+    "name": "Konst.3 Maja/Wysoki Stoczek"
+  },
+  {
+    "id": 351,
+    "point": {
+      "latitude": 53.144205,
+      "longitude": 23.106978
+    },
+    "name": "Swobodna"
+  },
+  {
+    "id": 352,
+    "point": {
+      "latitude": 53.144978,
+      "longitude": 23.100473
+    },
+    "name": "Kołłątaja/Dworska"
+  },
+  {
+    "id": 353,
+    "point": {
+      "latitude": 53.148213,
+      "longitude": 23.091402
+    },
+    "name": "Kołłątaja/Bacieczki"
+  },
+  {
+    "id": 354,
+    "point": {
+      "latitude": 53.151138,
+      "longitude": 23.088423
+    },
+    "name": "K.E.N./Kołłątaja"
+  },
+  {
+    "id": 355,
+    "point": {
+      "latitude": 53.150485,
+      "longitude": 23.084835
+    },
+    "name": "K.E.N./Pietkuna"
+  },
+  {
+    "id": 356,
+    "point": {
+      "latitude": 53.14813,
+      "longitude": 23.088542
+    },
+    "name": "Herberta/Pętla"
+  },
+  {
+    "id": 357,
+    "point": {
+      "latitude": 53.147127,
+      "longitude": 23.092552
+    },
+    "name": "Kołłątaja/Bacieczki"
+  },
+  {
+    "id": 358,
+    "point": {
+      "latitude": 53.144607,
+      "longitude": 23.102545
+    },
+    "name": "Kołłątaja/Dworska"
+  },
+  {
+    "id": 359,
+    "point": {
+      "latitude": 53.144017,
+      "longitude": 23.106763
+    },
+    "name": "Swobodna/Wysoki Stoczek"
+  },
+  {
+    "id": 360,
+    "point": {
+      "latitude": 53.143055,
+      "longitude": 23.110432
+    },
+    "name": "Konst.3 Maja/Rzemieślnicza"
+  },
+  {
+    "id": 361,
+    "point": {
+      "latitude": 53.145472,
+      "longitude": 23.113507
+    },
+    "name": "Konst.3 Maja/Studzienna"
+  },
+  {
+    "id": 362,
+    "point": {
+      "latitude": 53.148665,
+      "longitude": 23.11908
+    },
+    "name": "Berlinga/Kościół"
+  },
+  {
+    "id": 363,
+    "point": {
+      "latitude": 53.152123,
+      "longitude": 23.125048
+    },
+    "name": "Berlinga/Brzozowa"
+  },
+  {
+    "id": 364,
+    "point": {
+      "latitude": 53.155333,
+      "longitude": 23.128698
+    },
+    "name": "Berlinga/Parking"
+  },
+  {
+    "id": 365,
+    "point": {
+      "latitude": 53.153655,
+      "longitude": 23.133888
+    },
+    "name": "Berlinga/Dziesięciny Pętla"
+  },
+  {
+    "id": 366,
+    "point": {
+      "latitude": 53.150556,
+      "longitude": 23.137554
+    },
+    "name": "Świętokrzyska/Berlinga"
+  },
+  {
+    "id": 367,
+    "point": {
+      "latitude": 53.146807,
+      "longitude": 23.135891
+    },
+    "name": "Świętokrzyska/Kaplica"
+  },
+  {
+    "id": 368,
+    "point": {
+      "latitude": 53.143127,
+      "longitude": 23.133978
+    },
+    "name": "Antoniukowska/Wierzbowa"
+  },
+  {
+    "id": 369,
+    "point": {
+      "latitude": 53.140238,
+      "longitude": 23.138163
+    },
+    "name": "Antoniukowska/Knyszyńska"
+  },
+  {
+    "id": 370,
+    "point": {
+      "latitude": 53.133954,
+      "longitude": 23.149067
+    },
+    "name": "Lipowa/Św. Rocha"
+  },
+  {
+    "id": 371,
+    "point": {
+      "latitude": 53.118085,
+      "longitude": 23.103915
+    },
+    "name": "Zielone Wzgórza"
+  },
+  {
+    "id": 372,
+    "point": {
+      "latitude": 53.121105,
+      "longitude": 23.099838
+    },
+    "name": "Zielonogórska/Konwaliowa"
+  },
+  {
+    "id": 373,
+    "point": {
+      "latitude": 53.124113,
+      "longitude": 23.096653
+    },
+    "name": "Wrocławska/Zielonogórska"
+  },
+  {
+    "id": 374,
+    "point": {
+      "latitude": 53.128818,
+      "longitude": 23.098432
+    },
+    "name": "Sikorskiego / Upalna"
+  },
+  {
+    "id": 375,
+    "point": {
+      "latitude": 53.131013,
+      "longitude": 23.099495
+    },
+    "name": "Sikorskiego / Cerkiew"
+  },
+  {
+    "id": 376,
+    "point": {
+      "latitude": 53.13483,
+      "longitude": 23.135543
+    },
+    "name": "Dworzec PKP"
+  },
+  {
+    "id": 377,
+    "point": {
+      "latitude": 53.135427,
+      "longitude": 23.151883
+    },
+    "name": "Częstochowska"
+  },
+  {
+    "id": 378,
+    "point": {
+      "latitude": 53.13913,
+      "longitude": 23.133603
+    },
+    "name": "al.Solidarności/Broniewskiego"
+  },
+  {
+    "id": 379,
+    "point": {
+      "latitude": 53.138247,
+      "longitude": 23.125973
+    },
+    "name": "al.Solidarności/Tuwima"
+  },
+  {
+    "id": 380,
+    "point": {
+      "latitude": 53.129043,
+      "longitude": 23.098113
+    },
+    "name": "Sikorskiego / Bat. Chł."
+  },
+  {
+    "id": 381,
+    "point": {
+      "latitude": 53.127262,
+      "longitude": 23.096628
+    },
+    "name": "Popiełuszki / Sikorskiego"
+  },
+  {
+    "id": 382,
+    "point": {
+      "latitude": 53.127825,
+      "longitude": 23.091917
+    },
+    "name": "Popiełuszki / Bat.Chł."
+  },
+  {
+    "id": 383,
+    "point": {
+      "latitude": 53.128403,
+      "longitude": 23.08748
+    },
+    "name": "Popiełuszki / Szarych Szeregów"
+  },
+  {
+    "id": 384,
+    "point": {
+      "latitude": 53.125345,
+      "longitude": 23.086365
+    },
+    "name": "Boboli/Letnia"
+  },
+  {
+    "id": 385,
+    "point": {
+      "latitude": 53.12189,
+      "longitude": 23.08671
+    },
+    "name": "Starosielce PKP"
+  },
+  {
+    "id": 386,
+    "point": {
+      "latitude": 53.119572,
+      "longitude": 23.092685
+    },
+    "name": "al.Niepodległości/Szkoła"
+  },
+  {
+    "id": 387,
+    "point": {
+      "latitude": 53.11762,
+      "longitude": 23.097042
+    },
+    "name": "al.Niepodległości/Lawendowa"
+  },
+  {
+    "id": 388,
+    "point": {
+      "latitude": 53.134282,
+      "longitude": 23.174828
+    },
+    "name": "Słonimska/Urząd Miejski"
+  },
+  {
+    "id": 389,
+    "point": {
+      "latitude": 53.13472,
+      "longitude": 23.183425
+    },
+    "name": "Piasta"
+  },
+  {
+    "id": 390,
+    "point": {
+      "latitude": 53.133587,
+      "longitude": 23.191238
+    },
+    "name": "Mieszka I/Apteka"
+  },
+  {
+    "id": 391,
+    "point": {
+      "latitude": 53.134684,
+      "longitude": 23.198821
+    },
+    "name": "Piasta/Andrukiewicza"
+  },
+  {
+    "id": 392,
+    "point": {
+      "latitude": 53.133003,
+      "longitude": 23.205405
+    },
+    "name": "Piasta/Włościańska"
+  },
+  {
+    "id": 393,
+    "point": {
+      "latitude": 53.13404,
+      "longitude": 23.2089
+    },
+    "name": "Włościańska/Brzostowskiego"
+  },
+  {
+    "id": 394,
+    "point": {
+      "latitude": 53.134703,
+      "longitude": 23.211295
+    },
+    "name": "Osiedle Pieczurki"
+  },
+  {
+    "id": 395,
+    "point": {
+      "latitude": 53.13766,
+      "longitude": 23.21174
+    },
+    "name": "Dolistowska/Dolistówka"
+  },
+  {
+    "id": 396,
+    "point": {
+      "latitude": 53.143328,
+      "longitude": 23.212817
+    },
+    "name": "Brzechwy/42. Pułku Piechoty"
+  },
+  {
+    "id": 397,
+    "point": {
+      "latitude": 53.147917,
+      "longitude": 23.210937
+    },
+    "name": "Chełmońskiego/Rubinowicza"
+  },
+  {
+    "id": 398,
+    "point": {
+      "latitude": 53.148285,
+      "longitude": 23.20564
+    },
+    "name": "Chełmońskiego/Leńskiego"
+  },
+  {
+    "id": 399,
+    "point": {
+      "latitude": 53.143795,
+      "longitude": 23.202953
+    },
+    "name": "42. Pułku Piechoty/A.Fredry"
+  },
+  {
+    "id": 400,
+    "point": {
+      "latitude": 53.142085,
+      "longitude": 23.21269
+    },
+    "name": "Dolistowska/42. Pułku Piechoty"
+  },
+  {
+    "id": 401,
+    "point": {
+      "latitude": 53.138008,
+      "longitude": 23.211843
+    },
+    "name": "Dolistowska/Ogr.Działk.Pieczurki"
+  },
+  {
+    "id": 402,
+    "point": {
+      "latitude": 53.134133,
+      "longitude": 23.20757
+    },
+    "name": "Włościańska/Pieczurki"
+  },
+  {
+    "id": 403,
+    "point": {
+      "latitude": 53.13326,
+      "longitude": 23.204457
+    },
+    "name": "Piasta/Przejazd"
+  },
+  {
+    "id": 404,
+    "point": {
+      "latitude": 53.134684,
+      "longitude": 23.198821
+    },
+    "name": "Piasta/Andrukiewicza"
+  },
+  {
+    "id": 405,
+    "point": {
+      "latitude": 53.133115,
+      "longitude": 23.192292
+    },
+    "name": "Mieszka I/Piastowska"
+  },
+  {
+    "id": 406,
+    "point": {
+      "latitude": 53.134913,
+      "longitude": 23.187343
+    },
+    "name": "Mieszka I/Szkoła"
+  },
+  {
+    "id": 407,
+    "point": {
+      "latitude": 53.134757,
+      "longitude": 23.180963
+    },
+    "name": "Piasta/Skorupska"
+  },
+  {
+    "id": 408,
+    "point": {
+      "latitude": 53.134102,
+      "longitude": 23.17376
+    },
+    "name": "Słonimska/Urząd Miejski"
+  },
+  {
+    "id": 409,
+    "point": {
+      "latitude": 53.117111,
+      "longitude": 23.144292
+    },
+    "name": "Wiejska/Pogodna"
+  },
+  {
+    "id": 410,
+    "point": {
+      "latitude": 53.114898,
+      "longitude": 23.145637
+    },
+    "name": "Wiejska/Zachodnia"
+  },
+  {
+    "id": 411,
+    "point": {
+      "latitude": 53.113355,
+      "longitude": 23.146745
+    },
+    "name": "Wiejska/Kręta"
+  },
+  {
+    "id": 412,
+    "point": {
+      "latitude": 53.109597,
+      "longitude": 23.145672
+    },
+    "name": "Pułaskiego/Kawaleryjska"
+  },
+  {
+    "id": 413,
+    "point": {
+      "latitude": 53.109645,
+      "longitude": 23.13711
+    },
+    "name": "Pułaskiego/Szkoła"
+  },
+  {
+    "id": 414,
+    "point": {
+      "latitude": 53.10967,
+      "longitude": 23.133303
+    },
+    "name": "Pułaskiego/Wspólna"
+  },
+  {
+    "id": 415,
+    "point": {
+      "latitude": 53.109627,
+      "longitude": 23.126293
+    },
+    "name": "Pułaskiego/Zachodnia"
+  },
+  {
+    "id": 416,
+    "point": {
+      "latitude": 53.106955,
+      "longitude": 23.12389
+    },
+    "name": "Rzymowskiego/Dubois"
+  },
+  {
+    "id": 417,
+    "point": {
+      "latitude": 53.106645,
+      "longitude": 23.119005
+    },
+    "name": "Paderewskiego/Rzymowskiego"
+  },
+  {
+    "id": 418,
+    "point": {
+      "latitude": 53.107523,
+      "longitude": 23.11648
+    },
+    "name": "Paderewskiego"
+  },
+  {
+    "id": 419,
+    "point": {
+      "latitude": 53.138802,
+      "longitude": 23.133998
+    },
+    "name": "al.Solidarności/Choroszczańska"
+  },
+  {
+    "id": 420,
+    "point": {
+      "latitude": 53.128665,
+      "longitude": 23.084418
+    },
+    "name": "Popiełuszki / Boboli"
+  },
+  {
+    "id": 421,
+    "point": {
+      "latitude": 53.128098,
+      "longitude": 23.07687
+    },
+    "name": "Osiedle KZKS"
+  },
+  {
+    "id": 422,
+    "point": {
+      "latitude": 53.123958,
+      "longitude": 23.080963
+    },
+    "name": "Nowosielska/Węgierska"
+  },
+  {
+    "id": 423,
+    "point": {
+      "latitude": 53.120117,
+      "longitude": 23.084145
+    },
+    "name": "Meksykańska IPN"
+  },
+  {
+    "id": 424,
+    "point": {
+      "latitude": 53.114872,
+      "longitude": 23.082535
+    },
+    "name": "Meksykańska/Rumuńska"
+  },
+  {
+    "id": 425,
+    "point": {
+      "latitude": 53.113337,
+      "longitude": 23.08107
+    },
+    "name": "Niewodnicka/Spokojna"
+  },
+  {
+    "id": 426,
+    "point": {
+      "latitude": 53.112692,
+      "longitude": 23.086222
+    },
+    "name": "Klepacka/Pętla"
+  },
+  {
+    "id": 427,
+    "point": {
+      "latitude": 53.112794,
+      "longitude": 23.085756
+    },
+    "name": "Klepacka/Pętla"
+  },
+  {
+    "id": 428,
+    "point": {
+      "latitude": 53.112013,
+      "longitude": 23.080042
+    },
+    "name": "Niewodnicka/Spokojna"
+  },
+  {
+    "id": 429,
+    "point": {
+      "latitude": 53.115528,
+      "longitude": 23.08316
+    },
+    "name": "Meksykańska/Watykańska"
+  },
+  {
+    "id": 430,
+    "point": {
+      "latitude": 53.120772,
+      "longitude": 23.084147
+    },
+    "name": "Meksykańska IPN"
+  },
+  {
+    "id": 431,
+    "point": {
+      "latitude": 53.123415,
+      "longitude": 23.081752
+    },
+    "name": "Nowosielska/Węgierska"
+  },
+  {
+    "id": 432,
+    "point": {
+      "latitude": 53.127368,
+      "longitude": 23.077192
+    },
+    "name": "Osiedle KZKS"
+  },
+  {
+    "id": 433,
+    "point": {
+      "latitude": 53.12834,
+      "longitude": 23.086178
+    },
+    "name": "Popiełuszki / Boboli"
+  },
+  {
+    "id": 434,
+    "point": {
+      "latitude": 53.127147,
+      "longitude": 23.094813
+    },
+    "name": "Popiełuszki / Ubocze"
+  },
+  {
+    "id": 435,
+    "point": {
+      "latitude": 53.118135,
+      "longitude": 23.126095
+    },
+    "name": "Składowa/Stacja Paliw"
+  },
+  {
+    "id": 436,
+    "point": {
+      "latitude": 53.122452,
+      "longitude": 23.122487
+    },
+    "name": "Składowa/Tunel"
+  },
+  {
+    "id": 437,
+    "point": {
+      "latitude": 53.124995,
+      "longitude": 23.116153
+    },
+    "name": "Hetmańska/Gen.Fieldorfa \"Nila\""
+  },
+  {
+    "id": 438,
+    "point": {
+      "latitude": 53.144468,
+      "longitude": 23.132257
+    },
+    "name": "Antoniukowska / Świętokrzyska"
+  },
+  {
+    "id": 439,
+    "point": {
+      "latitude": 53.146318,
+      "longitude": 23.125422
+    },
+    "name": "Antoniuk F./Gajowa"
+  },
+  {
+    "id": 440,
+    "point": {
+      "latitude": 53.153843,
+      "longitude": 23.133523
+    },
+    "name": "Berlinga/Dziesięciny"
+  },
+  {
+    "id": 441,
+    "point": {
+      "latitude": 53.147935,
+      "longitude": 23.118668
+    },
+    "name": "Antoniuk F. / Konstytucji 3 Maja"
+  },
+  {
+    "id": 442,
+    "point": {
+      "latitude": 53.145457,
+      "longitude": 23.12813
+    },
+    "name": "Antoniuk F. / Ogrodniczki"
+  },
+  {
+    "id": 443,
+    "point": {
+      "latitude": 53.12864,
+      "longitude": 23.117793
+    },
+    "name": "Hetmańska/Marczukowska"
+  },
+  {
+    "id": 444,
+    "point": {
+      "latitude": 53.122705,
+      "longitude": 23.121807
+    },
+    "name": "Składowa/Octowa"
+  },
+  {
+    "id": 445,
+    "point": {
+      "latitude": 53.117607,
+      "longitude": 23.1262
+    },
+    "name": "Składowa/Hurtowa"
+  },
+  {
+    "id": 446,
+    "point": {
+      "latitude": 53.115472,
+      "longitude": 23.127853
+    },
+    "name": "Składowa P.K."
+  },
+  {
+    "id": 447,
+    "point": {
+      "latitude": 53.109043,
+      "longitude": 23.149195
+    },
+    "name": "Wiosenna/Słoneczna"
+  },
+  {
+    "id": 448,
+    "point": {
+      "latitude": 53.105968,
+      "longitude": 23.142842
+    },
+    "name": "Kawaleryjska/Bazar"
+  },
+  {
+    "id": 449,
+    "point": {
+      "latitude": 53.102858,
+      "longitude": 23.138357
+    },
+    "name": "Kawaleryjska/Zapiecek"
+  },
+  {
+    "id": 450,
+    "point": {
+      "latitude": 53.103645,
+      "longitude": 23.139203
+    },
+    "name": "Kawaleryjska/Zapiecek"
+  },
+  {
+    "id": 451,
+    "point": {
+      "latitude": 53.106173,
+      "longitude": 23.143197
+    },
+    "name": "Kawaleryjska/Bazar"
+  },
+  {
+    "id": 452,
+    "point": {
+      "latitude": 53.109046,
+      "longitude": 23.149307
+    },
+    "name": "Wiosenna/11 Listopada"
+  },
+  {
+    "id": 453,
+    "point": {
+      "latitude": 53.113333,
+      "longitude": 23.147162
+    },
+    "name": "Wiejska/Uniwersytet"
+  },
+  {
+    "id": 454,
+    "point": {
+      "latitude": 53.116278,
+      "longitude": 23.145017
+    },
+    "name": "Wiejska - Politechnika"
+  },
+  {
+    "id": 455,
+    "point": {
+      "latitude": 53.114282,
+      "longitude": 23.129467
+    },
+    "name": "Składowa/Urząd Miejski"
+  },
+  {
+    "id": 456,
+    "point": {
+      "latitude": 53.158178,
+      "longitude": 23.125611
+    },
+    "name": "Karskiego/Oliwkowa"
+  },
+  {
+    "id": 457,
+    "point": {
+      "latitude": 53.163325,
+      "longitude": 23.120503
+    },
+    "name": "Lodowa/Zamoyskiego"
+  },
+  {
+    "id": 458,
+    "point": {
+      "latitude": 53.16657,
+      "longitude": 23.117625
+    },
+    "name": "Lodowa/Skrzetuskiego"
+  },
+  {
+    "id": 459,
+    "point": {
+      "latitude": 53.166728,
+      "longitude": 23.112875
+    },
+    "name": "Końcowa/Liliowa"
+  },
+  {
+    "id": 460,
+    "point": {
+      "latitude": 53.164143,
+      "longitude": 23.111342
+    },
+    "name": "Zawady"
+  },
+  {
+    "id": 461,
+    "point": {
+      "latitude": 53.16103,
+      "longitude": 23.113942
+    },
+    "name": "Zawady/Pętla"
+  },
+  {
+    "id": 462,
+    "point": {
+      "latitude": 53.161142,
+      "longitude": 23.113688
+    },
+    "name": "Zawady/Pętla"
+  },
+  {
+    "id": 463,
+    "point": {
+      "latitude": 53.164665,
+      "longitude": 23.110967
+    },
+    "name": "Zawady"
+  },
+  {
+    "id": 464,
+    "point": {
+      "latitude": 53.16666,
+      "longitude": 23.113467
+    },
+    "name": "Końcowa/Liliowa"
+  },
+  {
+    "id": 465,
+    "point": {
+      "latitude": 53.165463,
+      "longitude": 23.118442
+    },
+    "name": "Lodowa/Chłodna"
+  },
+  {
+    "id": 466,
+    "point": {
+      "latitude": 53.162692,
+      "longitude": 23.120968
+    },
+    "name": "Lodowa/Zamoyskiego"
+  },
+  {
+    "id": 467,
+    "point": {
+      "latitude": 53.158014,
+      "longitude": 23.126672
+    },
+    "name": "Karskiego/Oliwkowa"
+  },
+  {
+    "id": 468,
+    "point": {
+      "latitude": 53.115345,
+      "longitude": 23.120397
+    },
+    "name": "Hurtowa"
+  },
+  {
+    "id": 469,
+    "point": {
+      "latitude": 53.116638,
+      "longitude": 23.116062
+    },
+    "name": "Sejneńska/Handlowa"
+  },
+  {
+    "id": 470,
+    "point": {
+      "latitude": 53.11758,
+      "longitude": 23.113773
+    },
+    "name": "Sejneńska/Cementownia"
+  },
+  {
+    "id": 471,
+    "point": {
+      "latitude": 53.117088,
+      "longitude": 23.109022
+    },
+    "name": "Bażantarnia"
+  },
+  {
+    "id": 472,
+    "point": {
+      "latitude": 53.117407,
+      "longitude": 23.11384
+    },
+    "name": "Sejneńska"
+  },
+  {
+    "id": 473,
+    "point": {
+      "latitude": 53.1155,
+      "longitude": 23.121192
+    },
+    "name": "Hurtowa I"
+  },
+  {
+    "id": 474,
+    "point": {
+      "latitude": 53.124742,
+      "longitude": 23.138667
+    },
+    "name": "Kopernika/Wop"
+  },
+  {
+    "id": 475,
+    "point": {
+      "latitude": 53.122345,
+      "longitude": 23.14322
+    },
+    "name": "Kopernika/Os. Bema"
+  },
+  {
+    "id": 476,
+    "point": {
+      "latitude": 53.148458,
+      "longitude": 23.202743
+    },
+    "name": "Chełmońskiego/Kazimierza Wielkiego"
+  },
+  {
+    "id": 477,
+    "point": {
+      "latitude": 53.148168,
+      "longitude": 23.206653
+    },
+    "name": "Chełmońskiego/Szymanowskiego"
+  },
+  {
+    "id": 478,
+    "point": {
+      "latitude": 53.147777,
+      "longitude": 23.211815
+    },
+    "name": "Chełmońskiego/Matejki"
+  },
+  {
+    "id": 479,
+    "point": {
+      "latitude": 53.121693,
+      "longitude": 23.145387
+    },
+    "name": "Kopernika / Kaczorowskiego"
+  },
+  {
+    "id": 480,
+    "point": {
+      "latitude": 53.123447,
+      "longitude": 23.14172
+    },
+    "name": "Kopernika/Gen.J.Bema"
+  },
+  {
+    "id": 481,
+    "point": {
+      "latitude": 53.120387,
+      "longitude": 23.147253
+    },
+    "name": "Zwierzyniecka/Wiejska"
+  },
+  {
+    "id": 482,
+    "point": {
+      "latitude": 53.119782,
+      "longitude": 23.152173
+    },
+    "name": "Zwierzyniecka/Domy Studenta"
+  },
+  {
+    "id": 483,
+    "point": {
+      "latitude": 53.119415,
+      "longitude": 23.155885
+    },
+    "name": "Zwierzyniecka/Świerkowa"
+  },
+  {
+    "id": 484,
+    "point": {
+      "latitude": 53.11904,
+      "longitude": 23.160488
+    },
+    "name": "Zwierzyniecka - Cm.Wojskowy"
+  },
+  {
+    "id": 485,
+    "point": {
+      "latitude": 53.118493,
+      "longitude": 23.167857
+    },
+    "name": "Św.Pio / Białowieska"
+  },
+  {
+    "id": 486,
+    "point": {
+      "latitude": 53.121003,
+      "longitude": 23.174065
+    },
+    "name": "Mickiewicza/Miłosza"
+  },
+  {
+    "id": 487,
+    "point": {
+      "latitude": 53.125297,
+      "longitude": 23.171605
+    },
+    "name": "Mickiewicza/Orzeszkowej"
+  },
+  {
+    "id": 488,
+    "point": {
+      "latitude": 53.128405,
+      "longitude": 23.169167
+    },
+    "name": "Mickiewicza/Urząd Wojewódzki"
+  },
+  {
+    "id": 489,
+    "point": {
+      "latitude": 53.132693,
+      "longitude": 23.169845
+    },
+    "name": "Pałacowa/Hotel"
+  },
+  {
+    "id": 490,
+    "point": {
+      "latitude": 53.197255,
+      "longitude": 23.198645
+    },
+    "name": "Wasilków / Jurowiecka"
+  },
+  {
+    "id": 491,
+    "point": {
+      "latitude": 53.14279,
+      "longitude": 23.214014
+    },
+    "name": "42. Pułku Piechoty/Zakład Poprawczy"
+  },
+  {
+    "id": 492,
+    "point": {
+      "latitude": 53.13247,
+      "longitude": 23.19811
+    },
+    "name": "Andrukiewicza/Sybiarków"
+  },
+  {
+    "id": 493,
+    "point": {
+      "latitude": 53.132713,
+      "longitude": 23.16954
+    },
+    "name": "Pałacowa/Hotel"
+  },
+  {
+    "id": 494,
+    "point": {
+      "latitude": 53.124442,
+      "longitude": 23.18122
+    },
+    "name": "Miłosza/Branickiego"
+  },
+  {
+    "id": 495,
+    "point": {
+      "latitude": 53.12163,
+      "longitude": 23.178515
+    },
+    "name": "Atrium Biała"
+  },
+  {
+    "id": 496,
+    "point": {
+      "latitude": 53.119915,
+      "longitude": 23.172968
+    },
+    "name": "Św.Pio / Podleśna"
+  },
+  {
+    "id": 497,
+    "point": {
+      "latitude": 53.118532,
+      "longitude": 23.16616
+    },
+    "name": "Akcent ZOO"
+  },
+  {
+    "id": 498,
+    "point": {
+      "latitude": 53.119393,
+      "longitude": 23.158625
+    },
+    "name": "Zwierzyniecka/11 Listopada"
+  },
+  {
+    "id": 499,
+    "point": {
+      "latitude": 53.119792,
+      "longitude": 23.154582
+    },
+    "name": "Zwierzyniecka/Wesoła"
+  },
+  {
+    "id": 500,
+    "point": {
+      "latitude": 53.120142,
+      "longitude": 23.150863
+    },
+    "name": "Zwierzyniecka / Kaczorowskiego"
+  },
+  {
+    "id": 501,
+    "point": {
+      "latitude": 53.123388,
+      "longitude": 23.114255
+    },
+    "name": "Hetmańska/Popiełuszki"
+  },
+  {
+    "id": 502,
+    "point": {
+      "latitude": 53.120262,
+      "longitude": 23.108777
+    },
+    "name": "Hetmańska/Os.Zielone Wzgórza"
+  },
+  {
+    "id": 503,
+    "point": {
+      "latitude": 53.126305,
+      "longitude": 23.09695
+    },
+    "name": "Galeria \"Zielone Wzgórze\""
+  },
+  {
+    "id": 504,
+    "point": {
+      "latitude": 53.123068,
+      "longitude": 23.096605
+    },
+    "name": "Zielonogórska/Bank"
+  },
+  {
+    "id": 505,
+    "point": {
+      "latitude": 53.120315,
+      "longitude": 23.10082
+    },
+    "name": "Zielonogórska/Konwaliowa"
+  },
+  {
+    "id": 506,
+    "point": {
+      "latitude": 53.118727,
+      "longitude": 23.105425
+    },
+    "name": "Hetmańska/Piekarnia"
+  },
+  {
+    "id": 507,
+    "point": {
+      "latitude": 53.120798,
+      "longitude": 23.110148
+    },
+    "name": "Hetmańska/PKP Energetyka"
+  },
+  {
+    "id": 508,
+    "point": {
+      "latitude": 53.152622,
+      "longitude": 23.201615
+    },
+    "name": "Żyzna"
+  },
+  {
+    "id": 509,
+    "point": {
+      "latitude": 53.120425,
+      "longitude": 23.175798
+    },
+    "name": "Miłosza/Drewniana"
+  },
+  {
+    "id": 510,
+    "point": {
+      "latitude": 53.122713,
+      "longitude": 23.180442
+    },
+    "name": "Miłosza/Kołodziejska"
+  },
+  {
+    "id": 511,
+    "point": {
+      "latitude": 53.135958,
+      "longitude": 23.196858
+    },
+    "name": "Piastowska/Piasta"
+  },
+  {
+    "id": 512,
+    "point": {
+      "latitude": 53.141343,
+      "longitude": 23.201892
+    },
+    "name": "Kazimierza Wielkiego/Gen.N.Sulika"
+  },
+  {
+    "id": 513,
+    "point": {
+      "latitude": 53.14338,
+      "longitude": 23.20166
+    },
+    "name": "Kazimierza Wielkiego/42. Pułku Piechoty"
+  },
+  {
+    "id": 514,
+    "point": {
+      "latitude": 53.138533,
+      "longitude": 23.198649
+    },
+    "name": "Piastowska/Kazimierza Wielkiego"
+  },
+  {
+    "id": 515,
+    "point": {
+      "latitude": 53.138491,
+      "longitude": 23.121491
+    },
+    "name": "Wierzbowa / Rondo Reagana"
+  },
+  {
+    "id": 516,
+    "point": {
+      "latitude": 53.140677,
+      "longitude": 23.124663
+    },
+    "name": "Wierzbowa/Technikum Mechaniczne"
+  },
+  {
+    "id": 517,
+    "point": {
+      "latitude": 53.141925,
+      "longitude": 23.128954
+    },
+    "name": "Wierzbowa / Ordonówny"
+  },
+  {
+    "id": 518,
+    "point": {
+      "latitude": 53.154083,
+      "longitude": 23.120642
+    },
+    "name": "Gajowa/Zagórna"
+  },
+  {
+    "id": 519,
+    "point": {
+      "latitude": 53.155213,
+      "longitude": 23.115657
+    },
+    "name": "Gajowa/Pętla"
+  },
+  {
+    "id": 520,
+    "point": {
+      "latitude": 53.15527,
+      "longitude": 23.115487
+    },
+    "name": "Gajowa/Pętla"
+  },
+  {
+    "id": 521,
+    "point": {
+      "latitude": 53.153162,
+      "longitude": 23.121973
+    },
+    "name": "Gajowa/Zagórna"
+  },
+  {
+    "id": 522,
+    "point": {
+      "latitude": 53.143375,
+      "longitude": 23.131261
+    },
+    "name": "Wierzbowa/Antoniukowska"
+  },
+  {
+    "id": 523,
+    "point": {
+      "latitude": 53.140257,
+      "longitude": 23.122983
+    },
+    "name": "Wierzbowa/PZMOT"
+  },
+  {
+    "id": 524,
+    "point": {
+      "latitude": 53.167412,
+      "longitude": 23.148317
+    },
+    "name": "Tysiąclecia P.P./Wodociągi Nadleśnictwo"
+  },
+  {
+    "id": 525,
+    "point": {
+      "latitude": 53.175713,
+      "longitude": 23.14729
+    },
+    "name": "Tysiąclecia P.P./Zajazd"
+  },
+  {
+    "id": 526,
+    "point": {
+      "latitude": 53.178848,
+      "longitude": 23.14773
+    },
+    "name": "Muzeum Wsi"
+  },
+  {
+    "id": 527,
+    "point": {
+      "latitude": 53.190025,
+      "longitude": 23.152132
+    },
+    "name": "Rzeka Supraśl"
+  },
+  {
+    "id": 528,
+    "point": {
+      "latitude": 53.195515,
+      "longitude": 23.155465
+    },
+    "name": "Jurowce/Wiadukt"
+  },
+  {
+    "id": 529,
+    "point": {
+      "latitude": 53.234343,
+      "longitude": 23.150058
+    },
+    "name": "Katrynka"
+  },
+  {
+    "id": 530,
+    "point": {
+      "latitude": 53.239542,
+      "longitude": 23.16891
+    },
+    "name": "Wólka Przedmieście"
+  },
+  {
+    "id": 531,
+    "point": {
+      "latitude": 53.235513,
+      "longitude": 23.171967
+    },
+    "name": "Wólka Poduchowna"
+  },
+  {
+    "id": 532,
+    "point": {
+      "latitude": 53.227762,
+      "longitude": 23.170677
+    },
+    "name": "Woroszyły 1"
+  },
+  {
+    "id": 533,
+    "point": {
+      "latitude": 53.222347,
+      "longitude": 23.16685
+    },
+    "name": "Woroszyły 2"
+  },
+  {
+    "id": 534,
+    "point": {
+      "latitude": 53.213215,
+      "longitude": 23.171985
+    },
+    "name": "Sochonie/Pętla"
+  },
+  {
+    "id": 535,
+    "point": {
+      "latitude": 53.206197,
+      "longitude": 23.171835
+    },
+    "name": "Sochonie/Os.Łan"
+  },
+  {
+    "id": 536,
+    "point": {
+      "latitude": 53.198373,
+      "longitude": 23.174453
+    },
+    "name": "Jurowce/Zakład Stolarski"
+  },
+  {
+    "id": 537,
+    "point": {
+      "latitude": 53.198394,
+      "longitude": 23.17048
+    },
+    "name": "Jurowce/Kamienna"
+  },
+  {
+    "id": 538,
+    "point": {
+      "latitude": 53.19819,
+      "longitude": 23.157007
+    },
+    "name": "Jurowce/Pętla"
+  },
+  {
+    "id": 539,
+    "point": {
+      "latitude": 53.189863,
+      "longitude": 23.151622
+    },
+    "name": "Jurowce/Most"
+  },
+  {
+    "id": 540,
+    "point": {
+      "latitude": 53.182743,
+      "longitude": 23.147732
+    },
+    "name": "Sielachowskie"
+  },
+  {
+    "id": 541,
+    "point": {
+      "latitude": 53.174367,
+      "longitude": 23.14657
+    },
+    "name": "Tysiąclecia P.P./Zajazd"
+  },
+  {
+    "id": 542,
+    "point": {
+      "latitude": 53.166408,
+      "longitude": 23.148295
+    },
+    "name": "Tysiąclecia P.P./Wodociągi Nadleśnictwo"
+  },
+  {
+    "id": 543,
+    "point": {
+      "latitude": 53.198318,
+      "longitude": 23.159167
+    },
+    "name": "Jurowce/Wieś"
+  },
+  {
+    "id": 544,
+    "point": {
+      "latitude": 53.198394,
+      "longitude": 23.17048
+    },
+    "name": "Jurowce/Kamienna"
+  },
+  {
+    "id": 545,
+    "point": {
+      "latitude": 53.198762,
+      "longitude": 23.174492
+    },
+    "name": "Jurowce/Zakład Stolarski"
+  },
+  {
+    "id": 546,
+    "point": {
+      "latitude": 53.206707,
+      "longitude": 23.171732
+    },
+    "name": "Sochonie/Os.Łan"
+  },
+  {
+    "id": 547,
+    "point": {
+      "latitude": 53.119597,
+      "longitude": 23.174685
+    },
+    "name": "Mickiewicza/Kościół Św. Ojca Pio"
+  },
+  {
+    "id": 548,
+    "point": {
+      "latitude": 53.116585,
+      "longitude": 23.17667
+    },
+    "name": "Mickiewicza / Zwierzyniecka"
+  },
+  {
+    "id": 549,
+    "point": {
+      "latitude": 53.093958,
+      "longitude": 23.217748
+    },
+    "name": "Stoczni Gdańskiej/Kościół"
+  },
+  {
+    "id": 550,
+    "point": {
+      "latitude": 53.094207,
+      "longitude": 23.226373
+    },
+    "name": "Stoczni Gdańskiej/Milowa"
+  },
+  {
+    "id": 551,
+    "point": {
+      "latitude": 53.09614,
+      "longitude": 23.231248
+    },
+    "name": "Stoczni Gdańskiej/Zabłudowska"
+  },
+  {
+    "id": 552,
+    "point": {
+      "latitude": 53.116218,
+      "longitude": 23.177105
+    },
+    "name": "Mickiewicza / Jagiellońska"
+  },
+  {
+    "id": 553,
+    "point": {
+      "latitude": 53.150493,
+      "longitude": 23.18588
+    },
+    "name": "Wysockiego/Raginisa"
+  },
+  {
+    "id": 554,
+    "point": {
+      "latitude": 53.155485,
+      "longitude": 23.18604
+    },
+    "name": "Wysockiego/Zgoda"
+  },
+  {
+    "id": 555,
+    "point": {
+      "latitude": 53.160562,
+      "longitude": 23.186273
+    },
+    "name": "Wysockiego - Cmentarz Miejski"
+  },
+  {
+    "id": 556,
+    "point": {
+      "latitude": 53.160655,
+      "longitude": 23.190627
+    },
+    "name": "Kolbego - Kościół"
+  },
+  {
+    "id": 557,
+    "point": {
+      "latitude": 53.159833,
+      "longitude": 23.196625
+    },
+    "name": "Kolbego / Raginisa"
+  },
+  {
+    "id": 558,
+    "point": {
+      "latitude": 53.16118,
+      "longitude": 23.19823
+    },
+    "name": "Bolesława Krzywoustego/Raginisa"
+  },
+  {
+    "id": 559,
+    "point": {
+      "latitude": 53.168267,
+      "longitude": 23.187338
+    },
+    "name": "Wysockiego / Krzywoustego"
+  },
+  {
+    "id": 560,
+    "point": {
+      "latitude": 53.172772,
+      "longitude": 23.186745
+    },
+    "name": "Wysockiego - Silikaty"
+  },
+  {
+    "id": 561,
+    "point": {
+      "latitude": 53.1762,
+      "longitude": 23.186875
+    },
+    "name": "Wysockiego/Pętla"
+  },
+  {
+    "id": 562,
+    "point": {
+      "latitude": 53.176608,
+      "longitude": 23.187353
+    },
+    "name": "Wysockiego/Pętla"
+  },
+  {
+    "id": 563,
+    "point": {
+      "latitude": 53.172195,
+      "longitude": 23.186598
+    },
+    "name": "Wysockiego - Silikaty"
+  },
+  {
+    "id": 564,
+    "point": {
+      "latitude": 53.167258,
+      "longitude": 23.188307
+    },
+    "name": "Krzywoustego / Wysockiego"
+  },
+  {
+    "id": 565,
+    "point": {
+      "latitude": 53.159899,
+      "longitude": 23.19843
+    },
+    "name": "Raginisa / Kolbego"
+  },
+  {
+    "id": 566,
+    "point": {
+      "latitude": 53.160513,
+      "longitude": 23.193705
+    },
+    "name": "Kolbego / Gen. Grota-Roweckiego"
+  },
+  {
+    "id": 567,
+    "point": {
+      "latitude": 53.160687,
+      "longitude": 23.189513
+    },
+    "name": "Kolbego / Staffa"
+  },
+  {
+    "id": 568,
+    "point": {
+      "latitude": 53.159162,
+      "longitude": 23.185998
+    },
+    "name": "Wysockiego - Cmentarz Miejski"
+  },
+  {
+    "id": 569,
+    "point": {
+      "latitude": 53.1541,
+      "longitude": 23.185783
+    },
+    "name": "Wysockiego/Pietrasze"
+  },
+  {
+    "id": 570,
+    "point": {
+      "latitude": 53.149027,
+      "longitude": 23.185565
+    },
+    "name": "Wasilkowska/Błękitna"
+  },
+  {
+    "id": 571,
+    "point": {
+      "latitude": 53.186407,
+      "longitude": 23.189672
+    },
+    "name": "Wasilków/Ogródki Działkowe"
+  },
+  {
+    "id": 572,
+    "point": {
+      "latitude": 53.193403,
+      "longitude": 23.193885
+    },
+    "name": "Wasilków/Stacja Pomp"
+  },
+  {
+    "id": 573,
+    "point": {
+      "latitude": 53.196682,
+      "longitude": 23.197773
+    },
+    "name": "Wasilków/Osiedle"
+  },
+  {
+    "id": 574,
+    "point": {
+      "latitude": 53.199425,
+      "longitude": 23.206115
+    },
+    "name": "Wasilków/Kościelna"
+  },
+  {
+    "id": 575,
+    "point": {
+      "latitude": 53.204718,
+      "longitude": 23.206788
+    },
+    "name": "Wasilków / Polna"
+  },
+  {
+    "id": 576,
+    "point": {
+      "latitude": 53.198882,
+      "longitude": 23.207695
+    },
+    "name": "Wasilków PKS"
+  },
+  {
+    "id": 577,
+    "point": {
+      "latitude": 53.194457,
+      "longitude": 23.194793
+    },
+    "name": "Wasilków/Plaża"
+  },
+  {
+    "id": 578,
+    "point": {
+      "latitude": 53.185322,
+      "longitude": 23.188982
+    },
+    "name": "Wasilków/Ogródki Działkowe"
+  },
+  {
+    "id": 579,
+    "point": {
+      "latitude": 52.999222,
+      "longitude": 23.151463
+    },
+    "name": "Wólka"
+  },
+  {
+    "id": 580,
+    "point": {
+      "latitude": 52.981918,
+      "longitude": 23.147648
+    },
+    "name": "Biele"
+  },
+  {
+    "id": 581,
+    "point": {
+      "latitude": 52.980355,
+      "longitude": 23.18904
+    },
+    "name": "Klewinowo/Pętla"
+  },
+  {
+    "id": 582,
+    "point": {
+      "latitude": 52.982635,
+      "longitude": 23.179342
+    },
+    "name": "Klewinowo Nowe"
+  },
+  {
+    "id": 583,
+    "point": {
+      "latitude": 52.968927,
+      "longitude": 23.13012
+    },
+    "name": "Rostołty"
+  },
+  {
+    "id": 584,
+    "point": {
+      "latitude": 52.971026,
+      "longitude": 23.104189
+    },
+    "name": "Simuny"
+  },
+  {
+    "id": 585,
+    "point": {
+      "latitude": 52.97511,
+      "longitude": 23.08858
+    },
+    "name": "Hołówki Duże"
+  },
+  {
+    "id": 586,
+    "point": {
+      "latitude": 52.992044,
+      "longitude": 23.098764
+    },
+    "name": "Hołówki Małe"
+  },
+  {
+    "id": 587,
+    "point": {
+      "latitude": 53.0063,
+      "longitude": 23.095927
+    },
+    "name": "Szerenosy"
+  },
+  {
+    "id": 588,
+    "point": {
+      "latitude": 53.006009,
+      "longitude": 23.116834
+    },
+    "name": "Juchnowiec Dolny/Kolonia"
+  },
+  {
+    "id": 589,
+    "point": {
+      "latitude": 53.016994,
+      "longitude": 23.151217
+    },
+    "name": "Ogrodniczki_947"
+  },
+  {
+    "id": 590,
+    "point": {
+      "latitude": 53.010672,
+      "longitude": 23.17363
+    },
+    "name": "Janowicze/Pętla"
+  },
+  {
+    "id": 591,
+    "point": {
+      "latitude": 53.012286,
+      "longitude": 23.204183
+    },
+    "name": "Janowicze/Kolonia"
+  },
+  {
+    "id": 592,
+    "point": {
+      "latitude": 53.030716,
+      "longitude": 23.193501
+    },
+    "name": "Hermanówka"
+  },
+  {
+    "id": 593,
+    "point": {
+      "latitude": 53.05064,
+      "longitude": 23.188292
+    },
+    "name": "Niewodnica Nargilewska"
+  },
+  {
+    "id": 594,
+    "point": {
+      "latitude": 53.038298,
+      "longitude": 23.173061
+    },
+    "name": "Lewickie Kolonia"
+  },
+  {
+    "id": 595,
+    "point": {
+      "latitude": 53.02551,
+      "longitude": 23.152917
+    },
+    "name": "Rumejki"
+  },
+  {
+    "id": 596,
+    "point": {
+      "latitude": 53.121547,
+      "longitude": 23.161637
+    },
+    "name": "11 Listopada/Park"
+  },
+  {
+    "id": 597,
+    "point": {
+      "latitude": 53.126532,
+      "longitude": 23.161228
+    },
+    "name": "Skłodowskiej/Hortex"
+  },
+  {
+    "id": 598,
+    "point": {
+      "latitude": 53.130842,
+      "longitude": 23.15488
+    },
+    "name": "Plac Uniwersytecki"
+  },
+  {
+    "id": 599,
+    "point": {
+      "latitude": 53.127907,
+      "longitude": 23.159178
+    },
+    "name": "Książnica Podlaska"
+  },
+  {
+    "id": 600,
+    "point": {
+      "latitude": 53.123297,
+      "longitude": 23.163018
+    },
+    "name": "11 Listopada/Szpital"
+  },
+  {
+    "id": 601,
+    "point": {
+      "latitude": 53.120773,
+      "longitude": 23.160847
+    },
+    "name": "11 Listopada/Stadion"
+  },
+  {
+    "id": 602,
+    "point": {
+      "latitude": 53.10921,
+      "longitude": 23.146163
+    },
+    "name": "Kawaleryjska/Pułaskiego"
+  },
+  {
+    "id": 603,
+    "point": {
+      "latitude": 53.110395,
+      "longitude": 23.146907
+    },
+    "name": "Kawaleryjska/Uniwersytet Muzyczny"
+  },
+  {
+    "id": 604,
+    "point": {
+      "latitude": 53.079125,
+      "longitude": 23.095813
+    },
+    "name": "Księżyno/Bociania"
+  },
+  {
+    "id": 605,
+    "point": {
+      "latitude": 53.074763,
+      "longitude": 23.088975
+    },
+    "name": "Księżyno/Niedźwiedzia"
+  },
+  {
+    "id": 606,
+    "point": {
+      "latitude": 53.071783,
+      "longitude": 23.085863
+    },
+    "name": "Niewodnica"
+  },
+  {
+    "id": 607,
+    "point": {
+      "latitude": 53.075473,
+      "longitude": 23.08997
+    },
+    "name": "Księżyno/Borsucza"
+  },
+  {
+    "id": 608,
+    "point": {
+      "latitude": 53.079003,
+      "longitude": 23.096117
+    },
+    "name": "Księżyno/Vega"
+  },
+  {
+    "id": 609,
+    "point": {
+      "latitude": 53.11793,
+      "longitude": 23.103635
+    },
+    "name": "Zielone Wzgórza"
+  },
+  {
+    "id": 610,
+    "point": {
+      "latitude": 53.107325,
+      "longitude": 23.12611
+    },
+    "name": "Rzymowskiego/Dubois"
+  },
+  {
+    "id": 611,
+    "point": {
+      "latitude": 53.10604,
+      "longitude": 23.13157
+    },
+    "name": "Sławińskiego/Rzymowskiego"
+  },
+  {
+    "id": 612,
+    "point": {
+      "latitude": 53.103132,
+      "longitude": 23.136055
+    },
+    "name": "Sławińskiego/Jednostka Wojskowa"
+  },
+  {
+    "id": 613,
+    "point": {
+      "latitude": 53.099518,
+      "longitude": 23.13076
+    },
+    "name": "Wiadukt/Pętla"
+  },
+  {
+    "id": 614,
+    "point": {
+      "latitude": 53.103815,
+      "longitude": 23.135392
+    },
+    "name": "Sławińskiego/Kawaleryjska"
+  },
+  {
+    "id": 615,
+    "point": {
+      "latitude": 53.106592,
+      "longitude": 23.131332
+    },
+    "name": "Sławińskiego/Wspólna"
+  },
+  {
+    "id": 616,
+    "point": {
+      "latitude": 53.107953,
+      "longitude": 23.128808
+    },
+    "name": "Rzymowskiego/Żeromskiego"
+  },
+  {
+    "id": 617,
+    "point": {
+      "latitude": 53.10751,
+      "longitude": 23.124715
+    },
+    "name": "Dubois/Pawilon"
+  },
+  {
+    "id": 618,
+    "point": {
+      "latitude": 53.109483,
+      "longitude": 23.125447
+    },
+    "name": "Pułaskiego/Przedszkole"
+  },
+  {
+    "id": 619,
+    "point": {
+      "latitude": 53.109555,
+      "longitude": 23.134967
+    },
+    "name": "Pułaskiego/Wspólna"
+  },
+  {
+    "id": 620,
+    "point": {
+      "latitude": 53.109537,
+      "longitude": 23.13875
+    },
+    "name": "Pułaskiego/Szkoła"
+  },
+  {
+    "id": 621,
+    "point": {
+      "latitude": 53.137837,
+      "longitude": 23.119947
+    },
+    "name": "al.Jana Pawła II/Hotel Turkus"
+  },
+  {
+    "id": 622,
+    "point": {
+      "latitude": 53.138585,
+      "longitude": 23.11498
+    },
+    "name": "al.Jana Pawła II/St.Paliw"
+  },
+  {
+    "id": 623,
+    "point": {
+      "latitude": 53.140402,
+      "longitude": 23.108397
+    },
+    "name": "Konst.3 Maja/al. Jana Pawła II"
+  },
+  {
+    "id": 624,
+    "point": {
+      "latitude": 53.150112,
+      "longitude": 23.083765
+    },
+    "name": "K.E.N./Pietkiewicza"
+  },
+  {
+    "id": 625,
+    "point": {
+      "latitude": 53.150693,
+      "longitude": 23.086915
+    },
+    "name": "K.E.N./Pietkuna"
+  },
+  {
+    "id": 626,
+    "point": {
+      "latitude": 53.150545,
+      "longitude": 23.089708
+    },
+    "name": "Kołłątaja/Mackiewicza"
+  },
+  {
+    "id": 627,
+    "point": {
+      "latitude": 53.142227,
+      "longitude": 23.109205
+    },
+    "name": "Konst.3 Maja/Swobodna"
+  },
+  {
+    "id": 628,
+    "point": {
+      "latitude": 53.139395,
+      "longitude": 23.108677
+    },
+    "name": "al.Jana Pawła II/Rzeka Biała"
+  },
+  {
+    "id": 629,
+    "point": {
+      "latitude": 53.137958,
+      "longitude": 23.117022
+    },
+    "name": "al.Jana Pawła II/Centrum Handlowe"
+  },
+  {
+    "id": 630,
+    "point": {
+      "latitude": 53.117945,
+      "longitude": 23.200617
+    },
+    "name": "Dojlidy Fabr. / Centrum Dojlidy"
+  },
+  {
+    "id": 631,
+    "point": {
+      "latitude": 53.111752,
+      "longitude": 23.201187
+    },
+    "name": "Myśliwska / Niedźwiedzia"
+  },
+  {
+    "id": 632,
+    "point": {
+      "latitude": 53.109128,
+      "longitude": 23.200025
+    },
+    "name": "Myśliwska"
+  },
+  {
+    "id": 633,
+    "point": {
+      "latitude": 53.105623,
+      "longitude": 23.196272
+    },
+    "name": "Kuronia / Myśliwska"
+  },
+  {
+    "id": 634,
+    "point": {
+      "latitude": 53.106598,
+      "longitude": 23.192521
+    },
+    "name": "Żurawia / Borsucza"
+  },
+  {
+    "id": 635,
+    "point": {
+      "latitude": 53.11049,
+      "longitude": 23.189542
+    },
+    "name": "Szpital Zakaźny"
+  },
+  {
+    "id": 636,
+    "point": {
+      "latitude": 53.111053,
+      "longitude": 23.183752
+    },
+    "name": "Wiewiórcza / Sokola"
+  },
+  {
+    "id": 637,
+    "point": {
+      "latitude": 53.11157,
+      "longitude": 23.180617
+    },
+    "name": "Mickiewicza / Wiewiórcza"
+  },
+  {
+    "id": 638,
+    "point": {
+      "latitude": 53.10845,
+      "longitude": 23.075492
+    },
+    "name": "Klepacze/Sklep"
+  },
+  {
+    "id": 639,
+    "point": {
+      "latitude": 53.106305,
+      "longitude": 23.068182
+    },
+    "name": "Klepacze/Pętla"
+  },
+  {
+    "id": 640,
+    "point": {
+      "latitude": 53.108835,
+      "longitude": 23.076163
+    },
+    "name": "Klepacze/Remiza"
+  },
+  {
+    "id": 641,
+    "point": {
+      "latitude": 53.139282,
+      "longitude": 23.106818
+    },
+    "name": "Sikorskiego/Biawar"
+  },
+  {
+    "id": 642,
+    "point": {
+      "latitude": 53.134905,
+      "longitude": 23.102042
+    },
+    "name": "Sikorskiego"
+  },
+  {
+    "id": 643,
+    "point": {
+      "latitude": 53.11758,
+      "longitude": 23.099028
+    },
+    "name": "al.Niepodległości/Garaże"
+  },
+  {
+    "id": 644,
+    "point": {
+      "latitude": 53.119177,
+      "longitude": 23.09364
+    },
+    "name": "al.Niepodległości/Magnoliowa"
+  },
+  {
+    "id": 645,
+    "point": {
+      "latitude": 53.121898,
+      "longitude": 23.08728
+    },
+    "name": "Starosielce PKP"
+  },
+  {
+    "id": 646,
+    "point": {
+      "latitude": 53.124555,
+      "longitude": 23.08694
+    },
+    "name": "Boboli/Klonowa"
+  },
+  {
+    "id": 647,
+    "point": {
+      "latitude": 53.084285,
+      "longitude": 23.133433
+    },
+    "name": "Śródlesie"
+  },
+  {
+    "id": 648,
+    "point": {
+      "latitude": 53.076923,
+      "longitude": 23.1376
+    },
+    "name": "Hryniewicze"
+  },
+  {
+    "id": 649,
+    "point": {
+      "latitude": 53.067545,
+      "longitude": 23.136793
+    },
+    "name": "Hryniewicze/MPRD"
+  },
+  {
+    "id": 650,
+    "point": {
+      "latitude": 53.060368,
+      "longitude": 23.14112
+    },
+    "name": "Hryniewicze/Wysypisko"
+  },
+  {
+    "id": 651,
+    "point": {
+      "latitude": 53.054183,
+      "longitude": 23.144502
+    },
+    "name": "Kolonia Lewickie"
+  },
+  {
+    "id": 652,
+    "point": {
+      "latitude": 53.049128,
+      "longitude": 23.14294
+    },
+    "name": "Lewickie/PKS"
+  },
+  {
+    "id": 653,
+    "point": {
+      "latitude": 53.044548,
+      "longitude": 23.141658
+    },
+    "name": "Lewickie/Firma CHM"
+  },
+  {
+    "id": 654,
+    "point": {
+      "latitude": 53.033548,
+      "longitude": 23.141228
+    },
+    "name": "Lewickie/Ogródki Działkowe"
+  },
+  {
+    "id": 655,
+    "point": {
+      "latitude": 53.025273,
+      "longitude": 23.142177
+    },
+    "name": "Rumejki"
+  },
+  {
+    "id": 656,
+    "point": {
+      "latitude": 53.017232,
+      "longitude": 23.139505
+    },
+    "name": "Juchnowiec/PKS"
+  },
+  {
+    "id": 657,
+    "point": {
+      "latitude": 53.013577,
+      "longitude": 23.136412
+    },
+    "name": "Juchnowiec/Młyn"
+  },
+  {
+    "id": 658,
+    "point": {
+      "latitude": 53.009148,
+      "longitude": 23.131705
+    },
+    "name": "Juchnowiec/Wieś"
+  },
+  {
+    "id": 659,
+    "point": {
+      "latitude": 53.004197,
+      "longitude": 23.136818
+    },
+    "name": "Juchnowiec/Pętla"
+  },
+  {
+    "id": 660,
+    "point": {
+      "latitude": 53.00943,
+      "longitude": 23.131412
+    },
+    "name": "Juchnowiec/Mleczarnia"
+  },
+  {
+    "id": 661,
+    "point": {
+      "latitude": 53.01556,
+      "longitude": 23.13817
+    },
+    "name": "Juchnowiec/Młyn"
+  },
+  {
+    "id": 662,
+    "point": {
+      "latitude": 53.025768,
+      "longitude": 23.142315
+    },
+    "name": "Rumejki"
+  },
+  {
+    "id": 663,
+    "point": {
+      "latitude": 53.033915,
+      "longitude": 23.141082
+    },
+    "name": "Lewickie/Ogródki Działkowe"
+  },
+  {
+    "id": 664,
+    "point": {
+      "latitude": 53.045165,
+      "longitude": 23.141932
+    },
+    "name": "Lewickie/Firma CHM"
+  },
+  {
+    "id": 665,
+    "point": {
+      "latitude": 53.0484,
+      "longitude": 23.142845
+    },
+    "name": "Lewickie/PKS"
+  },
+  {
+    "id": 666,
+    "point": {
+      "latitude": 53.05492,
+      "longitude": 23.144723
+    },
+    "name": "Kolonia Lewickie"
+  },
+  {
+    "id": 667,
+    "point": {
+      "latitude": 53.06089,
+      "longitude": 23.140397
+    },
+    "name": "Hryniewicze/Wysypisko"
+  },
+  {
+    "id": 668,
+    "point": {
+      "latitude": 53.068718,
+      "longitude": 23.137017
+    },
+    "name": "Hryniewicze/MPRD"
+  },
+  {
+    "id": 669,
+    "point": {
+      "latitude": 53.079587,
+      "longitude": 23.136402
+    },
+    "name": "Hryniewicze"
+  },
+  {
+    "id": 670,
+    "point": {
+      "latitude": 53.083803,
+      "longitude": 23.133567
+    },
+    "name": "Śródlesie"
+  },
+  {
+    "id": 671,
+    "point": {
+      "latitude": 53.004022,
+      "longitude": 23.137067
+    },
+    "name": "Juchnowiec"
+  },
+  {
+    "id": 672,
+    "point": {
+      "latitude": 52.982028,
+      "longitude": 23.14765
+    },
+    "name": "Juchnowiec D./Wólka"
+  },
+  {
+    "id": 673,
+    "point": {
+      "latitude": 52.999222,
+      "longitude": 23.151463
+    },
+    "name": "Wólka"
+  },
+  {
+    "id": 674,
+    "point": {
+      "latitude": 53.113035,
+      "longitude": 23.130105
+    },
+    "name": "Żeromskiego/Transportowa"
+  },
+  {
+    "id": 675,
+    "point": {
+      "latitude": 53.110123,
+      "longitude": 23.130898
+    },
+    "name": "Żeromskiego/Cerkiew Św. Jerzego"
+  },
+  {
+    "id": 676,
+    "point": {
+      "latitude": 53.106893,
+      "longitude": 23.117908
+    },
+    "name": "Paderewskiego"
+  },
+  {
+    "id": 677,
+    "point": {
+      "latitude": 53.106585,
+      "longitude": 23.122518
+    },
+    "name": "Rzymowskiego"
+  },
+  {
+    "id": 678,
+    "point": {
+      "latitude": 53.110145,
+      "longitude": 23.131198
+    },
+    "name": "Żeromskiego/Pułaskiego"
+  },
+  {
+    "id": 679,
+    "point": {
+      "latitude": 53.13059,
+      "longitude": 23.173983
+    },
+    "name": "Warszawska/Kościół Św.Wojciecha"
+  },
+  {
+    "id": 680,
+    "point": {
+      "latitude": 53.127518,
+      "longitude": 23.181298
+    },
+    "name": "Warszawska/Piastowska"
+  },
+  {
+    "id": 681,
+    "point": {
+      "latitude": 53.112868,
+      "longitude": 23.202843
+    },
+    "name": "Ks.Suchowolca/Myśliwska"
+  },
+  {
+    "id": 682,
+    "point": {
+      "latitude": 53.09566,
+      "longitude": 23.229923
+    },
+    "name": "Stoczni Gdańskiej/Zabłudowska"
+  },
+  {
+    "id": 683,
+    "point": {
+      "latitude": 53.093908,
+      "longitude": 23.224592
+    },
+    "name": "Stoczni Gdańskiej/Wodna"
+  },
+  {
+    "id": 684,
+    "point": {
+      "latitude": 53.094018,
+      "longitude": 23.216258
+    },
+    "name": "Stoczni Gdańskiej/Kościół"
+  },
+  {
+    "id": 685,
+    "point": {
+      "latitude": 53.110745,
+      "longitude": 23.207487
+    },
+    "name": "Ks.Suchowolca/Kościół"
+  },
+  {
+    "id": 686,
+    "point": {
+      "latitude": 53.113931,
+      "longitude": 23.201869
+    },
+    "name": "Dojlidy Fab./Suchowolca"
+  },
+  {
+    "id": 687,
+    "point": {
+      "latitude": 53.118013,
+      "longitude": 23.200742
+    },
+    "name": "Dojlidy Fab./Dojnowska"
+  },
+  {
+    "id": 688,
+    "point": {
+      "latitude": 53.127159,
+      "longitude": 23.182342
+    },
+    "name": "Warszawska/Piastowska"
+  },
+  {
+    "id": 689,
+    "point": {
+      "latitude": 53.130181,
+      "longitude": 23.174875
+    },
+    "name": "Warszawska/Uniwersytet"
+  },
+  {
+    "id": 690,
+    "point": {
+      "latitude": 53.122843,
+      "longitude": 23.204565
+    },
+    "name": "Ciołkowskiego/Baranowicka"
+  },
+  {
+    "id": 691,
+    "point": {
+      "latitude": 53.125397,
+      "longitude": 23.212307
+    },
+    "name": "Ciołkowskiego/Obrębowa"
+  },
+  {
+    "id": 692,
+    "point": {
+      "latitude": 53.126748,
+      "longitude": 23.216552
+    },
+    "name": "Ciołkowskiego/Plażowa"
+  },
+  {
+    "id": 693,
+    "point": {
+      "latitude": 53.129402,
+      "longitude": 23.224612
+    },
+    "name": "Ciołkowskiego/Gen.N.Sulika"
+  },
+  {
+    "id": 694,
+    "point": {
+      "latitude": 53.131227,
+      "longitude": 23.229562
+    },
+    "name": "Ciołkowskiego/Polna"
+  },
+  {
+    "id": 695,
+    "point": {
+      "latitude": 53.13272,
+      "longitude": 23.233765
+    },
+    "name": "Kol.Grabówka/Myśliwska"
+  },
+  {
+    "id": 696,
+    "point": {
+      "latitude": 53.134667,
+      "longitude": 23.239295
+    },
+    "name": "Kol. Grabówka/Klubowa"
+  },
+  {
+    "id": 697,
+    "point": {
+      "latitude": 53.120995,
+      "longitude": 23.262353
+    },
+    "name": "Sobolewo/Zajęcza"
+  },
+  {
+    "id": 698,
+    "point": {
+      "latitude": 53.117135,
+      "longitude": 23.265212
+    },
+    "name": "Sobolewo/Przejazd"
+  },
+  {
+    "id": 699,
+    "point": {
+      "latitude": 53.11279,
+      "longitude": 23.268545
+    },
+    "name": "Sobolewo/Szkoła"
+  },
+  {
+    "id": 700,
+    "point": {
+      "latitude": 53.10653,
+      "longitude": 23.270165
+    },
+    "name": "Sobolewo/Pętla"
+  },
+  {
+    "id": 701,
+    "point": {
+      "latitude": 53.11285,
+      "longitude": 23.26855
+    },
+    "name": "Sobolewo/Szkoła"
+  },
+  {
+    "id": 702,
+    "point": {
+      "latitude": 53.1168,
+      "longitude": 23.265433
+    },
+    "name": "Sobolewo/Przejazd"
+  },
+  {
+    "id": 703,
+    "point": {
+      "latitude": 53.121575,
+      "longitude": 23.261778
+    },
+    "name": "Sobolewo/Sokola"
+  },
+  {
+    "id": 704,
+    "point": {
+      "latitude": 53.134342,
+      "longitude": 23.238182
+    },
+    "name": "Kol. Grabówka/Klubowa"
+  },
+  {
+    "id": 705,
+    "point": {
+      "latitude": 53.132583,
+      "longitude": 23.233402
+    },
+    "name": "Kol.Grabówka/Dębowa"
+  },
+  {
+    "id": 706,
+    "point": {
+      "latitude": 53.131098,
+      "longitude": 23.229127
+    },
+    "name": "Ciołkowskiego/Polna"
+  },
+  {
+    "id": 707,
+    "point": {
+      "latitude": 53.12871,
+      "longitude": 23.221868
+    },
+    "name": "Ciołkowskiego/Gen.N.Sulika"
+  },
+  {
+    "id": 708,
+    "point": {
+      "latitude": 53.126163,
+      "longitude": 23.214692
+    },
+    "name": "Ciołkowskiego/Składy Budowlane"
+  },
+  {
+    "id": 709,
+    "point": {
+      "latitude": 53.124208,
+      "longitude": 23.208517
+    },
+    "name": "Ciołkowskiego/Zaściańska"
+  },
+  {
+    "id": 710,
+    "point": {
+      "latitude": 53.110107,
+      "longitude": 23.21274
+    },
+    "name": "Plażowa/Pętla"
+  },
+  {
+    "id": 711,
+    "point": {
+      "latitude": 52.975098,
+      "longitude": 23.152219
+    },
+    "name": "Złotniki"
+  },
+  {
+    "id": 712,
+    "point": {
+      "latitude": 52.949157,
+      "longitude": 23.160638
+    },
+    "name": "Tryczówka Kościół"
+  },
+  {
+    "id": 713,
+    "point": {
+      "latitude": 52.940071,
+      "longitude": 23.168487
+    },
+    "name": "Dorożki Kolonia"
+  },
+  {
+    "id": 714,
+    "point": {
+      "latitude": 52.929423,
+      "longitude": 23.185489
+    },
+    "name": "Zajączki Las"
+  },
+  {
+    "id": 715,
+    "point": {
+      "latitude": 52.919085,
+      "longitude": 23.182248
+    },
+    "name": "Zajączki"
+  },
+  {
+    "id": 716,
+    "point": {
+      "latitude": 52.920041,
+      "longitude": 23.210803
+    },
+    "name": "Czerewki/Kożany"
+  },
+  {
+    "id": 717,
+    "point": {
+      "latitude": 52.918484,
+      "longitude": 23.152228
+    },
+    "name": "Czerewki DPS"
+  },
+  {
+    "id": 718,
+    "point": {
+      "latitude": 52.925665,
+      "longitude": 23.154217
+    },
+    "name": "Pańki"
+  },
+  {
+    "id": 719,
+    "point": {
+      "latitude": 52.93384,
+      "longitude": 23.15287
+    },
+    "name": "Dorożki"
+  },
+  {
+    "id": 720,
+    "point": {
+      "latitude": 52.943957,
+      "longitude": 23.15415
+    },
+    "name": "Bogdanki/Wieś"
+  },
+  {
+    "id": 721,
+    "point": {
+      "latitude": 52.945986,
+      "longitude": 23.113654
+    },
+    "name": "Baranki/Pętla"
+  },
+  {
+    "id": 722,
+    "point": {
+      "latitude": 52.94707,
+      "longitude": 23.150071
+    },
+    "name": "Bogdanki/Szkoła"
+  },
+  {
+    "id": 723,
+    "point": {
+      "latitude": 52.949899,
+      "longitude": 23.160647
+    },
+    "name": "Tryczówka Kościół"
+  },
+  {
+    "id": 724,
+    "point": {
+      "latitude": 52.965524,
+      "longitude": 23.156829
+    },
+    "name": "Złotniki/Kolonia"
+  },
+  {
+    "id": 725,
+    "point": {
+      "latitude": 52.975939,
+      "longitude": 23.151521
+    },
+    "name": "Złotniki"
+  },
+  {
+    "id": 726,
+    "point": {
+      "latitude": 52.920867,
+      "longitude": 23.21127
+    },
+    "name": "Wojszki 10"
+  },
+  {
+    "id": 727,
+    "point": {
+      "latitude": 52.92809,
+      "longitude": 23.211975
+    },
+    "name": "Wojszki Wieś"
+  },
+  {
+    "id": 728,
+    "point": {
+      "latitude": 52.926446,
+      "longitude": 23.211804
+    },
+    "name": "Wojszki"
+  },
+  {
+    "id": 729,
+    "point": {
+      "latitude": 53.125175,
+      "longitude": 23.167103
+    },
+    "name": "Świętojańska / Galeria Alfa"
+  },
+  {
+    "id": 730,
+    "point": {
+      "latitude": 53.123757,
+      "longitude": 23.172363
+    },
+    "name": "Mickiewicza/Grottgera"
+  },
+  {
+    "id": 731,
+    "point": {
+      "latitude": 53.113712,
+      "longitude": 23.178755
+    },
+    "name": "Mickiewicza / Ciołkowskiego"
+  },
+  {
+    "id": 732,
+    "point": {
+      "latitude": 53.110448,
+      "longitude": 23.181212
+    },
+    "name": "Mickiewicza / Wiewiórcza"
+  },
+  {
+    "id": 733,
+    "point": {
+      "latitude": 53.108203,
+      "longitude": 23.182857
+    },
+    "name": "Mickiewicza / Liceum"
+  },
+  {
+    "id": 734,
+    "point": {
+      "latitude": 53.105665,
+      "longitude": 23.186123
+    },
+    "name": "Jacka Kuronia"
+  },
+  {
+    "id": 735,
+    "point": {
+      "latitude": 53.110128,
+      "longitude": 23.190373
+    },
+    "name": "Szpital Zakaźny"
+  },
+  {
+    "id": 736,
+    "point": {
+      "latitude": 53.106489,
+      "longitude": 23.191611
+    },
+    "name": "Kuronia / Żurawia"
+  },
+  {
+    "id": 737,
+    "point": {
+      "latitude": 53.106153,
+      "longitude": 23.184687
+    },
+    "name": "Sąd Rejonowy"
+  },
+  {
+    "id": 738,
+    "point": {
+      "latitude": 53.10917,
+      "longitude": 23.182482
+    },
+    "name": "Mickiewicza / Liceum"
+  },
+  {
+    "id": 739,
+    "point": {
+      "latitude": 53.110217,
+      "longitude": 23.19178
+    },
+    "name": "WORD"
+  },
+  {
+    "id": 740,
+    "point": {
+      "latitude": 53.109952,
+      "longitude": 23.194852
+    },
+    "name": "Szpacza"
+  },
+  {
+    "id": 741,
+    "point": {
+      "latitude": 53.109165,
+      "longitude": 23.199975
+    },
+    "name": "Myśliwska"
+  },
+  {
+    "id": 742,
+    "point": {
+      "latitude": 53.109687,
+      "longitude": 23.198558
+    },
+    "name": "Szpacza"
+  },
+  {
+    "id": 743,
+    "point": {
+      "latitude": 53.104783,
+      "longitude": 23.185327
+    },
+    "name": "Sąd Rejonowy"
+  },
+  {
+    "id": 744,
+    "point": {
+      "latitude": 53.100052,
+      "longitude": 23.18865
+    },
+    "name": "Mickiewicza/Ogródki Działkowe"
+  },
+  {
+    "id": 745,
+    "point": {
+      "latitude": 53.094233,
+      "longitude": 23.192845
+    },
+    "name": "Mickiewicza/Grabowa"
+  },
+  {
+    "id": 746,
+    "point": {
+      "latitude": 53.086237,
+      "longitude": 23.201513
+    },
+    "name": "Brzoskwiniowa/Mickiewicza"
+  },
+  {
+    "id": 747,
+    "point": {
+      "latitude": 53.086685,
+      "longitude": 23.20802
+    },
+    "name": "Brzoskwiniowa/Daliowa"
+  },
+  {
+    "id": 748,
+    "point": {
+      "latitude": 53.086752,
+      "longitude": 23.207532
+    },
+    "name": "Brzoskwiniowa/Daliowa"
+  },
+  {
+    "id": 749,
+    "point": {
+      "latitude": 53.085942,
+      "longitude": 23.200942
+    },
+    "name": "Brzoskwiniowa/Mickiewicza"
+  },
+  {
+    "id": 750,
+    "point": {
+      "latitude": 53.094165,
+      "longitude": 23.19312
+    },
+    "name": "Mickiewicza/Grabowa"
+  },
+  {
+    "id": 751,
+    "point": {
+      "latitude": 53.101557,
+      "longitude": 23.187722
+    },
+    "name": "Mickiewicza/Ogródki Działkowe"
+  },
+  {
+    "id": 752,
+    "point": {
+      "latitude": 53.147558,
+      "longitude": 23.108603
+    },
+    "name": "Swobodna/Łagodna"
+  },
+  {
+    "id": 753,
+    "point": {
+      "latitude": 53.150795,
+      "longitude": 23.111927
+    },
+    "name": "Antoniuk F./Jarzębinowa"
+  },
+  {
+    "id": 754,
+    "point": {
+      "latitude": 53.153001,
+      "longitude": 23.107871
+    },
+    "name": "Produkcyjna/Nadrzeczna"
+  },
+  {
+    "id": 755,
+    "point": {
+      "latitude": 53.156088,
+      "longitude": 23.102047
+    },
+    "name": "Produkcyjna/Neptuna"
+  },
+  {
+    "id": 756,
+    "point": {
+      "latitude": 53.157812,
+      "longitude": 23.098645
+    },
+    "name": "Produkcyjna/Saturna"
+  },
+  {
+    "id": 757,
+    "point": {
+      "latitude": 53.161483,
+      "longitude": 23.092018
+    },
+    "name": "Produkcyjna/P.E.U.i M."
+  },
+  {
+    "id": 758,
+    "point": {
+      "latitude": 53.16529,
+      "longitude": 23.08405
+    },
+    "name": "Produkcyjna/Oczyszczalnia"
+  },
+  {
+    "id": 759,
+    "point": {
+      "latitude": 53.16615,
+      "longitude": 23.0809
+    },
+    "name": "Produkcyjna/Pętla"
+  },
+  {
+    "id": 760,
+    "point": {
+      "latitude": 53.16586,
+      "longitude": 23.08138
+    },
+    "name": "Produkcyjna"
+  },
+  {
+    "id": 761,
+    "point": {
+      "latitude": 53.16481,
+      "longitude": 23.08543
+    },
+    "name": "Produkcyjna/Oczyszczalnia"
+  },
+  {
+    "id": 762,
+    "point": {
+      "latitude": 53.1618,
+      "longitude": 23.09112
+    },
+    "name": "Produkcyjna/P.E.U.i M."
+  },
+  {
+    "id": 763,
+    "point": {
+      "latitude": 53.160333,
+      "longitude": 23.093727
+    },
+    "name": "Produkcyjna/Maczka"
+  },
+  {
+    "id": 764,
+    "point": {
+      "latitude": 53.157923,
+      "longitude": 23.098288
+    },
+    "name": "Produkcyjna/Kleeberga"
+  },
+  {
+    "id": 765,
+    "point": {
+      "latitude": 53.155117,
+      "longitude": 23.103472
+    },
+    "name": "Produkcyjna/Bacieczki"
+  },
+  {
+    "id": 766,
+    "point": {
+      "latitude": 53.150615,
+      "longitude": 23.111835
+    },
+    "name": "Antoniuk F. / Swobodna"
+  },
+  {
+    "id": 767,
+    "point": {
+      "latitude": 53.148005,
+      "longitude": 23.109158
+    },
+    "name": "Swobodna/Szeroka"
+  },
+  {
+    "id": 768,
+    "point": {
+      "latitude": 53.159822,
+      "longitude": 23.097572
+    },
+    "name": "Produkcyjna/Auchan"
+  },
+  {
+    "id": 769,
+    "point": {
+      "latitude": 53.168405,
+      "longitude": 23.218348
+    },
+    "name": "Niemeńska/Berezyńska"
+  },
+  {
+    "id": 770,
+    "point": {
+      "latitude": 53.166022,
+      "longitude": 23.222252
+    },
+    "name": "Niemeńska/Czarnej Hańczy"
+  },
+  {
+    "id": 771,
+    "point": {
+      "latitude": 53.164015,
+      "longitude": 23.223065
+    },
+    "name": "Niemeńska/Wiślana Pętla"
+  },
+  {
+    "id": 772,
+    "point": {
+      "latitude": 53.164237,
+      "longitude": 23.2231
+    },
+    "name": "Niemeńska/Wiślana Pętla"
+  },
+  {
+    "id": 773,
+    "point": {
+      "latitude": 53.167542,
+      "longitude": 23.22119
+    },
+    "name": "Niemeńska"
+  },
+  {
+    "id": 774,
+    "point": {
+      "latitude": 53.168845,
+      "longitude": 23.213672
+    },
+    "name": "Niemeńska II"
+  },
+  {
+    "id": 775,
+    "point": {
+      "latitude": 53.134197,
+      "longitude": 23.214498
+    },
+    "name": "Włościańska/Boisko"
+  },
+  {
+    "id": 776,
+    "point": {
+      "latitude": 53.134432,
+      "longitude": 23.219278
+    },
+    "name": "Włościańska/Ściegiennego"
+  },
+  {
+    "id": 777,
+    "point": {
+      "latitude": 53.135542,
+      "longitude": 23.21921
+    },
+    "name": "Pieczurki/Pętla"
+  },
+  {
+    "id": 778,
+    "point": {
+      "latitude": 53.134077,
+      "longitude": 23.211425
+    },
+    "name": "Włościańska/Sklep"
+  },
+  {
+    "id": 779,
+    "point": {
+      "latitude": 53.151737,
+      "longitude": 23.089458
+    },
+    "name": "Kołłątaja/K.E.N."
+  },
+  {
+    "id": 780,
+    "point": {
+      "latitude": 53.153853,
+      "longitude": 23.088193
+    },
+    "name": "Kołłątaja"
+  },
+  {
+    "id": 781,
+    "point": {
+      "latitude": 53.156989,
+      "longitude": 23.084262
+    },
+    "name": "Przędzalniana/Fasty Osiedle"
+  },
+  {
+    "id": 782,
+    "point": {
+      "latitude": 53.157837,
+      "longitude": 23.080332
+    },
+    "name": "ZPB \"Fasty\""
+  },
+  {
+    "id": 783,
+    "point": {
+      "latitude": 53.159018,
+      "longitude": 23.074987
+    },
+    "name": "Przędzalniana/Szosa Ełcka  "
+  },
+  {
+    "id": 784,
+    "point": {
+      "latitude": 53.161035,
+      "longitude": 23.069817
+    },
+    "name": "Fasty/Giełda rolno-spożywcza"
+  },
+  {
+    "id": 785,
+    "point": {
+      "latitude": 53.165202,
+      "longitude": 23.068298
+    },
+    "name": "Fasty/Warsztat mechaniczny"
+  },
+  {
+    "id": 786,
+    "point": {
+      "latitude": 53.168538,
+      "longitude": 23.058115
+    },
+    "name": "Fasty/Przystanek PKS"
+  },
+  {
+    "id": 787,
+    "point": {
+      "latitude": 53.171267,
+      "longitude": 23.046778
+    },
+    "name": "Fasty/Pętla"
+  },
+  {
+    "id": 788,
+    "point": {
+      "latitude": 53.171235,
+      "longitude": 23.046483
+    },
+    "name": "Fasty/Pętla"
+  },
+  {
+    "id": 789,
+    "point": {
+      "latitude": 53.168023,
+      "longitude": 23.060693
+    },
+    "name": "Fasty/Przystanek PKS"
+  },
+  {
+    "id": 790,
+    "point": {
+      "latitude": 53.161048,
+      "longitude": 23.069802
+    },
+    "name": "Fasty/Giełda rolno-spożywcza"
+  },
+  {
+    "id": 791,
+    "point": {
+      "latitude": 53.158563,
+      "longitude": 23.076898
+    },
+    "name": "Przędzalniana/Szosa Ełcka  "
+  },
+  {
+    "id": 792,
+    "point": {
+      "latitude": 53.157658,
+      "longitude": 23.08018
+    },
+    "name": "ZPB \"Fasty\""
+  },
+  {
+    "id": 793,
+    "point": {
+      "latitude": 53.15672,
+      "longitude": 23.08515
+    },
+    "name": "Przędzalniana/Fasty Osiedle"
+  },
+  {
+    "id": 794,
+    "point": {
+      "latitude": 53.153772,
+      "longitude": 23.088013
+    },
+    "name": "Kołłątaja"
+  },
+  {
+    "id": 795,
+    "point": {
+      "latitude": 53.104168,
+      "longitude": 23.152347
+    },
+    "name": "Wiosenna"
+  },
+  {
+    "id": 796,
+    "point": {
+      "latitude": 53.086802,
+      "longitude": 23.157292
+    },
+    "name": "Izabelin / Dworska"
+  },
+  {
+    "id": 797,
+    "point": {
+      "latitude": 53.083573,
+      "longitude": 23.162558
+    },
+    "name": "Olmonty"
+  },
+  {
+    "id": 798,
+    "point": {
+      "latitude": 53.087048,
+      "longitude": 23.157038
+    },
+    "name": "Izabelin / Dworska"
+  },
+  {
+    "id": 799,
+    "point": {
+      "latitude": 53.111003,
+      "longitude": 23.183255
+    },
+    "name": "Wiewiórcza / Liceum"
+  },
+  {
+    "id": 800,
+    "point": {
+      "latitude": 53.140168,
+      "longitude": 23.106697
+    },
+    "name": "al.Jana Pawła II/Kościół"
+  },
+  {
+    "id": 801,
+    "point": {
+      "latitude": 53.141298,
+      "longitude": 23.099857
+    },
+    "name": "al.Jana Pawła II/Pomnik"
+  },
+  {
+    "id": 802,
+    "point": {
+      "latitude": 53.143628,
+      "longitude": 23.087003
+    },
+    "name": "al.Jana Pawła II/Hotel Leśny"
+  },
+  {
+    "id": 803,
+    "point": {
+      "latitude": 53.144378,
+      "longitude": 23.083097
+    },
+    "name": "al.Jana Pawła II/Makro  "
+  },
+  {
+    "id": 804,
+    "point": {
+      "latitude": 53.144045,
+      "longitude": 23.074033
+    },
+    "name": "Elewatorska Fadom"
+  },
+  {
+    "id": 805,
+    "point": {
+      "latitude": 53.139287,
+      "longitude": 23.074698
+    },
+    "name": "Elewatorska Polmos"
+  },
+  {
+    "id": 806,
+    "point": {
+      "latitude": 53.135687,
+      "longitude": 23.074603
+    },
+    "name": "Elewatorska PZZ"
+  },
+  {
+    "id": 807,
+    "point": {
+      "latitude": 53.132237,
+      "longitude": 23.07603
+    },
+    "name": "Elewatorska Stadion"
+  },
+  {
+    "id": 808,
+    "point": {
+      "latitude": 53.130857,
+      "longitude": 23.076723
+    },
+    "name": "Elewatorska Stadion"
+  },
+  {
+    "id": 809,
+    "point": {
+      "latitude": 53.134893,
+      "longitude": 23.075127
+    },
+    "name": "Elewatorska PZZ"
+  },
+  {
+    "id": 810,
+    "point": {
+      "latitude": 53.140037,
+      "longitude": 23.074922
+    },
+    "name": "Elewatorska Polmos"
+  },
+  {
+    "id": 811,
+    "point": {
+      "latitude": 53.144577,
+      "longitude": 23.073677
+    },
+    "name": "Elewatorska Fadom"
+  },
+  {
+    "id": 812,
+    "point": {
+      "latitude": 53.145122,
+      "longitude": 23.077988
+    },
+    "name": "al.Jana Pawła II/ W.S.P."
+  },
+  {
+    "id": 813,
+    "point": {
+      "latitude": 53.143535,
+      "longitude": 23.086523
+    },
+    "name": "al.Jana Pawła II/Hotel Leśny"
+  },
+  {
+    "id": 814,
+    "point": {
+      "latitude": 53.140735,
+      "longitude": 23.10155
+    },
+    "name": "al.Jana Pawła II/Biawar"
+  },
+  {
+    "id": 815,
+    "point": {
+      "latitude": 53.149937,
+      "longitude": 23.18677
+    },
+    "name": "Raginisa/Wysockiego"
+  },
+  {
+    "id": 816,
+    "point": {
+      "latitude": 53.152977,
+      "longitude": 23.191598
+    },
+    "name": "Raginisa/Cmentarz Farny"
+  },
+  {
+    "id": 817,
+    "point": {
+      "latitude": 53.156432,
+      "longitude": 23.1953
+    },
+    "name": "Raginisa/Trawiasta"
+  },
+  {
+    "id": 818,
+    "point": {
+      "latitude": 53.155505,
+      "longitude": 23.19429
+    },
+    "name": "Raginisa/Trawiasta"
+  },
+  {
+    "id": 819,
+    "point": {
+      "latitude": 53.152383,
+      "longitude": 23.190527
+    },
+    "name": "Raginisa/Cmentarz Farny"
+  },
+  {
+    "id": 820,
+    "point": {
+      "latitude": 53.190658,
+      "longitude": 23.238793
+    },
+    "name": "Nowodworce"
+  },
+  {
+    "id": 821,
+    "point": {
+      "latitude": 53.190675,
+      "longitude": 23.238812
+    },
+    "name": "Nowodworce"
+  },
+  {
+    "id": 822,
+    "point": {
+      "latitude": 53.122647,
+      "longitude": 23.092322
+    },
+    "name": "Wrocławska/Storczykowa"
+  },
+  {
+    "id": 823,
+    "point": {
+      "latitude": 53.156533,
+      "longitude": 23.140293
+    },
+    "name": "Świętokrzyska/Orzechowa"
+  },
+  {
+    "id": 824,
+    "point": {
+      "latitude": 53.159292,
+      "longitude": 23.142392
+    },
+    "name": "Maczka/Świętokrzyska"
+  },
+  {
+    "id": 825,
+    "point": {
+      "latitude": 53.158657,
+      "longitude": 23.140928
+    },
+    "name": "Świętokrzyska/Maczka"
+  },
+  {
+    "id": 826,
+    "point": {
+      "latitude": 53.155338,
+      "longitude": 23.139355
+    },
+    "name": "Świętokrzyska/Orzechowa"
+  },
+  {
+    "id": 827,
+    "point": {
+      "latitude": 53.123367,
+      "longitude": 23.094983
+    },
+    "name": "Wrocławska/Rybnika"
+  },
+  {
+    "id": 828,
+    "point": {
+      "latitude": 53.122485,
+      "longitude": 23.091207
+    },
+    "name": "Wrocławska/Miodowa"
+  },
+  {
+    "id": 829,
+    "point": {
+      "latitude": 53.149382,
+      "longitude": 23.055095
+    },
+    "name": "Porosły/Stacja Paliw"
+  },
+  {
+    "id": 830,
+    "point": {
+      "latitude": 53.150493,
+      "longitude": 23.050812
+    },
+    "name": "Porosły"
+  },
+  {
+    "id": 831,
+    "point": {
+      "latitude": 53.151608,
+      "longitude": 23.043285
+    },
+    "name": "Łyski"
+  },
+  {
+    "id": 832,
+    "point": {
+      "latitude": 53.155618,
+      "longitude": 23.026327
+    },
+    "name": "Łyski - Fabryka Okien"
+  },
+  {
+    "id": 833,
+    "point": {
+      "latitude": 53.15646,
+      "longitude": 23.022147
+    },
+    "name": "Choroszcz / Warszawska"
+  },
+  {
+    "id": 834,
+    "point": {
+      "latitude": 53.157047,
+      "longitude": 23.012495
+    },
+    "name": "Nowosiółki"
+  },
+  {
+    "id": 835,
+    "point": {
+      "latitude": 53.152275,
+      "longitude": 23.004122
+    },
+    "name": "Firma NEXMAR"
+  },
+  {
+    "id": 836,
+    "point": {
+      "latitude": 53.14644,
+      "longitude": 22.994403
+    },
+    "name": "Choroszcz/Mickiewicza"
+  },
+  {
+    "id": 837,
+    "point": {
+      "latitude": 53.146672,
+      "longitude": 22.989773
+    },
+    "name": "Choroszcz/Powst.Styczniowego"
+  },
+  {
+    "id": 838,
+    "point": {
+      "latitude": 53.152527,
+      "longitude": 22.98617
+    },
+    "name": "Choroszcz - Szpital"
+  },
+  {
+    "id": 839,
+    "point": {
+      "latitude": 53.148888,
+      "longitude": 22.986408
+    },
+    "name": "Choroszcz/Sienkiewicza"
+  },
+  {
+    "id": 840,
+    "point": {
+      "latitude": 53.14263,
+      "longitude": 22.987642
+    },
+    "name": "Choroszcz - Rynek 11 Listopada"
+  },
+  {
+    "id": 841,
+    "point": {
+      "latitude": 53.142615,
+      "longitude": 22.988507
+    },
+    "name": "Choroszcz - Rynek 11 Listopada"
+  },
+  {
+    "id": 842,
+    "point": {
+      "latitude": 53.152292,
+      "longitude": 22.985857
+    },
+    "name": "Choroszcz - Szpital"
+  },
+  {
+    "id": 843,
+    "point": {
+      "latitude": 53.148285,
+      "longitude": 22.987483
+    },
+    "name": "Choroszcz/Akacjowa"
+  },
+  {
+    "id": 844,
+    "point": {
+      "latitude": 53.145432,
+      "longitude": 22.991237
+    },
+    "name": "Choroszcz/Szkoła"
+  },
+  {
+    "id": 845,
+    "point": {
+      "latitude": 53.152407,
+      "longitude": 23.004198
+    },
+    "name": "Firma NEXMAR"
+  },
+  {
+    "id": 846,
+    "point": {
+      "latitude": 53.157625,
+      "longitude": 23.011475
+    },
+    "name": "Nowosiółki"
+  },
+  {
+    "id": 847,
+    "point": {
+      "latitude": 53.156622,
+      "longitude": 23.022747
+    },
+    "name": "Choroszcz / Warszawska"
+  },
+  {
+    "id": 848,
+    "point": {
+      "latitude": 53.154198,
+      "longitude": 23.028783
+    },
+    "name": "Łyski - Fabryka Okien"
+  },
+  {
+    "id": 849,
+    "point": {
+      "latitude": 53.151258,
+      "longitude": 23.044792
+    },
+    "name": "Łyski"
+  },
+  {
+    "id": 850,
+    "point": {
+      "latitude": 53.15052,
+      "longitude": 23.052113
+    },
+    "name": "Porosły"
+  },
+  {
+    "id": 851,
+    "point": {
+      "latitude": 53.148773,
+      "longitude": 23.057282
+    },
+    "name": "Porosły/Stacja Paliw"
+  },
+  {
+    "id": 852,
+    "point": {
+      "latitude": 53.139342,
+      "longitude": 22.984257
+    },
+    "name": "Choroszcz / Zastawie"
+  },
+  {
+    "id": 853,
+    "point": {
+      "latitude": 53.137568,
+      "longitude": 22.976982
+    },
+    "name": "Choroszcz / Piaskowa"
+  },
+  {
+    "id": 854,
+    "point": {
+      "latitude": 53.134868,
+      "longitude": 22.97398
+    },
+    "name": "Choroszcz - Cmentarz"
+  },
+  {
+    "id": 855,
+    "point": {
+      "latitude": 53.13765,
+      "longitude": 22.977105
+    },
+    "name": "Choroszcz / Piaskowa"
+  },
+  {
+    "id": 856,
+    "point": {
+      "latitude": 53.13976,
+      "longitude": 22.985462
+    },
+    "name": "Choroszcz / Dominikańska"
+  },
+  {
+    "id": 857,
+    "point": {
+      "latitude": 53.123887,
+      "longitude": 23.150602
+    },
+    "name": "Waszyngtona / Wesoła"
+  },
+  {
+    "id": 858,
+    "point": {
+      "latitude": 53.126178,
+      "longitude": 23.158995
+    },
+    "name": "Waszyngtona/Szpital Uniwersytecki"
+  },
+  {
+    "id": 859,
+    "point": {
+      "latitude": 53.124837,
+      "longitude": 23.155312
+    },
+    "name": "Waszyngtona/Szpital DSK"
+  },
+  {
+    "id": 860,
+    "point": {
+      "latitude": 53.138308,
+      "longitude": 23.186757
+    },
+    "name": "Towarowa/Pętla"
+  },
+  {
+    "id": 861,
+    "point": {
+      "latitude": 53.142543,
+      "longitude": 23.213992
+    },
+    "name": "42. Pułku Piechoty/Dolistowska"
+  },
+  {
+    "id": 862,
+    "point": {
+      "latitude": 53.141952,
+      "longitude": 23.221117
+    },
+    "name": "42. Pułku Piechoty"
+  },
+  {
+    "id": 863,
+    "point": {
+      "latitude": 53.141637,
+      "longitude": 23.225133
+    },
+    "name": "42. Pułku Piechoty/Ogródki Działkowe"
+  },
+  {
+    "id": 864,
+    "point": {
+      "latitude": 53.140722,
+      "longitude": 23.232942
+    },
+    "name": "Warzywna"
+  },
+  {
+    "id": 865,
+    "point": {
+      "latitude": 53.14185,
+      "longitude": 23.22269
+    },
+    "name": "42. Pułku Piechoty"
+  },
+  {
+    "id": 866,
+    "point": {
+      "latitude": 53.142873,
+      "longitude": 23.211348
+    },
+    "name": "42. Pułku Piechoty/Brzechwy"
+  },
+  {
+    "id": 867,
+    "point": {
+      "latitude": 53.114752,
+      "longitude": 23.190227
+    },
+    "name": "Osiedle Dojlidy"
+  },
+  {
+    "id": 868,
+    "point": {
+      "latitude": 53.144053,
+      "longitude": 23.243847
+    },
+    "name": "Sowlany/Alejkowa"
+  },
+  {
+    "id": 869,
+    "point": {
+      "latitude": 53.153235,
+      "longitude": 23.242795
+    },
+    "name": "Sowlany/Wojskowa"
+  },
+  {
+    "id": 870,
+    "point": {
+      "latitude": 53.156645,
+      "longitude": 23.24323
+    },
+    "name": "Sowlany/Św.Marka"
+  },
+  {
+    "id": 871,
+    "point": {
+      "latitude": 53.165035,
+      "longitude": 23.25568
+    },
+    "name": "Karakule Las"
+  },
+  {
+    "id": 872,
+    "point": {
+      "latitude": 53.170287,
+      "longitude": 23.260088
+    },
+    "name": "Karakule/Bagnowska"
+  },
+  {
+    "id": 873,
+    "point": {
+      "latitude": 53.174215,
+      "longitude": 23.26091
+    },
+    "name": "Karakule/Turystyczna"
+  },
+  {
+    "id": 874,
+    "point": {
+      "latitude": 53.179877,
+      "longitude": 23.263153
+    },
+    "name": "Karakule/Klasztorna"
+  },
+  {
+    "id": 875,
+    "point": {
+      "latitude": 53.183298,
+      "longitude": 23.262777
+    },
+    "name": "Ogrodniczki/Szkolna"
+  },
+  {
+    "id": 876,
+    "point": {
+      "latitude": 53.18486,
+      "longitude": 23.270772
+    },
+    "name": "Ogrodniczki/Polna"
+  },
+  {
+    "id": 877,
+    "point": {
+      "latitude": 53.182318,
+      "longitude": 23.275135
+    },
+    "name": "Tartak"
+  },
+  {
+    "id": 878,
+    "point": {
+      "latitude": 53.177317,
+      "longitude": 23.281282
+    },
+    "name": "Ciasne/Osada"
+  },
+  {
+    "id": 879,
+    "point": {
+      "latitude": 53.172777,
+      "longitude": 23.288062
+    },
+    "name": "Ciasne"
+  },
+  {
+    "id": 880,
+    "point": {
+      "latitude": 53.177685,
+      "longitude": 23.280848
+    },
+    "name": "Ciasne/Osada"
+  },
+  {
+    "id": 881,
+    "point": {
+      "latitude": 53.182673,
+      "longitude": 23.274875
+    },
+    "name": "Tartak"
+  },
+  {
+    "id": 882,
+    "point": {
+      "latitude": 53.185083,
+      "longitude": 23.270617
+    },
+    "name": "Ogrodniczki/Polna"
+  },
+  {
+    "id": 883,
+    "point": {
+      "latitude": 53.183752,
+      "longitude": 23.262495
+    },
+    "name": "Ogrodniczki/Szkolna"
+  },
+  {
+    "id": 884,
+    "point": {
+      "latitude": 53.178785,
+      "longitude": 23.263113
+    },
+    "name": "Karakule/Klasztorna"
+  },
+  {
+    "id": 885,
+    "point": {
+      "latitude": 53.174733,
+      "longitude": 23.261007
+    },
+    "name": "Karakule/Wąska"
+  },
+  {
+    "id": 886,
+    "point": {
+      "latitude": 53.169947,
+      "longitude": 23.259972
+    },
+    "name": "Karakule/Bagnowska"
+  },
+  {
+    "id": 887,
+    "point": {
+      "latitude": 53.16472,
+      "longitude": 23.254942
+    },
+    "name": "Karakule Las"
+  },
+  {
+    "id": 888,
+    "point": {
+      "latitude": 53.156322,
+      "longitude": 23.243157
+    },
+    "name": "Sowlany/Św.Marka"
+  },
+  {
+    "id": 889,
+    "point": {
+      "latitude": 53.152433,
+      "longitude": 23.243003
+    },
+    "name": "Sowlany/Wiatrakowa"
+  },
+  {
+    "id": 890,
+    "point": {
+      "latitude": 53.144284,
+      "longitude": 23.24389
+    },
+    "name": "Sowlany/Alejkowa"
+  },
+  {
+    "id": 891,
+    "point": {
+      "latitude": 53.182351,
+      "longitude": 23.187537
+    },
+    "name": "Wasilków / Cisowa"
+  },
+  {
+    "id": 892,
+    "point": {
+      "latitude": 53.143173,
+      "longitude": 23.179372
+    },
+    "name": "Traugutta / Wasilkowska"
+  },
+  {
+    "id": 893,
+    "point": {
+      "latitude": 53.141165,
+      "longitude": 23.184343
+    },
+    "name": "Traugutta/Dworzec Fabryczny"
+  },
+  {
+    "id": 894,
+    "point": {
+      "latitude": 53.143393,
+      "longitude": 23.186293
+    },
+    "name": "Kapralska/Pusta"
+  },
+  {
+    "id": 895,
+    "point": {
+      "latitude": 53.142557,
+      "longitude": 23.18594
+    },
+    "name": "Kapralska/Pionerska"
+  },
+  {
+    "id": 896,
+    "point": {
+      "latitude": 53.141685,
+      "longitude": 23.183488
+    },
+    "name": "Traugutta/Ciasna"
+  },
+  {
+    "id": 897,
+    "point": {
+      "latitude": 53.143208,
+      "longitude": 23.179528
+    },
+    "name": "Traugutta / Wasilkowska"
+  },
+  {
+    "id": 898,
+    "point": {
+      "latitude": 53.157018,
+      "longitude": 23.089829
+    },
+    "name": "Kleeberga"
+  },
+  {
+    "id": 899,
+    "point": {
+      "latitude": 53.151448,
+      "longitude": 23.082572
+    },
+    "name": "Pieleckiego/Pietkiewicza"
+  },
+  {
+    "id": 900,
+    "point": {
+      "latitude": 53.152368,
+      "longitude": 23.086463
+    },
+    "name": "Pileckiego/Bacieczki TBS"
+  },
+  {
+    "id": 901,
+    "point": {
+      "latitude": 53.155997,
+      "longitude": 23.088194
+    },
+    "name": "Kleeberga / Wróblewskiego"
+  },
+  {
+    "id": 902,
+    "point": {
+      "latitude": 53.146647,
+      "longitude": 23.181658
+    },
+    "name": "Andersa/Wasilkowska"
+  },
+  {
+    "id": 903,
+    "point": {
+      "latitude": 53.148135,
+      "longitude": 23.177668
+    },
+    "name": "Andersa/Fabryka Mebli"
+  },
+  {
+    "id": 904,
+    "point": {
+      "latitude": 53.151432,
+      "longitude": 23.169027
+    },
+    "name": "Andersa/Uchwyty"
+  },
+  {
+    "id": 905,
+    "point": {
+      "latitude": 53.151307,
+      "longitude": 23.168623
+    },
+    "name": "Andersa/Elektrociepłownia"
+  },
+  {
+    "id": 906,
+    "point": {
+      "latitude": 53.147833,
+      "longitude": 23.17785
+    },
+    "name": "Andersa/Fabryka Mebli"
+  },
+  {
+    "id": 907,
+    "point": {
+      "latitude": 53.163813,
+      "longitude": 23.186393
+    },
+    "name": "Wysockiego - Outlet Białystok"
+  },
+  {
+    "id": 908,
+    "point": {
+      "latitude": 53.21231,
+      "longitude": 23.212638
+    },
+    "name": "Wasilków"
+  },
+  {
+    "id": 909,
+    "point": {
+      "latitude": 53.205115,
+      "longitude": 23.207135
+    },
+    "name": "Wasilków / Polna"
+  },
+  {
+    "id": 910,
+    "point": {
+      "latitude": 53.167433,
+      "longitude": 23.187145
+    },
+    "name": "Wysockiego / Krzywoustego"
+  },
+  {
+    "id": 911,
+    "point": {
+      "latitude": 53.162712,
+      "longitude": 23.186063
+    },
+    "name": "Wysockiego - Outlet Białystok"
+  },
+  {
+    "id": 912,
+    "point": {
+      "latitude": 53.220417,
+      "longitude": 23.219982
+    },
+    "name": "Święta Woda"
+  },
+  {
+    "id": 913,
+    "point": {
+      "latitude": 53.148562,
+      "longitude": 23.116952
+    },
+    "name": "Antoniuk F. / Berlinga"
+  },
+  {
+    "id": 914,
+    "point": {
+      "latitude": 53.16605,
+      "longitude": 23.08064
+    },
+    "name": "Produkcyjna"
+  },
+  {
+    "id": 915,
+    "point": {
+      "latitude": 53.16671,
+      "longitude": 23.07704
+    },
+    "name": "Produkcyjna/Kaszmirowa"
+  },
+  {
+    "id": 916,
+    "point": {
+      "latitude": 53.169455,
+      "longitude": 23.06381
+    },
+    "name": "Fasty/Dobrzyniewska"
+  },
+  {
+    "id": 917,
+    "point": {
+      "latitude": 53.182228,
+      "longitude": 23.06476
+    },
+    "name": "Dobrzyniewo Fabryczne/Polna"
+  },
+  {
+    "id": 918,
+    "point": {
+      "latitude": 53.185756,
+      "longitude": 23.062994
+    },
+    "name": "Dobrzyniewo Fabryczne"
+  },
+  {
+    "id": 919,
+    "point": {
+      "latitude": 53.188525,
+      "longitude": 23.060913
+    },
+    "name": "Dobrzyniewo Fabryczne/Królewska"
+  },
+  {
+    "id": 920,
+    "point": {
+      "latitude": 53.190792,
+      "longitude": 23.048553
+    },
+    "name": "Ogrodniki"
+  },
+  {
+    "id": 921,
+    "point": {
+      "latitude": 53.192143,
+      "longitude": 23.037485
+    },
+    "name": "Dobrzyniewo Kościelne"
+  },
+  {
+    "id": 922,
+    "point": {
+      "latitude": 53.19817,
+      "longitude": 23.025142
+    },
+    "name": "Dobrzyniewo Duże/Cegielnia"
+  },
+  {
+    "id": 923,
+    "point": {
+      "latitude": 53.198755,
+      "longitude": 23.01773
+    },
+    "name": "Dobrzyniewo Duże/Urz.Gminy"
+  },
+  {
+    "id": 924,
+    "point": {
+      "latitude": 53.200387,
+      "longitude": 23.011403
+    },
+    "name": "Dobrzyniewo Duże/Białostocka"
+  },
+  {
+    "id": 925,
+    "point": {
+      "latitude": 53.20555,
+      "longitude": 23.014387
+    },
+    "name": "Dobrzyniewo Duże/GCK"
+  },
+  {
+    "id": 926,
+    "point": {
+      "latitude": 53.208698,
+      "longitude": 23.015585
+    },
+    "name": "Dobrzyniewo Duże/Sklep"
+  },
+  {
+    "id": 927,
+    "point": {
+      "latitude": 53.215278,
+      "longitude": 23.004088
+    },
+    "name": "Dobrzyniewo Duże/Szkoła"
+  },
+  {
+    "id": 928,
+    "point": {
+      "latitude": 53.216982,
+      "longitude": 22.993367
+    },
+    "name": "Gniła 1"
+  },
+  {
+    "id": 929,
+    "point": {
+      "latitude": 53.217258,
+      "longitude": 22.985848
+    },
+    "name": "Gniła 2"
+  },
+  {
+    "id": 930,
+    "point": {
+      "latitude": 53.217305,
+      "longitude": 22.970197
+    },
+    "name": "Gniła/Kolonia"
+  },
+  {
+    "id": 931,
+    "point": {
+      "latitude": 53.217742,
+      "longitude": 22.958548
+    },
+    "name": "Pogorzałki/Kościół"
+  },
+  {
+    "id": 932,
+    "point": {
+      "latitude": 53.221567,
+      "longitude": 22.95214
+    },
+    "name": "Pogorzałki/Klub"
+  },
+  {
+    "id": 933,
+    "point": {
+      "latitude": 53.22796,
+      "longitude": 22.946262
+    },
+    "name": "Pogorzałki/Kolonia"
+  },
+  {
+    "id": 934,
+    "point": {
+      "latitude": 53.240388,
+      "longitude": 22.937932
+    },
+    "name": "Borsukówka/Pętla"
+  },
+  {
+    "id": 935,
+    "point": {
+      "latitude": 53.240377,
+      "longitude": 22.937885
+    },
+    "name": "Borsukówka/Pętla"
+  },
+  {
+    "id": 936,
+    "point": {
+      "latitude": 53.227473,
+      "longitude": 22.94664
+    },
+    "name": "Pogorzałki/Kolonia"
+  },
+  {
+    "id": 937,
+    "point": {
+      "latitude": 53.22154,
+      "longitude": 22.95195
+    },
+    "name": "Pogorzałki/Klub"
+  },
+  {
+    "id": 938,
+    "point": {
+      "latitude": 53.217715,
+      "longitude": 22.958485
+    },
+    "name": "Pogorzałki/Kościół"
+  },
+  {
+    "id": 939,
+    "point": {
+      "latitude": 53.217348,
+      "longitude": 22.971217
+    },
+    "name": "Gniła/Kolonia"
+  },
+  {
+    "id": 940,
+    "point": {
+      "latitude": 53.217112,
+      "longitude": 22.988577
+    },
+    "name": "Gniła 2"
+  },
+  {
+    "id": 941,
+    "point": {
+      "latitude": 53.21698,
+      "longitude": 22.993798
+    },
+    "name": "Gniła 1"
+  },
+  {
+    "id": 942,
+    "point": {
+      "latitude": 53.21481,
+      "longitude": 23.005083
+    },
+    "name": "Dobrzyniewo Duże/Kolonia"
+  },
+  {
+    "id": 943,
+    "point": {
+      "latitude": 53.209048,
+      "longitude": 23.015507
+    },
+    "name": "Dobrzyniewo Duże/Sklep"
+  },
+  {
+    "id": 944,
+    "point": {
+      "latitude": 53.204322,
+      "longitude": 23.013632
+    },
+    "name": "Dobrzyniewo Duże/GCK"
+  },
+  {
+    "id": 945,
+    "point": {
+      "latitude": 53.19984,
+      "longitude": 23.011023
+    },
+    "name": "Dobrzyniewo Duże/Białostocka"
+  },
+  {
+    "id": 946,
+    "point": {
+      "latitude": 53.198585,
+      "longitude": 23.01975
+    },
+    "name": "Dobrzyniewo Duże/Urz.Gminy"
+  },
+  {
+    "id": 947,
+    "point": {
+      "latitude": 53.198115,
+      "longitude": 23.02595
+    },
+    "name": "Dobrzyniewo Duże/Cegielnia"
+  },
+  {
+    "id": 948,
+    "point": {
+      "latitude": 53.192227,
+      "longitude": 23.036328
+    },
+    "name": "Dobrzyniewo Kościelne"
+  },
+  {
+    "id": 949,
+    "point": {
+      "latitude": 53.190742,
+      "longitude": 23.050087
+    },
+    "name": "Ogrodniki"
+  },
+  {
+    "id": 950,
+    "point": {
+      "latitude": 53.188189,
+      "longitude": 23.061073
+    },
+    "name": "Dobrzyniewo Fabryczne/Królewska"
+  },
+  {
+    "id": 951,
+    "point": {
+      "latitude": 53.183948,
+      "longitude": 23.063777
+    },
+    "name": "Dobrzyniewo Fabryczne"
+  },
+  {
+    "id": 952,
+    "point": {
+      "latitude": 53.170022,
+      "longitude": 23.063795
+    },
+    "name": "Fasty/Dobrzyniewska"
+  },
+  {
+    "id": 953,
+    "point": {
+      "latitude": 53.16664,
+      "longitude": 23.07762
+    },
+    "name": "Produkcyjna/Kaszmirowa"
+  },
+  {
+    "id": 954,
+    "point": {
+      "latitude": 53.191464,
+      "longitude": 23.041937
+    },
+    "name": "Dobrzyniewo Kościelne/Kościół"
+  },
+  {
+    "id": 1001,
+    "point": {
+      "latitude": 53.015851,
+      "longitude": 23.165486
+    },
+    "name": "Janowicze nr 1A"
+  },
+  {
+    "id": 1002,
+    "point": {
+      "latitude": 53.181418,
+      "longitude": 23.187183
+    },
+    "name": "Wasilków / Dolina Cisów"
+  },
+  {
+    "id": 1101,
+    "point": {
+      "latitude": 53.129857,
+      "longitude": 23.167632
+    },
+    "name": "Mickiewicza/Uniwersytet Medyczny"
+  },
+  {
+    "id": 1102,
+    "point": {
+      "latitude": 53.131872,
+      "longitude": 23.166135
+    },
+    "name": "Plac Jana Pawła II/Pałac Branickich"
+  },
+  {
+    "id": 1103,
+    "point": {
+      "latitude": 53.131953,
+      "longitude": 23.165242
+    },
+    "name": "Plac Jana Pawła II/Katedra"
+  },
+  {
+    "id": 1104,
+    "point": {
+      "latitude": 53.217598,
+      "longitude": 22.980518
+    },
+    "name": "Gniła 3"
+  },
+  {
+    "id": 1105,
+    "point": {
+      "latitude": 53.217428,
+      "longitude": 22.9814
+    },
+    "name": "Gniła Laski"
+  },
+  {
+    "id": 1106,
+    "point": {
+      "latitude": 53.18592,
+      "longitude": 23.240949
+    },
+    "name": "Nowodworce Brzozowa"
+  },
+  {
+    "id": 1107,
+    "point": {
+      "latitude": 53.18538,
+      "longitude": 23.241091
+    },
+    "name": "Nowodworce Brzozowa"
+  },
+  {
+    "id": 1201,
+    "point": {
+      "latitude": 53.125162,
+      "longitude": 23.16699
+    },
+    "name": "Świętojańska / Akademicka"
+  },
+  {
+    "id": 1202,
+    "point": {
+      "latitude": 53.110676,
+      "longitude": 23.152954
+    },
+    "name": "Kampus UwB"
+  },
+  {
+    "id": 1301,
+    "point": {
+      "latitude": 53.068294,
+      "longitude": 23.086197
+    },
+    "name": "Ignatki Zakłady"
+  },
+  {
+    "id": 1302,
+    "point": {
+      "latitude": 53.065424,
+      "longitude": 23.093736
+    },
+    "name": "Ignatki/Przemysłowa"
+  },
+  {
+    "id": 1303,
+    "point": {
+      "latitude": 53.065732,
+      "longitude": 23.093113
+    },
+    "name": "Ignatki/Przemysłowa"
+  },
+  {
+    "id": 1304,
+    "point": {
+      "latitude": 53.068403,
+      "longitude": 23.085716
+    },
+    "name": "Ignatki Zakłady"
+  },
+  {
+    "id": 1305,
+    "point": {
+      "latitude": 53.07105,
+      "longitude": 23.082741
+    },
+    "name": "Niewodnica"
+  }
+]

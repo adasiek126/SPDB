@@ -20,6 +20,9 @@
 
     <div class="displayMap" id="map"></div>
 
+
+    <p><input type="submit" name="traffic" ng-click="showInterestingPlaces()" value="Analiza atrakcji"></p>
+
     <div class="busStops">
         <div class="col-md-6">
             <div class="busStopsRight">
@@ -99,7 +102,7 @@
                         <div class="panel-heading">
                             <h3 class="panel-title">List {{list.listName}}</h3>
                         </div>
-                        <div class="panel-body" ng-include="'html/multiBusStops.html'"></div>
+                        <div class="panel-body" ng-include="'html/dragListBusStops.html'"></div>
                     </div>
                 </div>
             </div>
@@ -131,7 +134,7 @@
                         <div class="panel-heading">
                             <h3 class="panel-title">List {{list.listName}}</h3>
                         </div>
-                        <div class="panel-body" ng-include="'html/multiGoogleAvailablePlaces.html'"></div>
+                        <div class="panel-body" ng-include="'html/dragListGooglePlaces.html'"></div>
                     </div>
                 </div>
             </div>
@@ -148,7 +151,6 @@
                 </div>
             </div>
         </div>
-        <p><input type="submit" name="traffic" ng-click="showInterestingPlaces()" value="Analiza atrakcji"></p>
     </div>
 
 
