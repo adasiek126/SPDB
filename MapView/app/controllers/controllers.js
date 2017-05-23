@@ -72,7 +72,7 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
     $scope.apiUrl = 'http://localhost:5000/api/';
     $scope.startPoint = {lat: 53.139, lng: 23.159}; // Białystok
 
-
+    $scope.searchGooglePlacesRadius = 1500;
 
 
     // TODO Część Dorsza do ogarnięcia
@@ -292,10 +292,19 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
         $scope.clearMarkers($scope.markersGooglePT);
         console.log("Taken google places types");
         console.log($scope.googleTakenPT);
+        for (var i = 0; i < $scope.takenBS.length; i++) {
+            $scope.showInterestingGooglePlace($scope.takenBS[i]);
+        }
+
+    };
+
+    // TODO dodać możliwość znalezienia najbliższej atrakcji każdego typu
+    $scope.showInterestingGooglePlace = function (takenB) {
         var service = new google.maps.places.PlacesService($scope.map);
+        var location = {lat: takenB.cLA, lng: takenB.cLO};
         var request = {
-            location: $scope.startPoint,
-            radius: 500,
+            location: location,
+            radius: $scope.searchGooglePlacesRadius,
             animation: google.maps.Animation.DROP,
             types: $scope.googleTakenPT
         };
