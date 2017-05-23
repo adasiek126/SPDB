@@ -3,9 +3,9 @@
  */
 
 var BusStopController = function ($scope, $http, $q, userData, userGravatar, gitHubUserLookup, googlePlacesService, busStopsService) {
-    $scope.ManyHellos = ['Hello', 'Hola', 'Bonjour', 'Guten Tag', 'Ciao', 'Namaste', 'Yiasou'];
 
-    $scope.data = userData.user;
+
+
 
     $scope.getGravatar = function (email) {
         return userGravatar.getGravatar(email);
@@ -26,6 +26,13 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
         $scope.error = "Ooops, something went wrong..";
     };
 
+
+
+    $scope.ManyHellos = ['Hello', 'Hola', 'Bonjour', 'Guten Tag', 'Ciao', 'Namaste', 'Yiasou'];
+
+    $scope.data = userData.user;
+
+
     $scope.showBusStopsModel = {
         goodBusStopsCheck: false,
         badBusStopsCheck: false,
@@ -38,8 +45,9 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
     $scope.idAvailableBusStops = "ABS";
     $scope.idTakenBusStops = "TBS";
 
-    $scope.busStopsForModel = [];
-    $scope.googlePlacesTypesForModel = [];
+
+    $scope.busStopsModel = [];
+    $scope.googlePlacesTypesModel = [];
 
     $scope.takenBS = [];
     $scope.goodBusStops = [];
@@ -51,6 +59,7 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
     $scope.markersGooglePT = [];
 
     $scope.availableBusLines = [];
+    $scope.selectedBusLine = -1;
 
     $scope.initialized = false;
 
@@ -108,58 +117,96 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
     $scope.lines = [];
 
 
+    function initModels() {
+        var promiseBusStopPlaces = busStopsService.getBusStopPlaces();
+        promiseBusStopPlaces.then(function (data) {
+                angular.forEach(data.data, function (busStop, index) {
+                    $scope.busStopsModel.push({
+                        id: busStop.id,
+                        name: busStop.name,
+                        oLA : busStop.original_latitude,
+                        oLO : busStop.original_longitude,
+                        cLA : busStop.calculated_latitude,
+                        cLO : busStop.calculated_longitude,
+                        lines: busStop.lines
+                    });
+                    angular.forEach(busStop.lines, function (line, index) {
+                        if ($scope.availableBusLines.indexOf(line) < 0)
+                            $scope.availableBusLines.push(line);
 
+                    });
+                    $scope.availableBusLines.sort($scope.naturalCompare);
+                    $scope.selectedBusLine = $scope.availableBusLines[0];
+                });
+            }
+        );
+
+        console.log(["Available bus stops:", $scope.busStopsModel]);
+        $scope.busStopsDragDropModel = [
+            {listName: "of taken bus stops", items: [], dragging: false, id: $scope.idTakenBusStops},
+            {listName: "of available bus stops", items: $scope.busStopsModel, dragging: false, id: $scope.idAvailableBusStops}
+        ];
+
+        // Model to JSON for demo purpose
+        $scope.$watch('busStopsDragDropModel', function (model) {
+            $scope.modelAsJsonAvailableBusStops = angular.toJson(model, true);
+        }, true);
+
+
+        var promiseGooglePlaces = googlePlacesService.getGoogleAvailablePlaces();
+        promiseGooglePlaces.then(function (data) {
+                angular.forEach(data.data.placeTypes, function (place, index) {
+                    angular.forEach(place, function (description, index) {
+                        $scope.googlePlacesTypesModel.push({label: description});
+                    });
+                });
+            }
+        );
+
+        console.log(["Available Google places:", $scope.googlePlacesTypesModel]);
+        $scope.googlePlacesDragDropModel = [
+            {listName: "of taken places", items: [], dragging: false, id: $scope.idTakenGoogle},
+            {listName: "of available places", items: $scope.googlePlacesTypesModel, dragging: false, id: $scope.idAvailableGoogle }
+        ];
+
+        // Model to JSON for demo purpose
+        $scope.$watch('googlePlacesDragDropModel', function (model) {
+            $scope.modelAsJsonGoogleAvailablePlaces = angular.toJson(model, true);
+        }, true);
+    }
+
+    $scope.initMap = function () {
+        if ($scope.initialized === false) {
+
+
+            $scope.map = new google.maps.Map(document.getElementById('map'), {
+                center: $scope.startPoint,
+                zoom: 13,
+                mapTypeId: "roadmap"
+            });
+            $scope.map.controls[google.maps.ControlPosition.RIGHT_TOP].push(document.getElementById('legend'));
+            $scope.info_window = new google.maps.InfoWindow();
+
+            initModels();
+            // legend under the map
+            $scope.drawCircle('goodBusStopCircle', 'green');
+            $scope.drawCircle('badBusStopCircle', 'red');
+
+
+
+
+            console.log(["new", $scope.busStopsModel]);
+            console.log($scope.busStopsModel.length);
+
+            $scope.initialized = true;
+
+        }
+    };
+
+    google.maps.event.addDomListener(window, 'load', $scope.initMap);
 
     // nasze
 
-    var promiseGooglePlaces = googlePlacesService.getGoogleAvailablePlaces();
-    promiseGooglePlaces.then(function (data) {
-            angular.forEach(data.data.placeTypes, function (place, index) {
-                angular.forEach(place, function (description, index) {
-                    $scope.googlePlacesTypesForModel.push({label: description});
-                });
-            });
-        }
-    );
-
-    console.log(["Available Google places:\n ", $scope.googlePlacesTypesForModel]);
-    $scope.googlePlacesModels = [
-        {listName: "of taken places", items: [], dragging: false, id: $scope.idTakenGoogle},
-        {listName: "of available places", items: $scope.googlePlacesTypesForModel, dragging: false, id: $scope.idAvailableGoogle }
-    ];
-
-    // Model to JSON for demo purpose
-    $scope.$watch('googlePlacesModels', function (model) {
-        $scope.modelAsJsonGoogleAvailablePlaces = angular.toJson(model, true);
-    }, true);
-
-    var promiseBusStopPlaces = busStopsService.getBusStopPlaces();
-    promiseBusStopPlaces.then(function (data) {
-            angular.forEach(data.data, function (busStop, index) {
-                $scope.busStopsForModel.push({
-                    id: busStop.id,
-                    name: busStop.name,
-                    oLA : busStop.original_latitude,
-                    oLO : busStop.original_longitude,
-                    cLA : busStop.calculated_latitude,
-                    cLO : busStop.calculated_longitude,
-                    lines: busStop.lines
-                });
-            });
-        }
-    );
-
-    console.log(["Available bus stops:\n ", $scope.busStopsForModel]);
-    $scope.busStopsModels = [
-        {listName: "of taken bus stops", items: [], dragging: false, id: $scope.idTakenBusStops},
-        {listName: "of available bus stops", items: $scope.busStopsForModel, dragging: false, id: $scope.idAvailableBusStops}
-    ];
-
-
-    // Model to JSON for demo purpose
-    $scope.$watch('busStopsModels', function (model) {
-        $scope.modelAsJsonAvailableBusStops = angular.toJson(model, true);
-    }, true);
 
     /**
      * dnd-dragging determines what data gets serialized and send to the receiver
@@ -223,22 +270,30 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
         });
     };
 
-    $scope.clearGooglePlaces = function () {
-        $scope.googleTakenPT = [];
-    };
+    $scope.naturalCompare = function (a, b) {
+        var ax = [], bx = [];
 
-    $scope.clearBusStopsPlaces = function () {
-        $scope.takenBS = [];
+        a.replace(/(\d+)|(\D+)/g, function(_, $1, $2) { ax.push([$1 || Infinity, $2 || ""]) });
+        b.replace(/(\d+)|(\D+)/g, function(_, $1, $2) { bx.push([$1 || Infinity, $2 || ""]) });
+
+        while(ax.length && bx.length) {
+            var an = ax.shift();
+            var bn = bx.shift();
+            var nn = (an[0] - bn[0]) || an[1].localeCompare(bn[1]);
+            if(nn) return nn;
+        }
+
+        return ax.length - bx.length;
     };
 
     $scope.addGooglePlacesTypes = function (placesList) {
-        $scope.clearGooglePlaces();
+        $scope.googleTakenPT = [];
         placesList.forEach(function (item, index) {
             if (typeof item.label !== 'undefined') {
                 $scope.googleTakenPT.push(item.label);
             }
         });
-        console.log($scope.googleTakenPT);
+        console.log("Taken google places types:", $scope.googleTakenPT);
     };
 
     $scope.removeGooglePlacesTypes = function (placesList) {
@@ -252,17 +307,17 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
                 }
             }
         });
-        console.log($scope.googleTakenPT);
+        console.log("Taken google places types:", $scope.googleTakenPT);
     };
 
     $scope.addBusStops = function (placesList) {
-        $scope.clearBusStopsPlaces();
+        $scope.takenBS = [];
         placesList.forEach(function (item, index) {
             if (typeof item.id !== 'undefined') {
                 $scope.takenBS.push(item);
             }
         });
-        console.log($scope.takenBS);
+        console.log("Taken bus stops:", $scope.takenBS);
     };
 
     $scope.removeBusStops = function (placesList) {
@@ -271,7 +326,7 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
                 $scope.removeByAttr($scope.takenBS, 'id', item.id);
             }
         });
-        console.log($scope.takenBS);
+        console.log("Taken bus stops:", $scope.takenBS);
     };
 
     $scope.removeByAttr = function(arr, attr, value){
@@ -290,8 +345,7 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
 
     $scope.showInterestingGooglePlaces = function () {
         $scope.clearMarkers($scope.markersGooglePT);
-        console.log("Taken google places types");
-        console.log($scope.googleTakenPT);
+        console.log("Taken google places types", $scope.googleTakenPT);
         for (var i = 0; i < $scope.takenBS.length; i++) {
             $scope.showInterestingGooglePlace($scope.takenBS[i]);
         }
@@ -313,6 +367,7 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
     };
 
     $scope.prepareBusStops = function () {
+
         for (var i = 0; i < $scope.takenBS.length; i++) {
             // TODO if na zaznaczonych checkboxach
             $scope.goodBusStops.push([]);
@@ -331,17 +386,18 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
     };
 
     $scope.showBusStops = function () {
+
         $scope.clearMarkers($scope.goodMarkersBS);
         $scope.clearMarkers($scope.badMarkersBS);
+        $scope.goodBusStops = [];
+        $scope.badBusStops = [];
 
         $scope.prepareBusStops();
 
-        console.log("Good bus stops");
-        console.log($scope.goodBusStops);
+        console.log("Good bus stops", $scope.goodBusStops);
         $scope.createBusStopMarkers($scope.goodBusStops, $scope.markerIconPositive);
 
-        console.log("Bad bus stops");
-        console.log($scope.badBusStops);
+        console.log("Bad bus stops", $scope.badBusStops);
         $scope.createBusStopMarkers($scope.badBusStops, $scope.markerIconNegative);
 
     };
@@ -355,24 +411,6 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
         markers = [];
     };
 
-    $scope.initMap = function () {
-        if ($scope.initialized === false) {
-
-            // legend under the map
-            $scope.drawCircle('goodBusStopCircle', 'green');
-            $scope.drawCircle('badBusStopCircle', 'red');
-
-            $scope.map = new google.maps.Map(document.getElementById('map'), {
-                center: $scope.startPoint,
-                zoom: 13,
-                mapTypeId: "roadmap"
-            });
-            $scope.map.controls[google.maps.ControlPosition.RIGHT_TOP].push(document.getElementById('legend'));
-            $scope.info_window = new google.maps.InfoWindow();
-            $scope.initialized = true;
-        }
-    };
-
     $scope.drawCircle = function (id, color) {
         var canvas = document.getElementById(id);
         var context = canvas.getContext("2d");
@@ -381,7 +419,7 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
         context.fill()
     };
 
-    google.maps.event.addDomListener(window, 'load', $scope.initMap);
+
 
     // TODO dorsz?
     $scope.clearLines = function () {
@@ -504,6 +542,7 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
             $scope.hourTo = $scope.hourFrom;
         }
     };
+
     $scope.changeHoursFrom = function () {
         $scope.hoursFrom = [];
         for (i = 0; i <= $scope.hourTo; i++) {
@@ -513,6 +552,7 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
             $scope.hourFrom = $scope.hourTo;
         }
     };
+
     $scope.loadLines = function () {
         var url = $scope.apiUrl;
         url += "getLines";
@@ -525,6 +565,7 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
             $scope.selectedLineNumber = $scope.linesNumbers[0];
         })
     };
+
     $scope.getLineTrafficData = function () {
         $scope.clearLines();
         $scope.histogram = $scope.apiUrl + "getHistogramLine/" + $scope.daysCodes.get($scope.selectedDay) + "/" + $scope.hourFrom + "/" + $scope.hourTo + "/" + $scope.selectedLineNumber;
@@ -646,3 +687,4 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
 };
 
 app.controller("BusStopController", BusStopController);
+

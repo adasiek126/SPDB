@@ -16,8 +16,8 @@
 
 <body>
 
-<div class="mainApp" ng-init="initMap()">
-
+<!--<div class="mainApp" ng-init="initMap()">-->
+<div class="mainApp">
     <div class="displayMap" id="map"></div>
 
 
@@ -66,8 +66,7 @@
         <div class="col-md-3">
             <p>Bus line:
                 <label>
-                    <select ng-model="selectedLineNumber" ng-options="lineNumber for lineNumber in linesNumbers"
-                            ng-init="loadLines()"></select>
+                    <select ng-model="selectedBusLine" ng-options="lineNumber for lineNumber in availableBusLines"></select>
                 </label></p><br/>
         </div>
 
@@ -98,7 +97,7 @@
     <div class="dragDropSelectList row">
         <div class="col-md-8">
             <div class="row">
-                <div ng-repeat="list in busStopsModels" class="col-md-6">
+                <div ng-repeat="list in busStopsDragDropModel" class="col-md-6">
                     <div class="panel panel-info">
                         <div class="panel-heading">
                             <h3 class="panel-title">List {{list.listName}}</h3>
@@ -130,7 +129,7 @@
     <div class="dragDropSelectList row">
         <div class="col-md-8">
             <div class="row">
-                <div ng-repeat="list in googlePlacesModels" class="col-md-6">
+                <div ng-repeat="list in googlePlacesDragDropModel" class="col-md-6">
                     <div class="panel panel-info">
                         <div class="panel-heading">
                             <h3 class="panel-title">List {{list.listName}}</h3>
