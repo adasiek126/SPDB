@@ -435,35 +435,40 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
         for (var i = 0; i < $scope.takenBS.length; i++) {
             $scope.showInterestingGooglePlace($scope.takenBS[i]);
         }
-
     };
 
     // TODO dodać możliwość znalezienia najbliższej atrakcji każdego typu
 
-    $scope.find_closest_marker = function( lat1, lon1, markers ) {
+    $scope.showClosestPlaces = function(){
+        console.log("Found Google markers", $scope.markersGooglePT);
+        $scope.findClosestPlaces($scope.startPoint, $scope.markersGooglePT);
+    }
+
+    $scope.findClosestPlaces = function( point, markers ) {
         var pi = Math.PI;
         var R = 6371; //equatorial radius
         var distances = [];
         var closest = -1;
+        console.log(markers[1]);
 
         for( i=0;i<markers.length; i++ ) {
             var lat2 = markers[i].position.lat();
             var lon2 = markers[i].position.lng();
 
-            var chLat = lat2-lat1;
-            var chLon = lon2-lon1;
+            var chLat = lat2-point.lat;
+            var chLon = lon2-point.lng;
 
             var dLat = chLat*(pi/180);
             var dLon = chLon*(pi/180);
 
-            var rLat1 = lat1*(pi/180);
-            var rLat2 = lat2*(pi/180);
+            var rLat1 = point.lat*(pi/180);
+            var rLat2 = point.lng*(pi/180);
 
             var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
                 Math.sin(dLon/2) * Math.sin(dLon/2) * Math.cos(rLat1) * Math.cos(rLat2);
             var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
             var d = R * c;
-
+            console.log("d=" + d);
             distances[i] = d;
             if ( closest == -1 || d < distances[closest] ) {
                 closest = i;
@@ -471,6 +476,8 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
         }
 
         // (debug) The closest marker is:
+        console.log("min_indeks=" + closest);
+        console.log("min_d=" + distances[closest]);
         console.log(markers[closest]);
     }
     
