@@ -259,6 +259,11 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
             if ($scope.busStopsDragDropModel[j].id === $scope.idTakenBusStops) {
                 $scope.busStopsDragDropModel[j].items = $scope.busStopsModelForDisplay;
             }
+
+            // TODO przenieść z jednej strony na drugą
+            if ($scope.busStopsDragDropModel[j].id === $scope.idAvailableBusStops) {
+                $scope.busStopsDragDropModel[j].items = [];
+            }
         }
 
         $scope.takenBS = $scope.busStopsModelForDisplay;
@@ -268,6 +273,10 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
         for (var j = 0; j < $scope.busStopsDragDropModel.length; j++) {
             if ($scope.busStopsDragDropModel[j].id === $scope.idTakenBusStops) {
                 $scope.busStopsDragDropModel[j].items = [];
+            }
+            // TODO przenieść z jednej strony na drugą
+            if ($scope.busStopsDragDropModel[j].id === $scope.idAvailableBusStops) {
+                $scope.busStopsDragDropModel[j].items = $scope.busStopsModelForDisplay;
             }
         }
 
