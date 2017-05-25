@@ -5,8 +5,6 @@
 var BusStopController = function ($scope, $http, $q, userData, userGravatar, gitHubUserLookup, googlePlacesService, busStopsService) {
 
 
-
-
     $scope.getGravatar = function (email) {
         return userGravatar.getGravatar(email);
     };
@@ -25,7 +23,6 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
     var onError = function (reason) {
         $scope.error = "Ooops, something went wrong..";
     };
-
 
 
     $scope.ManyHellos = ['Hello', 'Hola', 'Bonjour', 'Guten Tag', 'Ciao', 'Namaste', 'Yiasou'];
@@ -137,44 +134,49 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
     function initModels() {
         var promiseBusStopPlaces = busStopsService.getBusStopPlaces();
         promiseBusStopPlaces.then(function (data) {
-                angular.forEach(data.data, function (busStop, index) {
-                    $scope.busStopsModel.push({
+            angular.forEach(data.data, function (busStop, index) {
+                $scope.busStopsModel.push({
+                    id: busStop.id,
+                    name: busStop.name,
+                    oLA: busStop.original_latitude,
+                    oLO: busStop.original_longitude,
+                    cLA: busStop.calculated_latitude,
+                    cLO: busStop.calculated_longitude,
+                    lines: busStop.lines
+                });
+                angular.forEach(busStop.lines, function (line, index) {
+                    if ($scope.availableBusLines.indexOf(line) < 0)
+                        $scope.availableBusLines.push(line);
+                });
+                $scope.availableBusLines.sort($scope.naturalCompare);
+                $scope.selectedBusLine = $scope.availableBusLines[0];
+                var ifAddToDisplay = false;
+                angular.forEach(busStop.lines, function (line, index) {
+                    if (line === $scope.selectedBusLine)
+                        ifAddToDisplay = true;
+                });
+                if (ifAddToDisplay) {
+                    $scope.busStopsModelForDisplay.push({
                         id: busStop.id,
                         name: busStop.name,
-                        oLA : busStop.original_latitude,
-                        oLO : busStop.original_longitude,
-                        cLA : busStop.calculated_latitude,
-                        cLO : busStop.calculated_longitude,
+                        oLA: busStop.original_latitude,
+                        oLO: busStop.original_longitude,
+                        cLA: busStop.calculated_latitude,
+                        cLO: busStop.calculated_longitude,
                         lines: busStop.lines
                     });
-                    angular.forEach(busStop.lines, function (line, index) {
-                        if ($scope.availableBusLines.indexOf(line) < 0)
-                            $scope.availableBusLines.push(line);
-                    });
-                    $scope.availableBusLines.sort($scope.naturalCompare);
-                    $scope.selectedBusLine = $scope.availableBusLines[0];
-                    var ifAddToDisplay = false;
-                    angular.forEach(busStop.lines, function (line, index) {
-                      if (line === $scope.selectedBusLine)
-                          ifAddToDisplay = true;
-                    });
-                    if (ifAddToDisplay) {
-                        $scope.busStopsModelForDisplay.push({
-                            id: busStop.id,
-                            name: busStop.name,
-                            oLA : busStop.original_latitude,
-                            oLO : busStop.original_longitude,
-                            cLA : busStop.calculated_latitude,
-                            cLO : busStop.calculated_longitude,
-                            lines: busStop.lines
-                        });
-                    }
-                });
+                }
             });
+        });
 
         console.log(["Available bus stops:", $scope.busStopsModelForDisplay]);
         $scope.busStopsDragDropModel = [
-            {listName: "of available bus stops", items: $scope.busStopsModelForDisplay, dragging: false, id: $scope.idAvailableBusStops},
+            {
+                listName: "of available bus stops",
+                items: $scope.busStopsModelForDisplay,
+                dragging: false,
+                id: $scope.idAvailableBusStops
+            },
             {listName: "of taken bus stops", items: [], dragging: false, id: $scope.idTakenBusStops}
 
         ];
@@ -197,7 +199,12 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
 
         console.log(["Available Google places:", $scope.googlePlacesTypesModel]);
         $scope.googlePlacesDragDropModel = [
-            {listName: "of available places", items: $scope.googlePlacesTypesModel, dragging: false, id: $scope.idAvailableGoogle },
+            {
+                listName: "of available places",
+                items: $scope.googlePlacesTypesModel,
+                dragging: false,
+                id: $scope.idAvailableGoogle
+            },
             {listName: "of taken places", items: [], dragging: false, id: $scope.idTakenGoogle}
         ];
 
@@ -233,24 +240,24 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
 
     // nasze
 
-    $scope.busSelection = function() {
+    $scope.busSelection = function () {
         console.log("Selected bus line: ", $scope.selectedBusLine);
         $scope.busStopsModelForDisplay = [];
 
-      for (var i = 0; i < $scope.busStopsModel.length; i++) {
-          var busStop = $scope.busStopsModel[i];
-          for (var line = 0; line < busStop.lines.length; line++) {
-              if (busStop.lines[line] === $scope.selectedBusLine) {
-                  $scope.busStopsModelForDisplay.push(busStop);
-              }
-          }
-      }
+        for (var i = 0; i < $scope.busStopsModel.length; i++) {
+            var busStop = $scope.busStopsModel[i];
+            for (var line = 0; line < busStop.lines.length; line++) {
+                if (busStop.lines[line] === $scope.selectedBusLine) {
+                    $scope.busStopsModelForDisplay.push(busStop);
+                }
+            }
+        }
 
-      for (var j = 0; j < $scope.busStopsDragDropModel.length; j++) {
-          if ($scope.busStopsDragDropModel[j].id === $scope.idAvailableBusStops) {
-              $scope.busStopsDragDropModel[j].items = $scope.busStopsModelForDisplay;
-          }
-      }
+        for (var j = 0; j < $scope.busStopsDragDropModel.length; j++) {
+            if ($scope.busStopsDragDropModel[j].id === $scope.idAvailableBusStops) {
+                $scope.busStopsDragDropModel[j].items = $scope.busStopsModelForDisplay;
+            }
+        }
 
     };
 
@@ -348,14 +355,18 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
     $scope.naturalCompare = function (a, b) {
         var ax = [], bx = [];
 
-        a.replace(/(\d+)|(\D+)/g, function(_, $1, $2) { ax.push([$1 || Infinity, $2 || ""]) });
-        b.replace(/(\d+)|(\D+)/g, function(_, $1, $2) { bx.push([$1 || Infinity, $2 || ""]) });
+        a.replace(/(\d+)|(\D+)/g, function (_, $1, $2) {
+            ax.push([$1 || Infinity, $2 || ""])
+        });
+        b.replace(/(\d+)|(\D+)/g, function (_, $1, $2) {
+            bx.push([$1 || Infinity, $2 || ""])
+        });
 
-        while(ax.length && bx.length) {
+        while (ax.length && bx.length) {
             var an = ax.shift();
             var bn = bx.shift();
             var nn = (an[0] - bn[0]) || an[1].localeCompare(bn[1]);
-            if(nn) return nn;
+            if (nn) return nn;
         }
 
         return ax.length - bx.length;
@@ -404,14 +415,14 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
         console.log("Taken bus stops:", $scope.takenBS);
     };
 
-    $scope.removeByAttr = function(arr, attr, value){
+    $scope.removeByAttr = function (arr, attr, value) {
         var i = arr.length;
-        while(i--){
-            if( arr[i]
+        while (i--) {
+            if (arr[i]
                 && arr[i].hasOwnProperty(attr)
-                && (arguments.length > 2 && arr[i][attr] === value ) ){
+                && (arguments.length > 2 && arr[i][attr] === value )) {
 
-                arr.splice(i,1);
+                arr.splice(i, 1);
 
             }
         }
@@ -428,6 +439,41 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
     };
 
     // TODO dodać możliwość znalezienia najbliższej atrakcji każdego typu
+
+    $scope.find_closest_marker = function( lat1, lon1, markers ) {
+        var pi = Math.PI;
+        var R = 6371; //equatorial radius
+        var distances = [];
+        var closest = -1;
+
+        for( i=0;i<markers.length; i++ ) {
+            var lat2 = markers[i].position.lat();
+            var lon2 = markers[i].position.lng();
+
+            var chLat = lat2-lat1;
+            var chLon = lon2-lon1;
+
+            var dLat = chLat*(pi/180);
+            var dLon = chLon*(pi/180);
+
+            var rLat1 = lat1*(pi/180);
+            var rLat2 = lat2*(pi/180);
+
+            var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+                Math.sin(dLon/2) * Math.sin(dLon/2) * Math.cos(rLat1) * Math.cos(rLat2);
+            var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+            var d = R * c;
+
+            distances[i] = d;
+            if ( closest == -1 || d < distances[closest] ) {
+                closest = i;
+            }
+        }
+
+        // (debug) The closest marker is:
+        console.log(markers[closest]);
+    }
+    
     $scope.showInterestingGooglePlace = function (takenB) {
         var service = new google.maps.places.PlacesService($scope.map);
         var location = {lat: takenB.cLA, lng: takenB.cLO};
@@ -496,7 +542,6 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
         context.fillStyle = color;
         context.fill()
     };
-
 
 
     // TODO dorsz?
