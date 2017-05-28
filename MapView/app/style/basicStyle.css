@@ -111,6 +111,10 @@ html, body {
     float: right;
 }
 
+.acceptButtons {
+    float: left;
+}
+
 .busStopsLeft {
     float: left;
 }

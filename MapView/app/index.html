@@ -8,6 +8,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="style/basicStyle.css"/>
     <link rel="stylesheet" type="text/css" href="style/dragDropList.css"/>
+    <link rel="stylesheet" type="text/css" href="style/rzslider.css"/>
 </head>
 
 <body>
@@ -18,19 +19,25 @@
     <br/>
 
     <div class="acceptButtons">
-        <div class="col-md-6">
+        <div class="col-md-4">
             <div class="busStopsRight">
-                <p><input type="button" class="btn btn-success" name="busStopsShow" ng-click="showBusStops()" value="Dodaj przystanki"></p>
-            </div>
-            <div class="col-md-6">
-                <p><input type="button" class="btn btn-success" name="closestPlacesShow" ng-click="showClosestPlaces()" value="Pokaż nabliższą atrakcje"></p>
+                <p><input type="button" class="btn btn-success" name="busStopsShow" ng-click="showBusStops()"
+                          value="Dodaj przystanki"></p>
             </div>
         </div>
-        <div class="col-md-6">
-            <p><input type="button" class="btn btn-success" name="interestingPlacesShow" ng-click="showInterestingGooglePlaces()" value="Analiza atrakcji"></p>
+        <div class="col-md-4">
+            <p><input type="button" class="btn btn-success" name="closestPlacesShow" ng-click="showClosestPlaces()"
+                      value="Pokaż nabliższą atrakcje"></p>
         </div>
+        <div class="col-md-4">
+            <div class="busStopsRight">
+                <p><input type="button" class="btn btn-success" name="interestingPlacesShow"
+                          ng-click="showInterestingGooglePlaces()" value="Analiza atrakcji"></p>
+            </div>
 
+        </div>
     </div>
+
 
     <br/>
     <br/>
@@ -65,11 +72,6 @@
 
 
     <div class="alert alert-success">
-        <strong>Instructions:</strong>
-        Click on items to select/unselect them. When dragging, all selected items will be moved at once.
-    </div>
-
-    <div class="alert alert-success">
         Buses lines and directions
     </div>
 
@@ -77,7 +79,8 @@
         <div class="col-md-3">
             <p>Bus line:
                 <label>
-                    <select ng-model="selectedBusLine" ng-options="lineNumber for lineNumber in availableBusLines" ng-change="busSelection()"></select>
+                    <select ng-model="selectedBusLine" ng-options="lineNumber for lineNumber in availableBusLines"
+                            ng-change="busSelection()"></select>
                 </label></p><br/>
         </div>
 
@@ -108,11 +111,13 @@
     <div class="acceptButtons">
         <div class="col-md-6">
             <div class="busStopsRight">
-                <p><input type="button" class="btn btn-success" name="selectAllBusStopsBtn" ng-click="selectAllBusStops()" value="Wszystkie przystanki"></p>
+                <p><input type="button" class="btn btn-success" name="selectAllBusStopsBtn"
+                          ng-click="selectAllBusStops()" value="Wszystkie przystanki"></p>
             </div>
         </div>
         <div class="col-md-6">
-            <p><input type="button" class="btn btn-success" name="selectNoneBusStopsBtn" ng-click="selectNoneBusStops()" value="Żaden przystanek"></p>
+            <p><input type="button" class="btn btn-success" name="selectNoneBusStopsBtn" ng-click="selectNoneBusStops()"
+                      value="Żaden przystanek"></p>
         </div>
     </div>
 
@@ -151,138 +156,152 @@
     <div class="alert alert-success">
         Interesting places to find on map
     </div>
+    <div class="alert alert-success">
+        <article>
+            Define the scope of the search
+        </article>
+        <article>
+            Default search radius: <b>{{searchGooglePlacesRadius.normal.low}} m</b>
+        </article>
+    </div>
+    <div>
+        <p><input type="button" class="btn btn-success" name="busStopsShow" ng-click="setRadius()"
+                  value="Promień wyszukiwania"></p>
+    </div>
 
-    <div class="dragDropSelectList row">
-        <div class="col-md-8">
-            <div class="row">
-                <div ng-repeat="list in googlePlacesDragDropModel" class="col-md-6">
-                    <div class="panel panel-info">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">List {{list.listName}}</h3>
-                        </div>
-                        <div class="panel-body" ng-include="'html/dragListGooglePlaces.html'"></div>
+</div>
+
+<div class="dragDropSelectList row">
+    <div class="col-md-8">
+        <div class="row">
+            <div ng-repeat="list in googlePlacesDragDropModel" class="col-md-6">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">List {{list.listName}}</h3>
                     </div>
+                    <div class="panel-body" ng-include="'html/dragListGooglePlaces.html'"></div>
                 </div>
             </div>
-            <div view-source="multi"></div>
         </div>
+        <div view-source="multi"></div>
+    </div>
 
-        <div class="col-md-4">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Generated Model</h3>
-                </div>
-                <div class="panel-body">
-                    <pre class="code">{{modelAsJsonGoogleAvailablePlaces}}</pre>
-                </div>
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Generated Model</h3>
+            </div>
+            <div class="panel-body">
+                <pre class="code">{{modelAsJsonGoogleAvailablePlaces}}</pre>
             </div>
         </div>
     </div>
+</div>
 
 
-    <!--<div class="options">-->
+<!--<div class="options">-->
 
-    <!--<p>Dzień tygodnia: <label>-->
-    <!--<select ng-model="selectedDay" ng-options="day for day in days"-->
-    <!--ng-init="selectedDay=days[0]"></select>-->
-    <!--</label></p>-->
+<!--<p>Dzień tygodnia: <label>-->
+<!--<select ng-model="selectedDay" ng-options="day for day in days"-->
+<!--ng-init="selectedDay=days[0]"></select>-->
+<!--</label></p>-->
 
-    <!--<p>Godzina od: <label>-->
-    <!--<select ng-model="hourFrom" ng-options="hour for hour in hoursFrom" ng-init="hourFrom=8"-->
-    <!--ng-change="changeHoursTo()"></select>-->
-    <!--</label></p>-->
+<!--<p>Godzina od: <label>-->
+<!--<select ng-model="hourFrom" ng-options="hour for hour in hoursFrom" ng-init="hourFrom=8"-->
+<!--ng-change="changeHoursTo()"></select>-->
+<!--</label></p>-->
 
-    <!--<p>Godzina do: <label>-->
-    <!--<select ng-model="hourTo" ng-options="hour for hour in hoursTo"-->
-    <!--ng-init="hourTo=10;changeHoursTo()" ng-change="changeHoursFrom()"></select>-->
-    <!--</label></p>-->
-    <!--<p><input type="submit" name="clear" ng-click="clearLines()" value="Wyczyść"><input type="submit" name="traffic"-->
-    <!--ng-click="getDataFromApi()"-->
-    <!--value="Analiza ruchu"></p>-->
-    <!--<p>Linia: <label>-->
-    <!--<select ng-model="selectedLineNumber" ng-options="lineNumber for lineNumber in linesNumbers"-->
-    <!--ng-init="loadLines()"></select>-->
-    <!--</label></p>-->
+<!--<p>Godzina do: <label>-->
+<!--<select ng-model="hourTo" ng-options="hour for hour in hoursTo"-->
+<!--ng-init="hourTo=10;changeHoursTo()" ng-change="changeHoursFrom()"></select>-->
+<!--</label></p>-->
+<!--<p><input type="submit" name="clear" ng-click="clearLines()" value="Wyczyść"><input type="submit" name="traffic"-->
+<!--ng-click="getDataFromApi()"-->
+<!--value="Analiza ruchu"></p>-->
+<!--<p>Linia: <label>-->
+<!--<select ng-model="selectedLineNumber" ng-options="lineNumber for lineNumber in linesNumbers"-->
+<!--ng-init="loadLines()"></select>-->
+<!--</label></p>-->
 
-    <!--<p><input type="submit" name="lineTraffic" ng-click="getLineTrafficData()" value="Analiza ruchu dla linii"></p>-->
+<!--<p><input type="submit" name="lineTraffic" ng-click="getLineTrafficData()" value="Analiza ruchu dla linii"></p>-->
 
-    <!--<p>Minimalne wsparcie względne <label>-->
-    <!--<input type="number" min="0.1" max="1.0" step="0.1" ng-model="minSupport">-->
-    <!--</label></p>-->
+<!--<p>Minimalne wsparcie względne <label>-->
+<!--<input type="number" min="0.1" max="1.0" step="0.1" ng-model="minSupport">-->
+<!--</label></p>-->
 
-    <!--<p>Próg przyrostu opóźnienia <label>-->
-    <!--<input type="number" min="1" max="99999999" step="1" ng-model="minDiffDelay">-->
-    <!--</label></p>-->
+<!--<p>Próg przyrostu opóźnienia <label>-->
+<!--<input type="number" min="1" max="99999999" step="1" ng-model="minDiffDelay">-->
+<!--</label></p>-->
 
-    <!--<p><input type="submit" name="findStrech" ng-click="getStretches()" value="Znajdź korkujące się odcinki"></p>-->
-    <!--<br/>-->
-    <!--</div>-->
+<!--<p><input type="submit" name="findStrech" ng-click="getStretches()" value="Znajdź korkujące się odcinki"></p>-->
+<!--<br/>-->
+<!--</div>-->
 
-    <!--<div class="histogram">-->
-    <!--<p>Histogram</p>-->
-    <!--<img ng-src='{{histogram}}' alt="Histogram" id="histogram">-->
-    <!--</div>-->
+<!--<div class="histogram">-->
+<!--<p>Histogram</p>-->
+<!--<img ng-src='{{histogram}}' alt="Histogram" id="histogram">-->
+<!--</div>-->
 
-    <!--<div id="legend" style="">-->
-    <!--<p><u><i>Odrabianie opóźnienia</i></u>-->
-    <!--<section class="legend-blue"></section>-->
-    <!--</p>-->
-    <!--<p><u><i>Zmiana opóźnienia do 30s</i></u>-->
-    <!--<div class="legend-green"></div>-->
-    <!--</p>-->
-    <!--<p><u><i>Zmiana opóźnienia do 60s</i></u>-->
-    <!--<div class="legend-green-apple"></div>-->
-    <!--</p>-->
-    <!--<p><u><i>Zmiana opóźnienia do 120s</i></u>-->
-    <!--<div class="legend-yellow"></div>-->
-    <!--</p>-->
-    <!--<p><u><i>Zmiana opóźnienia do 300s</i></u>-->
-    <!--<div class="legend-orange"></div>-->
-    <!--</p>-->
-    <!--<p><u><i>Zmiana opóźnienia większa niż 300s</i></u>-->
-    <!--<div class="legend-red"></div>-->
-    <!--</p>-->
-    <!--</div>-->
+<!--<div id="legend" style="">-->
+<!--<p><u><i>Odrabianie opóźnienia</i></u>-->
+<!--<section class="legend-blue"></section>-->
+<!--</p>-->
+<!--<p><u><i>Zmiana opóźnienia do 30s</i></u>-->
+<!--<div class="legend-green"></div>-->
+<!--</p>-->
+<!--<p><u><i>Zmiana opóźnienia do 60s</i></u>-->
+<!--<div class="legend-green-apple"></div>-->
+<!--</p>-->
+<!--<p><u><i>Zmiana opóźnienia do 120s</i></u>-->
+<!--<div class="legend-yellow"></div>-->
+<!--</p>-->
+<!--<p><u><i>Zmiana opóźnienia do 300s</i></u>-->
+<!--<div class="legend-orange"></div>-->
+<!--</p>-->
+<!--<p><u><i>Zmiana opóźnienia większa niż 300s</i></u>-->
+<!--<div class="legend-red"></div>-->
+<!--</p>-->
+<!--</div>-->
 
 
-    <!--</div>-->
+<!--</div>-->
 
-    <!--<div class="container">-->
-    <!--<div>-->
-    <!--<p class="text-muted">-->
-    <!--1. Lower case filter:</p>-->
-    <!--<p class="text-info">First Name : {{data.firstName | lowercase}}</p>-->
-    <!--<hr/>-->
-    <!--<p class="text-muted">-->
-    <!--2. Upper case filter</p>-->
-    <!--<p class="text-info">First Name : {{data.firstName | uppercase }}</p>-->
-    <!--<hr/>-->
-    <!--<p class="text-muted">-->
-    <!--3. Date filter: (mm)</p>-->
-    <!--<p class="text-info">Start Month : {{data.startDate | date:'MM'}}-->
-    <!--</p>-->
-    <!--<hr/>-->
-    <!--<p class="text-muted">-->
-    <!--4. Custom filter to remove all spaces:-->
-    <!--</p>-->
-    <!--<p class="text-info">{{data.dashes | removeAllSpaces}}</p>-->
-    <!--<p></p>-->
-    <!--<hr/>-->
-    <!--<div>-->
-    <!--<img ng-src="{{getGravatar(data.email)}}"/>-->
-    <!--</div>-->
-    <!--<hr/>-->
-    <!--<div>-->
-    <!--<my-input/>-->
-    <!--<label>Github return code:-->
-    <!--<h4 ng-bind="status"></h4>-->
-    <!--</label>-->
-    <!--</div>-->
-    <!--<div>-->
-    <!--<pre>{{user | json}}</pre>-->
-    <!--{{error}}-->
-    <!--</div>-->
-    <!--</div>-->
+<!--<div class="container">-->
+<!--<div>-->
+<!--<p class="text-muted">-->
+<!--1. Lower case filter:</p>-->
+<!--<p class="text-info">First Name : {{data.firstName | lowercase}}</p>-->
+<!--<hr/>-->
+<!--<p class="text-muted">-->
+<!--2. Upper case filter</p>-->
+<!--<p class="text-info">First Name : {{data.firstName | uppercase }}</p>-->
+<!--<hr/>-->
+<!--<p class="text-muted">-->
+<!--3. Date filter: (mm)</p>-->
+<!--<p class="text-info">Start Month : {{data.startDate | date:'MM'}}-->
+<!--</p>-->
+<!--<hr/>-->
+<!--<p class="text-muted">-->
+<!--4. Custom filter to remove all spaces:-->
+<!--</p>-->
+<!--<p class="text-info">{{data.dashes | removeAllSpaces}}</p>-->
+<!--<p></p>-->
+<!--<hr/>-->
+<!--<div>-->
+<!--<img ng-src="{{getGravatar(data.email)}}"/>-->
+<!--</div>-->
+<!--<hr/>-->
+<!--<div>-->
+<!--<my-input/>-->
+<!--<label>Github return code:-->
+<!--<h4 ng-bind="status"></h4>-->
+<!--</label>-->
+<!--</div>-->
+<!--<div>-->
+<!--<pre>{{user | json}}</pre>-->
+<!--{{error}}-->
+<!--</div>-->
+<!--</div>-->
 
 
 </div>
@@ -291,11 +310,14 @@
 <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDroMUn-fiNfv87FPLlCQyU_w5FyifMFWM&libraries=geometry&libraries=places" type="text/javascript"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDroMUn-fiNfv87FPLlCQyU_w5FyifMFWM&libraries=geometry&libraries=places"
+        type="text/javascript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 
-<link data-require="bootstrap@*" data-semver="3.3.2" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"/>
-<script data-require="bootstrap@*" data-semver="3.3.2" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<link data-require="bootstrap@*" data-semver="3.3.2" rel="stylesheet"
+      href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"/>
+<script data-require="bootstrap@*" data-semver="3.3.2"
+        src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
 <script src="app.js"></script>
 <script src="controllers/controllers.js"></script>
@@ -303,6 +325,32 @@
 <script src="services/services.js"></script>
 <script src="directives/directives.js"></script>
 <script src="libraries/angular-drag-and-drop-lists.js"></script>
+<script src="libraries/rzslider.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.3/ui-bootstrap-tpls.js"></script>
+<script type="text/ng-template" id="sliderModal.html">
+    <div class="modal-body">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 col-lg-12">
+                    <label class="control-label"> Określ promień wyszukiwania atrakcji </label>
+                    <rzslider
+                            rz-slider-model="searchGooglePlacesRadius.normal.low"
+                            rz-slider-options="searchGooglePlacesRadius.normal.options">
+                    </rzslider>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <button type="button"
+                            ng-click="ok()"
+                            class="btn btn-primary"> Save
+                    </button>
+                    <button type="button" ng-click="cancel()" class="btn btn-default">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
 
 </body>
 </html>
