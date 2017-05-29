@@ -469,6 +469,11 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
         return arr;
     };
 
+    $scope.clearMap = function () {
+        $scope.clearMarkers($scope.markersGooglePT);
+        $scope.clearMarkers($scope.nearbyPlaceShell);
+    };
+
     $scope.showInterestingGooglePlaces = function () {
         $scope.clearMarkers($scope.markersGooglePT);
         $scope.clearMarkers($scope.nearbyPlaceShell);
@@ -482,20 +487,29 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
 
     $scope.showClosestPlaces = function () {
         console.log("Found Google markers", $scope.markersGooglePT);
-        console.log($scope.goodMarkersBS);
+        console.log("DB bus stops", $scope.goodMarkersBS);
         $scope.clearMarkers($scope.nearbyPlaceShell);
+
+        if ($scope.markersGooglePT.length === 0) {
+            console.log("First run, fulfilling map", $scope.markersGooglePT);
+            $scope.showInterestingGooglePlaces();
+        }
+
         $scope.goodMarkersBS.forEach(function (marker) {
-            console.log("to jest pozycja przystanku:" + $scope.startPoint);
+            console.log("Bus stop position:", marker.position.lat(), marker.position.lng());
             $scope.findClosestPlaces(marker.position, $scope.markersGooglePT);
         });
-    }
+
+        $scope.clearMarkers($scope.markersGooglePT);
+
+    };
 
     $scope.findClosestPlaces = function (point, markers) {
         var pi = Math.PI;
         var R = 6371; //equatorial radius
         var distances = [];
         var closest = -1;
-        console.log(markers[1]);
+        console.log("1st marker", markers[1]);
         for (i = 0; i < markers.length; i++) {
             var lat2 = markers[i].position.lat();
             var lon2 = markers[i].position.lng();
@@ -514,39 +528,41 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
             var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
             var d = R * c;
             distances[i] = d;
-            if (closest == -1 || d < distances[closest]) {
+            if (closest === -1 || d < distances[closest]) {
                 closest = i;
             }
         }
 
         // (debug) The closest marker is:
-        console.log("min_indeks=" + closest);
-        console.log("min_d=" + distances[closest]);
-        console.log(markers[closest]);
+        // console.log("min_indeks=", closest);
+        // console.log("min_d=", distances[closest]);
+        // console.log("Closest", markers[closest]);
         $scope.drawShell(markers[closest]);
-    }
+    };
 
     /*
-    TODO jak dwa razy klikniesz na dodaj przystanek potem zrobisz analizę a potem pokaż najbliszą atrakcje to nie usuwa starych powłok
+     TODO jak dwa razy klikniesz na dodaj przystanek potem zrobisz analizę a potem pokaż najbliszą atrakcje to nie usuwa starych powłok
      */
     $scope.drawShell = function (marker) {
-        var circle = new google.maps.Circle({
-            strokeColor: '#0000FF',
-            strokeOpacity: 0.8,
-            strokeWeight: 2,
-            fillColor: '#0000FF',
-            fillOpacity: 0.35,
-            map: $scope.map,
-            center: marker.position,
-            radius: 100
-        });
-        $scope.nearbyPlaceShell.push(circle);
-    }
+        if (marker !== undefined) {
+            var circle = new google.maps.Circle({
+                strokeColor: '#0000FF',
+                strokeOpacity: 0.8,
+                strokeWeight: 2,
+                fillColor: '#0000FF',
+                fillOpacity: 0.35,
+                map: $scope.map,
+                center: marker.position,
+                radius: 100
+            });
+            $scope.nearbyPlaceShell.push(circle);
+        }
+    };
 
     $scope.showInterestingGooglePlace = function (takenB) {
         var service = new google.maps.places.PlacesService($scope.map);
         var location = {lat: takenB.cLA, lng: takenB.cLO};
-        console.log($scope.searchGooglePlacesRadius.normal.low);
+        console.log("Searching radius", $scope.searchGooglePlacesRadius.normal.low);
         var request = {
             location: location,
             radius: $scope.searchGooglePlacesRadius.normal.low,
@@ -556,6 +572,7 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
         service.textSearch(request, $scope.processResults);
         google.maps.event.trigger($scope.map, 'resize');
     };
+
 
     $scope.prepareBusStops = function () {
 
@@ -655,6 +672,7 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
             $scope.info_window.open($scope.map, this);
         });
     };
+
 
     $scope.createBusStopMarkers = function (locations, icon) {
         var marker, i;

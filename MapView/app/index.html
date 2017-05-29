@@ -19,17 +19,22 @@
     <br/>
 
     <div class="acceptButtons">
-        <div class="col-md-4">
+        <div class="col-md-3">
                 <p><input type="button" class="btn btn-success btn-width" name="busStopsShow" ng-click="showBusStops()"
                           value="Dodaj przystanki"></p>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
                 <p><input type="button" class="btn btn-success btn-width" name="closestPlacesShow" ng-click="showClosestPlaces()"
                           value="Najbliższa atrakcja"></p>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
                 <p><input type="button" class="btn btn-success btn-width" name="interestingPlacesShow"
                           ng-click="showInterestingGooglePlaces()" value="Analiza atrakcji"></p>
+
+        </div>
+        <div class="col-md-3">
+            <p><input type="button" class="btn btn-success btn-width" name="clearMapMarkers"
+                      ng-click="clearMap()" value="Wyczyść atrakcje"></p>
 
         </div>
     </div>
@@ -43,7 +48,7 @@
             <div class="busStopsRight">
                 <canvas class="busStopCircle" id="goodBusStopCircle" width="40" height="40"></canvas>
                 <div class="busStopsText" id="goodBusStopText">
-                    <label>Good bus stops:
+                    <label>Data base bus stops:
                         <input type="checkbox" ng-model="showBusStopsModel.goodBusStopsCheck">
                     </label><br/>
                 </div>
@@ -54,7 +59,7 @@
             <div class="busStopsLeft">
                 <canvas class="busStopCircle" id="badBusStopCircle" width="40" height="40"></canvas>
                 <div class="busStopsText" id="badBusStopText">
-                    <label>Bad bus stops:
+                    <label>Calculated bus stops:
                         <input type="checkbox" ng-model="showBusStopsModel.badBusStopsCheck">
                     </label><br/>
                 </div>
