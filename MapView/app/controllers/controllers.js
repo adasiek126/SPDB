@@ -362,7 +362,7 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
                 $scope.searchGooglePlacesRadius = JSON.parse(JSON.stringify(values)); //Copy of the object in order to keep original values in $scope.percentages in parent controller.
 
                 var formatToPercentage = function (value) {
-                    return value + '%';
+                    return value + 'm';
                 };
 
                 $scope.searchGooglePlacesRadius.normal.options = {
