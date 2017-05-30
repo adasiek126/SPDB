@@ -81,7 +81,7 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
     $scope.startPoint = {lat: 53.139, lng: 23.159}; // Białystok
 
     $scope.searchGooglePlacesRadius = {
-        normal: {
+        grouping_distance: {
             low: 500
         },
     };
@@ -361,14 +361,14 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
             controller: function ($scope, $uibModalInstance, values) {
                 $scope.searchGooglePlacesRadius = JSON.parse(JSON.stringify(values)); //Copy of the object in order to keep original values in $scope.percentages in parent controller.
 
-                var formatToPercentage = function (value) {
+                var formatToMeter = function (value) {
                     return value + 'm';
                 };
 
-                $scope.searchGooglePlacesRadius.normal.options = {
+                $scope.searchGooglePlacesRadius.grouping_distance.options = {
                     floor: 100,
                     ceil: 1500,
-                    translate: formatToPercentage,
+                    translate: formatToMeter,
                     showSelectionBar: true
                 };
                 $scope.ok = function () {
@@ -386,6 +386,69 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
         });
         modalInstance.result.then(function (percentages) {
             $scope.searchGooglePlacesRadius = percentages;
+        });
+        modalInstance.rendered.then(function () {
+            $rootScope.$broadcast('rzSliderForceRender'); //Force refresh sliders on render. Otherwise bullets are aligned at left side.
+        });
+    };
+
+    //Slider inside modal
+    $scope.initialParameters = {
+        grouping_distance: {
+            low: 20
+        },
+        search_distance: {
+            low: 200
+        },
+        speed_threshold: {
+            low: 1000
+        }
+    };
+    $scope.openProperties = function () {
+        var modalInstance = $modal.open({
+            templateUrl: 'setProperties.html',
+            controller: function ($scope, $modalInstance, values) {
+                $scope.initialParameters = JSON.parse(JSON.stringify(values)); //Copy of the object in order to keep original values in $scope.percentages in parent controller.
+
+
+                var formatToMeter = function (value) {
+                    return value + 'm';
+                };
+                var formatToMeterPerHour = function (value) {
+                    return value + 'm/s';
+                };
+
+                $scope.initialParameters.grouping_distance.options = {
+                    floor: 0,
+                    ceil: 100,
+                    translate: formatToMeter,
+                    showSelectionBar: true
+                };
+                $scope.initialParameters.search_distance.options = {
+                    floor: 0,
+                    ceil: 3000,
+                    translate: formatToMeter
+                };
+                $scope.initialParameters.speed_threshold.options = {
+                    floor: 0,
+                    ceil: 2000,
+                    translate: formatToMeterPerHour
+                };
+                $scope.ok = function () {
+                    $modalInstance.close($scope.initialParameters);
+                };
+                $scope.cancel = function () {
+                    $modalInstance.dismiss();
+                };
+            },
+            resolve: {
+                values: function () {
+                    return $scope.initialParameters;
+                }
+            }
+        });
+        modalInstance.result.then(function (percentages) {
+            $scope.initialParameters = percentages;
         });
         modalInstance.rendered.then(function () {
             $rootScope.$broadcast('rzSliderForceRender'); //Force refresh sliders on render. Otherwise bullets are aligned at left side.
@@ -562,10 +625,10 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
     $scope.showInterestingGooglePlace = function (takenB) {
         var service = new google.maps.places.PlacesService($scope.map);
         var location = {lat: takenB.cLA, lng: takenB.cLO};
-        console.log("Searching radius", $scope.searchGooglePlacesRadius.normal.low);
+        console.log("Searching radius", $scope.searchGooglePlacesRadius.grouping_distance.low);
         var request = {
             location: location,
-            radius: $scope.searchGooglePlacesRadius.normal.low,
+            radius: $scope.searchGooglePlacesRadius.grouping_distance.low,
             animation: google.maps.Animation.DROP,
             types: $scope.googleTakenPT
         };
@@ -725,12 +788,31 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
         })
     };
 
+    $scope.slider = {
+        value: 10
+    };
+
+    $scope.getParam = function () {
+        var url = $scope.apiUrl;
+        url += "getBadBusStops/";
+        url += $scope.initialParameters.grouping_distance.low;
+        url += "/";
+        url += $scope.initialParameters.search_distance.low;
+        url += "/";
+        url += $scope.initialParameters.speed_threshold.low;
+        $http({
+            method: 'GET',
+            url: url,
+            responseType: 'json'
+        }).then(function (response) {
+            console.log("ala ma kota");
+        })
+    };
+
     // TODO dorsz?
     $scope.getDataFromApi = function () {
-        $scope.clearLines();
-        $scope.histogram = $scope.apiUrl + "getHistogram/" + $scope.daysCodes.get($scope.selectedDay) + "/" + $scope.hourFrom + "/" + $scope.hourTo;
         var url = $scope.apiUrl;
-        url += "getRoutes/";
+        url += "getBadBusStops/";
         url += $scope.daysCodes.get($scope.selectedDay);
         url += "/";
         url += $scope.hourFrom;

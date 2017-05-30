@@ -20,16 +20,17 @@
 
     <div class="acceptButtons">
         <div class="col-md-3">
-                <p><input type="button" class="btn btn-success btn-width" name="busStopsShow" ng-click="showBusStops()"
-                          value="Dodaj przystanki"></p>
+            <p><input type="button" class="btn btn-success btn-width" name="busStopsShow" ng-click="showBusStops()"
+                      value="Dodaj przystanki"></p>
         </div>
         <div class="col-md-3">
-                <p><input type="button" class="btn btn-success btn-width" name="closestPlacesShow" ng-click="showClosestPlaces()"
-                          value="Najbliższa atrakcja"></p>
+            <p><input type="button" class="btn btn-success btn-width" name="closestPlacesShow"
+                      ng-click="showClosestPlaces()"
+                      value="Najbliższa atrakcja"></p>
         </div>
         <div class="col-md-3">
-                <p><input type="button" class="btn btn-success btn-width" name="interestingPlacesShow"
-                          ng-click="showInterestingGooglePlaces()" value="Analiza atrakcji"></p>
+            <p><input type="button" class="btn btn-success btn-width" name="interestingPlacesShow"
+                      ng-click="showInterestingGooglePlaces()" value="Analiza atrakcji"></p>
 
         </div>
         <div class="col-md-3">
@@ -115,7 +116,8 @@
                       ng-click="selectAllBusStops()" value="Wszystkie przystanki"></p>
         </div>
         <div class="col-md-6">
-            <p><input type="button" class="btn btn-success btn-width" name="selectNoneBusStopsBtn" ng-click="selectNoneBusStops()"
+            <p><input type="button" class="btn btn-success btn-width" name="selectNoneBusStopsBtn"
+                      ng-click="selectNoneBusStops()"
                       value="Żaden przystanek"></p>
         </div>
     </div>
@@ -199,15 +201,27 @@
         </div>
     </div>
 
+    <div class="acceptButtons">
+        <div class="col-md-6">
+            <p><input type="button" class="btn btn-success btn-width" name="propertiesShow" ng-click="openProperties()"
+                      value="Parametry wyszukiwania"></p>
+        </div>
+        <div class="col-md-6">
+            <p><input type="button" class="btn btn-success btn-width" name="setParameters"
+                      ng-click="getParam()"
+                      value="Wyślij parametry"></p>
+        </div>
+    </div>
+
 </div>
 
 
 <!--<div class="options">-->
 
-<!--<p>Dzień tygodnia: <label>-->
-<!--<select ng-model="selectedDay" ng-options="day for day in days"-->
-<!--ng-init="selectedDay=days[0]"></select>-->
-<!--</label></p>-->
+<p>Dzień tygodnia: <label>
+    <select ng-model="selectedDay" ng-options="day for day in days"
+            ng-init="selectedDay=days[0]"></select>
+</label></p>
 
 <!--<p>Godzina od: <label>-->
 <!--<select ng-model="hourFrom" ng-options="hour for hour in hoursFrom" ng-init="hourFrom=8"-->
@@ -218,9 +232,9 @@
 <!--<select ng-model="hourTo" ng-options="hour for hour in hoursTo"-->
 <!--ng-init="hourTo=10;changeHoursTo()" ng-change="changeHoursFrom()"></select>-->
 <!--</label></p>-->
-<!--<p><input type="submit" name="clear" ng-click="clearLines()" value="Wyczyść"><input type="submit" name="traffic"-->
-<!--ng-click="getDataFromApi()"-->
-<!--value="Analiza ruchu"></p>-->
+<p><input type="submit" name="clear" ng-click="clearLines()" value="Wyczyść"><input type="submit" name="traffic"
+                                                                                    ng-click="getDataFromApi()"
+                                                                                    value="Analiza ruchu"></p>
 <!--<p>Linia: <label>-->
 <!--<select ng-model="selectedLineNumber" ng-options="lineNumber for lineNumber in linesNumbers"-->
 <!--ng-init="loadLines()"></select>-->
@@ -339,6 +353,49 @@
                     <rzslider
                             rz-slider-model="searchGooglePlacesRadius.normal.low"
                             rz-slider-options="searchGooglePlacesRadius.normal.options">
+                    </rzslider>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <button type="button"
+                            ng-click="ok()"
+                            class="btn btn-primary"> Save
+                    </button>
+                    <button type="button" ng-click="cancel()" class="btn btn-default">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script type="text/ng-template" id="setProperties.html">
+    <div class="modal-body">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 col-lg-12"><label class="control-label"> Maksymalna odległość od przystanku dla
+                    której analizowane są dane punktu </label>
+                    <rzslider
+                            rz-slider-model="initialParameters.grouping_distance.low"
+                            rz-slider-options="initialParameters.grouping_distance.options">
+                    </rzslider>
+                </div>
+            </div>
+            <div class="row">
+                <div class=" col-md-12 col-lg-12"><label class="control-label"> Promień który tworzy okrąg wokół
+                    punktu </label>
+                    <rzslider
+                            rz-slider-model="initialParameters.search_distance.low"
+                            rz-slider-options="initialParameters.search_distance.options">
+                    </rzslider>
+                </div>
+            </div>
+            <div class="row">
+                <div class=" col-md-12 col-lg-12"><label class="control-label"> Maksymalna wartość średniej predkości
+                    dla której kwalifikujemy punkt jako punkt zatrzymania </label>
+                    <rzslider
+                            rz-slider-model="initialParameters.speed_threshold.low"
+                            rz-slider-options="initialParameters.speed_threshold.options">
                     </rzslider>
                 </div>
             </div>
