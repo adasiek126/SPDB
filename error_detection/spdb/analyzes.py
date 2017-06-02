@@ -135,8 +135,6 @@ class Core:
                 print("Didn't find traces")
             else:
                 analyzed_list.append(AnalyzeResult(stop.id, stop.name, stop.point.latitude, stop.point.longitude, calculated_point.point.latitude, calculated_point.point.longitude, calculated_point.how_many, calculated_point.distance, self.getLinesForStopId(stop.id)))
-            if(len(analyzed_list) == 2):
-                return analyzed_list
         return analyzed_list
 
     def analyzeOneStop(self, id):
