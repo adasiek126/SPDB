@@ -2,33 +2,7 @@
  * Created by Adam Zieliński on 2017-05-13.
  */
 
-var BusStopController = function ($scope, $http, $q, userData, userGravatar, gitHubUserLookup, googlePlacesService, busStopsService, $modal, $rootScope) {
-
-
-    $scope.getGravatar = function (email) {
-        return userGravatar.getGravatar(email);
-    };
-
-    $scope.getGitHubUser = function (username) {
-        console.log("username: " + username);
-        gitHubUserLookup.lookupUser(username).then(onLookupComplete, onError);
-    };
-
-    var onLookupComplete = function (response) {
-        $scope.user = response.data;
-        $scope.status = response.status;
-
-    };
-
-    var onError = function (reason) {
-        $scope.error = "Ooops, something went wrong..";
-    };
-
-
-    $scope.ManyHellos = ['Hello', 'Hola', 'Bonjour', 'Guten Tag', 'Ciao', 'Namaste', 'Yiasou'];
-
-    $scope.data = userData.user;
-
+var BusStopController = function ($scope, $http, $q, googlePlacesService, busStopsService, $modal, $rootScope) {
 
     $scope.showBusStopsModel = {
         goodBusStopsCheck: true,
@@ -83,93 +57,21 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
     $scope.searchGooglePlacesRadius = {
         grouping_distance: {
             low: 500
-        },
+        }
     };
-    // TODO Część Dorsza do ogarnięcia
-    $scope.hoursFrom = [];
-    $scope.hoursTo = [];
-    for (var i = 0; i < 24; i++) {
-        $scope.hoursFrom.push(i);
-        $scope.hoursTo.push(i);
-    }
-    $scope.days = ["Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela"];
-    $scope.daysCodes = new Map();
-    $scope.daysCodes.set("Poniedziałek", "MON");
-    $scope.daysCodes.set("Wtorek", "TUE");
-    $scope.daysCodes.set("Środa", "WED");
-    $scope.daysCodes.set("Czwartek", "THU");
-    $scope.daysCodes.set("Piątek", "FRI");
-    $scope.daysCodes.set("Sobota", "SAT");
-    $scope.daysCodes.set("Niedziela", "SUN");
-    $scope.locations = [
-        ['Bondi Beach', 53.1390, 23.1593, 1],
-        ['Coogee Beach', 53.1391, 23.1589, 2],
-        ['Cronulla Beach', 53.1392, 23.1588, 3]
-    ];
 
-    $scope.histogram = '';
     $scope.directionService = new google.maps.DirectionsService();
     $scope.directionsDisplay = new google.maps.DirectionsRenderer();
 
     $scope.lat = $scope.startPoint.lat;
     $scope.lng = $scope.startPoint.lng;
-    $scope.minSupport = 0.7;
-    $scope.minDiffDelay = 100;
     $scope.lines = [];
-
-    // TODO zobacz czy jesteś w stanie jakoś lepiej to napisać
-
-    // TODO rozdzielic przystanki na kierunki autobusu
-
-    // TODO dodać parametry jakie bachanek chce dostać
-
-    // TODO ułożyć ładnie przyciski na froncie
-
-    // TODO co do rysownia linii przebiegu trasy busa, to nie wiem sam, bo niektóre, np 9 raz ma końcowy w jednyma  raz w drugim.
-
-    // TODO dodać jakąś opcję z możliwością wyznaczenia najbliższej atrakcji danego typu, to co z Bembenikiem gadaliśmy
-
-    // TODO dodać możliwość podania parametru odległości w jakiej od przystanku ma być szukane
-
-    // TODO ewentualnie dodać ładniejsze wyświetlanie nazw tych rzeczy googlowskich
-
 
     function initModels() {
         var promiseBusStopPlaces = busStopsService.getBusStopPlaces();
+
         promiseBusStopPlaces.then(function (data) {
-            angular.forEach(data.data, function (busStop, index) {
-                $scope.busStopsModel.push({
-                    id: busStop.id,
-                    name: busStop.name,
-                    oLA: busStop.original_latitude,
-                    oLO: busStop.original_longitude,
-                    cLA: busStop.calculated_latitude,
-                    cLO: busStop.calculated_longitude,
-                    lines: busStop.lines
-                });
-                angular.forEach(busStop.lines, function (line, index) {
-                    if ($scope.availableBusLines.indexOf(line) < 0)
-                        $scope.availableBusLines.push(line);
-                });
-                $scope.availableBusLines.sort($scope.naturalCompare);
-                $scope.selectedBusLine = $scope.availableBusLines[0];
-                var ifAddToDisplay = false;
-                angular.forEach(busStop.lines, function (line, index) {
-                    if (line === $scope.selectedBusLine)
-                        ifAddToDisplay = true;
-                });
-                if (ifAddToDisplay) {
-                    $scope.busStopsModelForDisplay.push({
-                        id: busStop.id,
-                        name: busStop.name,
-                        oLA: busStop.original_latitude,
-                        oLO: busStop.original_longitude,
-                        cLA: busStop.calculated_latitude,
-                        cLO: busStop.calculated_longitude,
-                        lines: busStop.lines
-                    });
-                }
-            });
+            $scope.initBusStuff(data);
         });
 
         console.log(["Available bus stops:", $scope.busStopsModelForDisplay]);
@@ -270,7 +172,6 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
                 $scope.busStopsDragDropModel[j].items = $scope.busStopsModelForDisplay;
             }
 
-            // TODO przenieść z jednej strony na drugą
             if ($scope.busStopsDragDropModel[j].id === $scope.idAvailableBusStops) {
                 $scope.busStopsDragDropModel[j].items = [];
             }
@@ -284,7 +185,7 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
             if ($scope.busStopsDragDropModel[j].id === $scope.idTakenBusStops) {
                 $scope.busStopsDragDropModel[j].items = [];
             }
-            // TODO przenieść z jednej strony na drugą
+
             if ($scope.busStopsDragDropModel[j].id === $scope.idAvailableBusStops) {
                 $scope.busStopsDragDropModel[j].items = $scope.busStopsModelForDisplay;
             }
@@ -404,6 +305,7 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
             low: 1000
         }
     };
+
     $scope.openProperties = function () {
         var modalInstance = $modal.open({
             templateUrl: 'setProperties.html',
@@ -546,8 +448,6 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
         }
     };
 
-    // TODO dodać możliwość znalezienia najbliższej atrakcji każdego typu
-
     $scope.showClosestPlaces = function () {
         console.log("Found Google markers", $scope.markersGooglePT);
         console.log("DB bus stops", $scope.goodMarkersBS);
@@ -603,9 +503,6 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
         $scope.drawShell(markers[closest]);
     };
 
-    /*
-     TODO jak dwa razy klikniesz na dodaj przystanek potem zrobisz analizę a potem pokaż najbliszą atrakcje to nie usuwa starych powłok
-     */
     $scope.drawShell = function (marker) {
         if (marker !== undefined) {
             var circle = new google.maps.Circle({
@@ -616,7 +513,7 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
                 fillOpacity: 0.35,
                 map: $scope.map,
                 center: marker.position,
-                radius: 100
+                radius: 50
             });
             $scope.nearbyPlaceShell.push(circle);
         }
@@ -635,7 +532,6 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
         service.textSearch(request, $scope.processResults);
         google.maps.event.trigger($scope.map, 'resize');
     };
-
 
     $scope.prepareBusStops = function () {
 
@@ -660,7 +556,8 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
     };
 
     $scope.showBusStops = function () {
-
+        // TODO remove line
+        console.log($scope.busStopsModel);
         $scope.clearMarkers($scope.goodMarkersBS);
         $scope.clearMarkers($scope.badMarkersBS);
         $scope.clearMarkers($scope.nearbyPlaceShell);
@@ -692,15 +589,6 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
         context.arc(20, 20, 20, 0, Math.PI * 2, false);
         context.fillStyle = color;
         context.fill()
-    };
-
-
-    // TODO dorsz?
-    $scope.clearLines = function () {
-        $scope.lines.forEach(function (line) {
-            line.line.setMap(null);
-        });
-        $scope.lines = [];
     };
 
     $scope.processResults = function (results, status) {
@@ -761,38 +649,48 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
         google.maps.event.trigger($scope.map, 'resize');
     };
 
-    // TODO dorsz?
-    $scope.drawLines = function (pointRoutes) {
-        pointRoutes.forEach(function (route) {
-            var line = new google.maps.Polyline({
-                path: route.points,
-                geodesic: true,
-                strokeColor: route.color,
-                strokeOpacity: 1.0,
-                strokeWeight: 3
-            });
-            var content = route.content;
-            var lineWithContent = {
-                'line': line,
-                'content': content
-            };
-            $scope.lines.push(lineWithContent);
-            line.addListener('click', function () {
-                if (content !== undefined) {
-                    $scope.info_window.setPosition($scope.findCenterOfPath(line.getPath().getArray()));
-                    $scope.info_window.setContent(content);
-                    $scope.info_window.open($scope.map, this);
-                }
-            });
-            line.setMap($scope.map);
-        })
-    };
-
     $scope.slider = {
         value: 10
     };
 
-    $scope.getParam = function () {
+    $scope.initBusStuff = function (data) {
+        angular.forEach(data.data, function (busStop, index) {
+            $scope.busStopsModel.push({
+                id: busStop.id,
+                name: busStop.name,
+                oLA: busStop.original_latitude,
+                oLO: busStop.original_longitude,
+                cLA: busStop.calculated_latitude,
+                cLO: busStop.calculated_longitude,
+                lines: busStop.lines
+            });
+            angular.forEach(busStop.lines, function (line, index) {
+                if ($scope.availableBusLines.indexOf(line) < 0)
+                    $scope.availableBusLines.push(line);
+            });
+            $scope.availableBusLines.sort($scope.naturalCompare);
+            $scope.selectedBusLine = $scope.availableBusLines[0];
+            var ifAddToDisplay = false;
+            angular.forEach(busStop.lines, function (line, index) {
+                if (line === $scope.selectedBusLine)
+                    ifAddToDisplay = true;
+            });
+            if (ifAddToDisplay) {
+                $scope.busStopsModelForDisplay.push({
+                    id: busStop.id,
+                    name: busStop.name,
+                    oLA: busStop.original_latitude,
+                    oLO: busStop.original_longitude,
+                    cLA: busStop.calculated_latitude,
+                    cLO: busStop.calculated_longitude,
+                    lines: busStop.lines
+                });
+            }
+        });
+        console.log("Bus init completed");
+    };
+
+    $scope.getCalculatedBusStopsRequest = function () {
         var url = $scope.apiUrl;
         url += "getBadBusStops/";
         url += $scope.initialParameters.grouping_distance.low;
@@ -800,86 +698,19 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
         url += $scope.initialParameters.search_distance.low;
         url += "/";
         url += $scope.initialParameters.speed_threshold.low;
+        console.log("Sending request to:", url);
         $http({
             method: 'GET',
             url: url,
             responseType: 'json'
         }).then(function (response) {
-            console.log("ala ma kota");
+            $scope.initBusStuff(response.data);
+            console.log("HTTP RESPONSE OK", response);
+            alert("Finished calculating!");
         })
     };
 
-    // TODO dorsz?
-    $scope.getDataFromApi = function () {
-        var url = $scope.apiUrl;
-        url += "getBadBusStops/";
-        url += $scope.daysCodes.get($scope.selectedDay);
-        url += "/";
-        url += $scope.hourFrom;
-        url += "/";
-        url += $scope.hourTo;
-        $http({
-            method: 'GET',
-            url: url,
-            responseType: 'json'
-        }).then(function (response) {
-            $scope.drawLines(response.data);
-        })
-    };
 
-    $scope.changeHoursTo = function () {
-        $scope.hoursTo = [];
-        for (var i = $scope.hourFrom; i < 24; i++) {
-            $scope.hoursTo.push(i);
-        }
-        if ($scope.hourTo <= $scope.hourFrom) {
-            $scope.hourTo = $scope.hourFrom;
-        }
-    };
-
-    $scope.changeHoursFrom = function () {
-        $scope.hoursFrom = [];
-        for (i = 0; i <= $scope.hourTo; i++) {
-            $scope.hoursFrom.push(i);
-        }
-        if ($scope.hourFrom > $scope.hourTo) {
-            $scope.hourFrom = $scope.hourTo;
-        }
-    };
-
-    $scope.loadLines = function () {
-        var url = $scope.apiUrl;
-        url += "getLines";
-        $http({
-            method: 'GET',
-            url: url,
-            responseType: 'json'
-        }).then(function (response) {
-            $scope.linesNumbers = response.data;
-            $scope.selectedLineNumber = $scope.linesNumbers[0];
-        })
-    };
-
-    $scope.getLineTrafficData = function () {
-        $scope.clearLines();
-        $scope.histogram = $scope.apiUrl + "getHistogramLine/" + $scope.daysCodes.get($scope.selectedDay) + "/" + $scope.hourFrom + "/" + $scope.hourTo + "/" + $scope.selectedLineNumber;
-        var url = $scope.apiUrl;
-        url += "getLinesTraffic/";
-        url += $scope.daysCodes.get($scope.selectedDay);
-        url += "/";
-        url += $scope.hourFrom;
-        url += "/";
-        url += $scope.hourTo;
-        url += "/";
-        url += $scope.selectedLineNumber;
-        $http({
-            method: 'GET',
-            url: url,
-            responseType: 'json'
-        }).then(function (response) {
-            $scope.drawLines(response.data);
-        })
-    };
     $scope.distance = function (line_by_two_points, point) {
         var x1 = line_by_two_points[0].lng;
         var x2 = line_by_two_points[1].lng;
@@ -889,95 +720,6 @@ var BusStopController = function ($scope, $http, $q, userData, userGravatar, git
         var y0 = point.lat;
         return Math.abs((y2 - y1) * x0 - (x2 - x1) * y0 + x2 * y1 - y2 * x1) / Math.sqrt((y2 - y1) * (y2 - y1) + (x2 - x1) * (x2 - x1));
     };
-    $scope.findMinDistFromPathToPoint = function (path_points, point) {
-        var dist_ret = 99999999;
-        for (i = 0; i < path_points.length - 1; i++) {
-            var points_pair = [path_points[i], path_points[i + 1]];
-            var distance = $scope.distance(points_pair, point);
-            if (distance < dist_ret) {
-                dist_ret = distance;
-            }
-        }
-        return dist_ret;
-    };
-    $scope.findClosestPath = function (point) {
-        var minDist = 99999999;
-        var actLine = $scope.lines[0];
-        $scope.lines.forEach(function (line) {
-            var dist = $scope.findMinDistFromPathToPoint(line.line.getPath().getArray(), point);
-            if (dist < minDist) {
-                minDist = dist;
-                actLine = line;
-            }
-        });
-        return actLine;
-    };
-    $scope.findCenterOfPath = function (path) {
-        var pathLength = google.maps.geometry.spherical.computeLength(path);
-        var middleDist = pathLength / 2;
-        var dist = 0;
-        var lineWithCenter = path[0];
-        var beginOfFragmentWithCenter = 0;
-        var lastLength = 0;
-        for (i = 0; i < path.length - 1; i++) {
-            if (dist < middleDist) {
-                lastLength = google.maps.geometry.spherical.computeDistanceBetween(path[i], path[i + 1]);
-                lineWithCenter = path[i];
-                beginOfFragmentWithCenter = i;
-                dist += lastLength;
-            } else {
-                break;
-            }
-        }
-        var distOnBeginOfCenterLine = dist - lastLength;
-        var distOnEndOfCenterLine = dist;
-        var percentageOfWholeDistanceOnBeginOfCenterLine = distOnBeginOfCenterLine / pathLength;
-        var percentageOfWholeDistanceOnEndOfCenterLine = dist / pathLength;
-        var a = percentageOfWholeDistanceOnEndOfCenterLine - percentageOfWholeDistanceOnBeginOfCenterLine;
-        var b = 1 / a;
-        var c = 0.5 - percentageOfWholeDistanceOnBeginOfCenterLine;
-        var d = c * b;
-        var inBetween = google.maps.geometry.spherical.interpolate(path[beginOfFragmentWithCenter], path[beginOfFragmentWithCenter + 1], d);
-        return inBetween;
-    };
-    $scope.getStretches = function () {
-        $scope.clearLines();
-        $scope.histogram = "";
-        var url = $scope.apiUrl;
-        url += "getStretches/";
-        url += $scope.minSupport;
-        url += "/";
-        url += $scope.minDiffDelay;
-        $http({
-            method: 'GET',
-            url: url,
-            responseType: 'json'
-        }).then(function (response) {
-            $scope.drawLines(response.data);
-        })
-    };
-
-    $scope.test = function () {
-        var routes = [{
-            'points': [
-                {'lat': 52.999226, 'lng': 23.151409},
-                {'lat': 52.9945, 'lng': 23.150332},
-                {'lat': 52.992036, 'lng': 23.149696},
-                {'lat': 52.991524, 'lng': 23.149564},
-                {'lat': 52.987058, 'lng': 23.148453},
-                {'lat': 52.986564, 'lng': 23.148329},
-                {'lat': 52.986311, 'lng': 23.148276},
-                {'lat': 52.986072, 'lng': 23.14822},
-                {'lat': 52.984915, 'lng': 23.14818},
-                {'lat': 52.982368, 'lng': 23.147693},
-                {'lat': 52.981921, 'lng': 23.147602}],
-            'color': '#00FF00',
-            'content': '<b>Testowy teskt</b>'
-        }
-        ];
-        $scope.drawLines(routes);
-    }
-
 };
 
 app.controller("BusStopController", BusStopController);

@@ -1,0 +1,7 @@
+numpy
+pandas
+flask
+virtualenv
+sqlalchemy
+psycopg2
+simplejson
