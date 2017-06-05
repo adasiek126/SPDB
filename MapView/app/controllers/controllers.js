@@ -504,6 +504,7 @@ var BusStopController = function ($scope, $http, $q, googlePlacesService, busSto
     };
 
     $scope.drawShell = function (marker) {
+        $scope.clearMarkers($scope.nearbyPlaceShell);
         if (marker !== undefined) {
             var circle = new google.maps.Circle({
                 strokeColor: '#0000FF',
@@ -513,8 +514,15 @@ var BusStopController = function ($scope, $http, $q, googlePlacesService, busSto
                 fillOpacity: 0.35,
                 map: $scope.map,
                 center: marker.position,
-                radius: 50
+                title: marker.title,
+                radius: 20
             });
+
+            google.maps.event.addListener(circle, 'click', function () {
+                $scope.info_window.setContent(marker.title);
+                $scope.info_window.open($scope.map, this);
+            });
+
             $scope.nearbyPlaceShell.push(circle);
         }
     };
