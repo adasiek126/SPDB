@@ -504,7 +504,6 @@ var BusStopController = function ($scope, $http, $q, googlePlacesService, busSto
     };
 
     $scope.drawShell = function (marker) {
-        $scope.clearMarkers($scope.nearbyPlaceShell);
         if (marker !== undefined) {
             var circle = new google.maps.Circle({
                 strokeColor: '#0000FF',
